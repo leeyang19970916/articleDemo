@@ -1,0 +1,42 @@
+nav {
+  width: 10%;
+  min-width: 180px;
+  background-color: #343a40 !important;
+}
+.accordion-button::before,
+.accordion-button::after {
+  content: none;
+}
+.accordion-item {
+  background-color: transparent;
+  border: black solid 1px;
+}
+.accordion-button {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  &:focus {
+    background-color: transparent;
+    color:white ;
+    outline: none;
+    // border: none;
+    box-shadow: none;
+  }
+  &:not(.collapsed){
+    background-color: transparent;
+    color: white;
+  }
+}
+.accordion-body{
+  padding-top: 0;
+  padding-bottom: 0;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  .item{
+    padding-top:0.5rem ;
+    padding-bottom: 0.25rem;
+  }
+}

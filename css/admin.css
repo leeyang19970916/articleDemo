@@ -1,0 +1,103 @@
+nav {
+  width: 10%;
+  min-width: 180px;
+  background-color: #343a40 !important;
+}
+
+.accordion-button::before,
+.accordion-button::after {
+  content: none;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: black solid 1px;
+}
+
+.accordion-button {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.accordion-button:focus {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: white;
+}
+
+.accordion-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.accordion-body .item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+main .second-nav {
+  width: 20%;
+  border-right: 1px rgb(218, 218, 218) solid;
+  padding: 1rem;
+}
+main .second-nav .second-nav-item {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: aliceblue;
+  background-color: plum;
+  border-radius: 50px;
+  padding: 0.25rem 0;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: rgb(166, 204, 114);
+  color: aliceblue;
+}
+
+main .tab-content {
+  width: 80%;
+  padding: 1.5rem;
+}
+main .article .maj-title, main .article .min-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+main .article .maj-title span, main .article .min-title span {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: auto;
+  font-size: 1.25rem;
+  padding-right: 1rem;
+  font-weight: 900;
+}
+main .article .maj-title input, main .article .min-title input {
+  width: 50%;
+}
+main .article .tag_btn {
+  margin-top: 1rem;
+}
+main .article .ck-editor {
+  margin-top: 1rem;
+}
+
+main {
+  width: 90%;
+}

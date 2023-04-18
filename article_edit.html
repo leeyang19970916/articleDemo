@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>撰寫文章介面</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+  </head>
+  <body>
+    <div class="w-100 bg-light d-flex" id="root">
+      <nav class="h-100"></nav>
+      <main class="h-100 d-flex">
+        <section class="h-100 bg-light second-nav"></section>
+        <div class="h-100 bg-light tab-content" id="v-pills-tabContent"></div>
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+  let secondNavArr = [
+    { id: "articleContent", name: "文章內容" },
+    { id: "articleImage", name: "新增圖片" },
+    { id: "article_FBOG", name: "FB/OG" },
+  ];
+</script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/innerHeight.js"></script>
+<script src="./js/navUI.js"></script>
+<script src="./js/second-navUI.js"></script>
+<script src="./js/tab-content.js"></script>
+<script src="./js/CKEditor.js"></script>
+<script>
+
+</script>

@@ -1,0 +1,31 @@
+main {
+    .tab-content{
+        width: 80%;
+        padding: 1.5rem;
+    }
+  .article {
+    // width: 80%;
+    // padding: 1rem;
+    .maj-title , .min-title{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        span{
+            flex-wrap: nowrap;
+            width: auto;
+            font-size: 1.25rem;
+            padding-right: 1rem;
+            font-weight: 900;
+        }
+        input{
+            width: 50%;
+        }
+    }
+    .tag_btn{
+        margin-top: 1rem;
+    }
+    .ck-editor{
+        margin-top: 1rem;
+    }
+  }
+}

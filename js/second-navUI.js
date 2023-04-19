@@ -4,7 +4,8 @@ function secondNavUI(params) {
   for (let i = 0; i < secondNavArr.length; i++) {
     
     const element = secondNavArr[i];
-    str += `<button class="nav-link ${i === 0 && "active"} second-nav-item" id="v-pills-${
+    str += `<button onclick="tabContentChange('${element.id}')" class="nav-link ${i === 0 && "active"}
+     second-nav-item" id="v-pills-${
       element.id
     }-tab" data-bs-toggle="pill" data-bs-target="#v-pills-${
       element.id

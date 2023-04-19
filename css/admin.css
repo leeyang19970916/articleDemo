@@ -94,8 +94,91 @@ main .article .maj-title input, main .article .min-title input {
 main .article .tag_btn {
   margin-top: 1rem;
 }
-main .article .ck-editor {
+main .article #cke_editor {
   margin-top: 1rem;
+}
+main .article #cke_editor #cke_1_contents {
+  height: 500px !important;
+}
+
+#tagModal .modal-body {
+  padding-top: 0;
+}
+#tagModal .modal-body .body-block {
+  margin-top: 1rem;
+}
+#tagModal .modal-body .add-newTag {
+  font-weight: bolder;
+  color: saddlebrown;
+  font-size: larger;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#tagModal .modal-body .add-newTag span {
+  margin-right: 1rem;
+}
+#tagModal .modal-body .add-newTag .input-group {
+  width: 75%;
+}
+#tagModal .modal-body .add-newTag .input-group button {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+#tagModal .modal-body .body_title {
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: 2px solid saddlebrown;
+  padding-bottom: 0.1rem;
+  color: saddlebrown;
+}
+#tagModal .modal-body .body-tag button {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+input[type=file] {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+label {
+  font-weight: bold;
+  color: #6990f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px dashed #6990f2;
+  padding: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label > i {
+  margin-bottom: 5px;
+}
+
+#box img {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main {

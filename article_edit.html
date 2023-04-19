@@ -7,7 +7,7 @@
     <title>撰寫文章介面</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+    <script src="./node_modules/ckeditor4/ckeditor.js"></script>
   </head>
   <body>
     <div class="w-100 bg-light d-flex" id="root">
@@ -16,6 +16,95 @@
         <section class="h-100 bg-light second-nav"></section>
         <div class="h-100 bg-light tab-content" id="v-pills-tabContent"></div>
       </main>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="tagModal"
+      tabindex="-1"
+      aria-labelledby="tagModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tagModalLabel">新增標籤</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="body-block">
+              <div class="add-newTag">
+                <span>新增標籤:</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Recipient's username"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="body-block">
+              <div class="body_title">共有標籤:</div>
+              <div class="mt-2 body-tag">
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+                <button type="button" class="btn btn-dark">心肌梗塞</button>
+              </div>
+            </div>
+            <div class="body-block">
+              <div class="body_title">目前標籤:</div>
+              <div class="mt-2 body-tag">
+                <button type="button" class="btn btn-primary">Primary</button
+                ><button type="button" class="btn btn-primary">Primary</button
+                ><button type="button" class="btn btn-primary">Primary</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary w-25">確定</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -32,7 +121,3 @@
 <script src="./js/navUI.js"></script>
 <script src="./js/second-navUI.js"></script>
 <script src="./js/tab-content.js"></script>
-<script src="./js/CKEditor.js"></script>
-<script>
-
-</script>

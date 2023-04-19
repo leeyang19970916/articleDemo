@@ -24,8 +24,11 @@ main {
     .tag_btn{
         margin-top: 1rem;
     }
-    .ck-editor{
+    #cke_editor{
         margin-top: 1rem;
+        #cke_1_contents{
+            height: 500px !important;
+        }
     }
   }
 }

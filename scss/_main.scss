@@ -2,6 +2,15 @@
 @import "./article";
 @import "./tagModal";
 @import "./image";
+@import "./metaSetting";
 main{
     width: 90%;
+}
+.mjr_title{
+    font-weight: 900;
+    color: rgb(85, 174, 180);
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid rgb(85, 174, 180);
+    font-size: 1.75rem;
 }

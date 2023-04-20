@@ -1,0 +1,31 @@
+
+.meta{
+    .single-meta-container{
+        margin-top: 1rem;
+        .min-title{
+            text-align: center;
+            background-color: rgb(221, 159, 159);
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 0.2rem 0;
+            width: 20%;
+            margin-bottom: 0.25rem;
+            font-size: 1.2rem;
+        }
+        .meta-item{
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            padding-right: 5rem;
+            .form-label{
+                margin: 0;
+                font-weight: bold;
+                font-size: larger;
+                min-width: 180px
+            }
+            .form-control{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ main {
     .tab-content{
         width: 80%;
         padding: 1.5rem;
+        overflow-y: scroll;
     }
   .article {
     // width: 80%;
@@ -26,7 +27,7 @@ main {
     }
     #cke_editor{
         margin-top: 1rem;
-        #cke_1_contents{
+        .cke_contents{
             height: 500px !important;
         }
     }

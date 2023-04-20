@@ -12,8 +12,9 @@ const navbarUI = () => {
       id: "article",
       name: "文章",
       item: [
-        { id: "article_tags", name: "標籤管理" },
+        { id: "article_list", name: "文章列表" },
         { id: "article_content", name: "文章內容" },
+        { id: "article_tags", name: "標籤管理" },
       ],
     },
     {
@@ -57,7 +58,7 @@ const navbarUI = () => {
                 ? ""
                 : element.item
                     .map(function (item) {
-                      return `<div class="item" data-id=${item.id} > ${item.name}</div>`;
+                      return `<div class="item" onclick="lacationURLChange('${item.id}')" data-id=${item.id} > ${item.name}</div>`;
                     })
                     .join("")
             } 
@@ -72,3 +73,14 @@ const navbarUI = () => {
     `;
 };
 navbarUI();
+
+
+const lacationURLChange=(id)=>{
+// 獲取當前頁面的路徑部分
+var currentPath = window.location.pathname;
+// console.log(currentPath,currentUrl)
+if (currentPath===`/${id}.html`) {
+  return
+}
+  location.href = `../${id}.html`;
+}

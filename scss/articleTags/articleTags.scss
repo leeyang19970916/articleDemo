@@ -1,0 +1,162 @@
+main {
+  flex-direction: column;
+}
+.articleTag-container {
+  width: 100%;
+  padding: 15px;
+  height: 100%;
+  .mjr_title {
+    width: 100%;
+  }
+  .search-add-input-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .input {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      margin-right: 1.5rem;
+
+      // padding: 0 2rem;
+      label {
+        font-weight: 900;
+        font-size: 1.25rem;
+        // min-width: 100px;
+        white-space: nowrap;
+        margin: 0;
+        padding-right: 1.25rem;
+      }
+      input {
+        width: 75%;
+      }
+    }
+  }
+  .editBtn {
+    white-space: nowrap;
+    width: 15%;
+    font-weight: 900;
+    font-size: 1rem;
+    background-color: #36678b;
+    color: white;
+    border: none;
+    &:active {
+      color: white;
+    }
+  }
+
+  .articleTags-list {
+    width: 100%;
+    border: 3px solid #e5dccb;
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+    min-height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow: hidden;
+    .btn-set {
+      margin-right: 1rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+      button {
+        color: white;
+      }
+      .remove-markIcon {
+        // 叉叉要放在右上角
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: red;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: yellow;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .now-tagName {
+      margin-bottom: 2rem;
+      span {
+        margin-left: 1rem;
+      }
+    }
+    .new-tagName {
+      margin-bottom: 1rem;
+      align-items: center;
+      .form-label {
+        margin: 0;
+      }
+      input {
+        &.form-control {
+          margin-left: 1rem !important;
+          border-radius: 50px !important;
+        }
+      }
+    }
+  }
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.app-icon {
+  position: relative;
+}
+
+.app-icon {
+  animation: shake 0.4s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  20% {
+    transform: translate(0, 0) rotate(0);
+  }
+  30% {
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  40% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  60% {
+    transform: translate(0, 0) rotate(0);
+  }
+  70% {
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  80% {
+    transform: translate(0, 0) rotate(0);
+  }
+  90% {
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}

@@ -1,0 +1,14 @@
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.articleList-container {
+  width: 100%;
+  padding: 15px;
+}
+.articleList-container .mjr_title {
+  width: 100%;
+}

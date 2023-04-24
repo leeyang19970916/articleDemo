@@ -1,0 +1,15 @@
+.list-container {
+  padding-top: 1.25rem;
+  .table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    &.table-striped {
+      border-radius: 10px;
+    }
+    // border-radius: 10px;
+    //  border: 2px solid gray;
+    thead {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}

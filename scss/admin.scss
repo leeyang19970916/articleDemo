@@ -1,2 +1,19 @@
 @import "./nav";
 @import "./main";
+@import "./common-btn";
+.inputControl{
+    display: flex;
+    align-items: center;
+    // margin-top: 1rem;
+    span{
+        flex-wrap: nowrap;
+        white-space:nowrap;
+        width: auto;
+        font-size: 1rem;
+        padding-right: 1rem;
+        font-weight: 900;
+    }
+    input{
+        // width: 50%;
+    }
+}

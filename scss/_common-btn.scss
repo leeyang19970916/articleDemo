@@ -1,0 +1,22 @@
+button{
+    &.tag-btn{
+        position: relative;
+        a{
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #2e75ab;
+            border-radius: 50%;
+            display: flex;
+            font-size: 50%;
+            height: 20px;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            -webkit-transform: translate(50%,-50%);
+            transform: translate(50%,-50%);
+            width: 20px;
+        }
+    }
+}

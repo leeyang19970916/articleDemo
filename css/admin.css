@@ -89,6 +89,7 @@ main .article .maj-title, main .article .min-title {
 main .article .maj-title span, main .article .min-title span {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  white-space: nowrap;
   width: auto;
   font-size: 1.25rem;
   padding-right: 1rem;
@@ -248,4 +249,49 @@ main {
   padding-bottom: 0.5rem;
   border-bottom: 3px solid rgb(85, 174, 180);
   font-size: 1.75rem;
+}
+
+button.tag-btn {
+  position: relative;
+}
+button.tag-btn a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border: 1px solid #2e75ab;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 50%;
+  height: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  top: 0;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  width: 20px;
+}
+
+.inputControl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.inputControl span {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  width: auto;
+  font-size: 1rem;
+  padding-right: 1rem;
+  font-weight: 900;
 }

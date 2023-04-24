@@ -7,8 +7,8 @@
     <title>文章列表</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/admin.css" />
-    <link rel="stylesheet" href="css/articleList/articleList.css">
-    <script src="./node_modules/ckeditor4/ckeditor.js"></script>
+    <link rel="stylesheet" href="css/articleList/articleList.css" />
+    <!-- <script src="./node_modules/ckeditor4/ckeditor.js"></script> -->
   </head>
   <body>
     <div class="w-100 bg-light d-flex" id="root">
@@ -16,9 +16,241 @@
       <main class="h-100 d-flex">
         <section class="articleList-container">
           <div class="mjr_title">文章列表</div>
+          <section class="filter-container">
+            <div class="input-title-date">
+              <div class="filter-tag">
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#tagModal"
+                  class="btn btn-success text-light w-100"
+                >
+                  搜尋標籤:
+                </button>
+              </div>
+              <div class="inputControl filter-title">
+                <span>搜尋標題:</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="主標/副標"
+                />
+              </div>
+              <div class="inputControl filter-date">
+                <span>搜尋日期:</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="搜尋日期"
+                />
+              </div>
+            </div>
+            <div class="tagsList">
+              <button type="button" class="btn btn-primary btn-sm tag-btn">
+                最新
+                <a href="">x</a>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm tag-btn">
+                肝臟
+                <a href="">x</a>
+              </button>
+              <button type="button" class="btn btn-primary btn-sm tag-btn">
+                癌症
+                <a href="">x</a>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm tag-btn">
+                飲料
+                <a href="">x</a>
+              </button>
+            </div>
+
+            <div class="btn-container">
+              <button type="button" class="btn btn-primary text-white">
+                確定
+              </button>
+              <button type="button" class="btn btn-outline-danger">清除</button>
+            </div>
+          </section>
+          <section class="list-container">
+            <table class="table table-striped table-hover">
+              <thead class="bg-primary">
+                <tr>
+                  <th scope="col" style="width: 1%"></th>
+                  <th scope="col" style="width: 5%">預覽圖</th>
+                  <th scope="col" class="tableTitle" style="width: 20%">
+                    標題
+                  </th>
+                  <th scope="col" style="width: 10%">標籤</th>
+                  <th scope="col" style="width: 10%">屬性</th>
+                  <th scope="col" style="width: 10%">標籤</th>
+                  <th scope="col" style="width: 10%">屬性</th>
+                  <th scope="col" style="width: 10%">標籤</th>
+                  <th scope="col" style="width: 10%">屬性</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="form-check d-flex justify-content-center">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="flexCheckDefault"
+                        value=""
+                      />
+                    </div>
+                  </th>
+                  <td>image</td>
+                  <td class="tableTitle">
+                    <div class="text-dark mainTitle"></div>
+                    <div class="text-dark minTitle">888888</div>
+                    <div
+                      class="dropdown table-group d-flex justify-content-end"
+                    >
+                      <div
+                        class="text-secondary date dropdown-toggle"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      ></div>
+                      <ul
+                        class="dropdown-menu date"
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <li class="text-primary fw-bolder fs-6">文章記錄</li>
+                        <li>
+      
+                            >建立文章</a
+                          >
+                        </li>
+                        <li>
+                   
+                        </li>
+                        <li>
+                        
+                          
+                        </li>
+                        <li>
+                     
+                  </td>
+                  <td>
+                    <div class="d-flex">
+                      <div class="btn text-primary px-1 d-table">#88</div>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td>86</td>
+                  <td>15</td>
+                  <td>52</td>
+                  <td class="text-center">
+                    <div class="btn-group table-group">
+                      <button
+                        type="button"
+                        class="btn btn-primary dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">預覽頁面</a></li>
+                        <li><a class="dropdown-item" href="#">編輯內文</a></li>
+                        <li><a class="dropdown-item" href="#">編輯紀錄</a></li>
+                        <li><a class="dropdown-item" href="#">刪除文章</a></li>
+                        <li><a class="dropdown-item" href="#">下載文章</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="form-check d-flex justify-content-center">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="flexCheckDefault"
+                        value=""
+                      />
+                    </div>
+                  </th>
+                  <td>image</td>
+                  <td class="tableTitle">
+                    <div class="text-dark mainTitle"></div>
+                    <div class="text-dark minTitle">888888</div>
+                    <div
+                      class="dropdown table-group d-flex justify-content-end"
+                    >
+                      <div
+                        class="text-secondary date dropdown-toggle"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      ></div>
+                      <ul
+                        class="dropdown-menu date"
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <li class="text-primary fw-bolder fs-6">文章記錄</li>
+                        <li>
+      
+                            >建立文章</a
+                          >
+                        </li>
+                        <li>
+                   
+                        </li>
+                        <li>
+                        
+                          
+                        </li>
+                        <li>
+                     
+                  </td>
+                  <td>
+                    <div class="d-flex">
+                      <div class="btn text-primary px-1 d-table">#88</div>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td>86</td>
+                  <td>15</td>
+                  <td>52</td>
+                  <td class="text-center">
+                    <div class="btn-group table-group">
+                      <button
+                        type="button"
+                        class="btn btn-primary dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">預覽頁面</a></li>
+                        <li><a class="dropdown-item" href="#">編輯內文</a></li>
+                        <li><a class="dropdown-item" href="#">編輯紀錄</a></li>
+                        <li><a class="dropdown-item" href="#">刪除文章</a></li>
+                        <li><a class="dropdown-item" href="#">下載文章</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </section>
       </main>
     </div>
+
+    <div
+      class="modal fade"
+      id="tagModal"
+      tabindex="-1"
+      aria-labelledby="tagModalLabel"
+      aria-hidden="true"
+    ></div>
   </body>
 </html>
 <script></script>
@@ -31,3 +263,7 @@
 <!-- 特殊 -->
 <!-- <script src="./js/second-navUI.js"></script>
 <script src="./js/tab-content.js"></script> -->
+
+<script src="/js/filterUI.js"></script>
+<script src="/js/list-table.js"></script>
+<script src="/js/tag-modal.js"></script>

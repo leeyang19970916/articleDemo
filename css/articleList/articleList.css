@@ -1,3 +1,99 @@
+section.filter-container {
+  border-radius: 20px;
+  border: 2px solid steelblue;
+  background-color: rgb(242, 239, 236);
+  margin-top: 1rem;
+  padding: 1rem 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+section.filter-container .input-title-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.filter-container .input-title-date .filter-tag {
+  width: 10%;
+}
+section.filter-container .input-title-date .filter-title {
+  width: 50%;
+}
+section.filter-container .input-title-date .filter-date {
+  width: 30%;
+}
+section.filter-container .tagsList {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px rgba(100, 100, 100, 0.343) solid;
+  background-color: rgba(233, 242, 253, 0.69);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+section.filter-container .tagsList button {
+  margin: 0 1rem 1rem 0;
+}
+section.filter-container .btn-container {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid rgb(227, 177, 142);
+}
+section.filter-container .btn-container button {
+  margin-left: 1rem;
+  width: 10%;
+}
+
+.list-container {
+  padding-top: 1.25rem;
+}
+.list-container .table {
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+.list-container .table.table-striped {
+  border-radius: 10px;
+}
+.list-container .table thead {
+  border-radius: 10px 10px 0 0;
+}
+
 main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

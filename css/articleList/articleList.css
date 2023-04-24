@@ -94,6 +94,13 @@ section.filter-container .btn-container button {
   border-radius: 10px 10px 0 0;
 }
 
+tbody .type .type-item {
+  display: inline;
+  margin: 0;
+  color: snow;
+  background-color: rgb(166, 204, 114);
+}
+
 main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

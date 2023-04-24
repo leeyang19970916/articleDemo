@@ -13,3 +13,17 @@
     }
   }
 }
+tbody{
+    .type{
+        // white-space:nowrap;
+        // display: flex;
+        // // flex-direction: column;
+        // flex-wrap: wrap;
+        .type-item{
+            display: inline;
+            margin: 0;
+            color:snow;
+            background-color: rgb(166, 204, 114) ;
+        }
+    }
+}

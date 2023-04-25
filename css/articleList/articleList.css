@@ -83,6 +83,13 @@ section.filter-container .btn-container button {
 .list-container {
   padding-top: 1.25rem;
 }
+.list-container .header-page {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: end;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .list-container .table {
   border-collapse: collapse;
   border-radius: 10px;
@@ -99,6 +106,15 @@ tbody .type .type-item {
   margin: 0;
   color: snow;
   background-color: rgb(166, 204, 114);
+}
+tbody .other {
+  text-align: end;
+}
+tbody .other .dropdown-toggle::after {
+  margin: 0;
+}
+tbody .other .dropdown-menu .dropdown-item {
+  text-align: center;
 }
 
 main {

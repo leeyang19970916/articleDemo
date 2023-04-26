@@ -1,37 +1,9 @@
-let taglistArr = [
-  { id: "health", name: "健康" },
-  { id: "text1", name: "測試" },
-
-  { id: "bodyyyyy", name: "胃痛" },
-  { id: "noseeeeee", name: "支氣管炎" },
-
-  { id: "nose", name: "鼻塞" },
-  { id: "head", name: "頭痛" },
-
-  { id: "heart", name: "心臟病" },
-  { id: "qwer", name: "神經科" },
-
-  { id: "chinese", name: "中醫" },
-  { id: "west", name: "西醫" },
-
-  { id: "dick", name: "泌尿科" },
-  { id: "wify", name: "婦產科" },
-
-  { id: "ceacer", name: "癌症" },
-  { id: "stone", name: "骨科" },
-
-  { id: "bodyheart", name: "身心科" },
-  { id: "attack", name: "肝臟打擊" },
-
-  { id: "game", name: "艾爾登法還" },
-  { id: "energy", name: "energy" },
-];
 let isEdit = false;
 function tagListUI() {
   let tagContainerDOM = document.querySelector(".articleTags-list");
   let str = "";
-  for (let i = 0; i < taglistArr.length; i++) {
-    const element = taglistArr[i];
+  for (let i = 0; i < normalTaglistArr.length; i++) {
+    const element = normalTaglistArr[i];
     str += ` <div class="btn-set">
     <button
       type="button"
@@ -51,10 +23,10 @@ function tagListUI() {
 tagListUI();
 
 const removeTag = (id) => {
-  taglistArr = taglistArr.filter((element) => element.id !== id);
-  // console.log(taglistArr,"taggglistArrr")
+  normalTaglistArr = normalTaglistArr.filter((element) => element.id !== id);
+  // console.log(normalTaglistArr,"taggglistArrr")
   tagListUI();
-  // return taglistArr
+  // return normalTaglistArr
 };
 const editHandler = () => {
   isEdit = !isEdit;
@@ -65,7 +37,7 @@ const searchTagHandler = () => {
     if (!value) {
       return;
     }
-    taglistArr=taglistArr.filter(element=>element.name==value)
+    normalTaglistArr=normalTaglistArr.filter(element=>element.name==value)
     // 篩選沒寫完懶得寫了
     tagListUI();
 };
@@ -79,7 +51,7 @@ const addTagHandler = () => {
     id: `${ new Date().getTime().toString()}`,
     name: value,
   };
-  taglistArr.push(newTag);
+  normalTaglistArr.push(newTag);
 
   document.querySelector("#addInput").value = "";
   tagListUI();
@@ -97,8 +69,8 @@ const confirmModal=()=>{
         return
     }
     let newTag={id:tagId,name:newValue}
-    for (let i = 0; i < taglistArr.length; i++) {
-        const element = taglistArr[i];
+    for (let i = 0; i < normalTaglistArr.length; i++) {
+        const element = normalTaglistArr[i];
         if (element.id===newTag.id) {
             element.name=newTag.name
             break

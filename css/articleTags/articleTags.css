@@ -58,10 +58,49 @@ main {
 }
 .articleTag-container .articleTags-list {
   width: 100%;
-  border: 3px solid #e5dccb;
-  padding: 1.25rem 1rem;
-  border-radius: 10px;
-  min-height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+.articleTag-container .articleTags-list .item-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.articleTag-container .articleTags-list .item-container.tag {
+  margin-right: 3rem;
+}
+.articleTag-container .articleTags-list .item-container.type {
+  margin-left: 3rem;
+}
+.articleTag-container .articleTags-list .item-container .name {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px salmon solid;
+  width: 100%;
+}
+.articleTag-container .articleTags-list .item-container .list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,36 +114,12 @@ main {
           justify-content: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
-.articleTag-container .articleTags-list .btn-set {
+.articleTag-container .articleTags-list .item-container .list .tag-btn {
   margin-right: 1rem;
-  margin-bottom: 1.25rem;
-  position: relative;
-}
-.articleTag-container .articleTags-list .btn-set button {
-  color: white;
-}
-.articleTag-container .articleTags-list .btn-set .remove-markIcon {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: red;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 50%;
-  background-color: yellow;
+  margin-bottom: 1rem;
 }
 
 .modal .modal-body {

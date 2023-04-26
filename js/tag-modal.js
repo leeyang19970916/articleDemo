@@ -2,8 +2,8 @@ let str = `      <div
 class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
 >
 <div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="tagModalLabel">新增標籤</h5>
+  <div class="modal-header bg-primary text-light">
+    <h5 class="modal-title " id="tagModalLabel">新增標籤</h5>
     <button
       type="button"
       class="btn-close"
@@ -14,17 +14,17 @@ class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
   <div class="modal-body">
     <div class="body-block">
       <div class="add-newTag">
-        <span>新增標籤:</span>
+        <span>新增自訂標籤:</span>
         <div class="input-group">
           <input
             type="text"
             class="form-control"
-            placeholder="Recipient's username"
+            placeholder="新增自訂標籤"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
           />
           <button
-            class="btn btn-outline-secondary"
+            class="btn btn-warning"
             type="button"
             id="button-addon2"
           >
@@ -34,34 +34,29 @@ class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
       </div>
     </div>
     <div class="body-block">
-      <div class="body_title">共有標籤:</div>
-      <div class="mt-2 body-tag">
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-        <button type="button" class="btn btn-dark">心肌梗塞</button>
-      </div>
+      <div class="body_title">一般標籤:</div>
+      <div class="mt-2 body-tag normalTag-container">
+      ${normalTaglistArr
+        .map(
+          (item) => `
+        <button data-id="${item.id}" type="button" 
+          class="btn btn-primary" onclick="currentTagHandler()">
+          ${item.name}
+        </button>
+      `
+        )
+        .join(" ")}
+    </div>
     </div>
     <div class="body-block">
-    <div class="body_title">屬性:</div>
+    <div class="body_title">屬性標籤:</div>
     <div class="mt-2 body-tag">
-      <button type="button" class="btn btn-warning">最新</button
-      ><button type="button" class="btn btn-warning">熱門</button
-      ><button type="button" class="btn btn-warning">愛心</button>
+    ${typeTagListArr
+      .map(
+        (item) =>
+          `<button data-id=${item.id} type="button" class="btn btn-warning">${item.name}</button>`
+      )
+      .join(" ")}
     </div>
   </div>
     <div class="body-block">
@@ -90,3 +85,22 @@ function tagModalUI(params) {
   dom.innerHTML = str;
 }
 tagModalUI();
+// function normalTagUI(params) {
+//   let dom=document.querySelector(".normalTag-container")
+//   let str=""
+//   for (let i = 0; i < normalTaglistArr.length; i++) {
+//     const item = normalTaglistArr[i];
+//     str+=`<button type="button" class="btn btn-warning mr-1 mb-1">${item.name}</button>`
+//   }
+//   dom.innerHTML=str
+// }
+// normalTagUI()
+function currentTagHandler(typeName, item) {
+  let id="123"
+  let index=currentTagArr.findIndex(tag=>tag.id===id)
+  if (index !== -1) {
+    currentTagArr = currentTagArr.filter(tag => tag.id !== id);
+  }else{
+    currentTagArr.push()
+  }
+}

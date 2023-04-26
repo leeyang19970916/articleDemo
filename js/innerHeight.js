@@ -1,8 +1,6 @@
 function innerHeightHandler() {
   let height = window.innerHeight;
-  window.addEventListener("resize", function () {
-    height = window.innerHeight;
-  });
+
   return height;
 }
 const heightHandler = () => {
@@ -11,3 +9,7 @@ const heightHandler = () => {
   root.style.height = `${innerHeight}px`;
 };
 heightHandler();
+window.addEventListener("resize", function () {
+  heightHandler();
+  // height = window.innerHeight;
+});

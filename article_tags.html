@@ -31,7 +31,7 @@
                 class="btn btn-warning text-white"
                 type="button"
                 id="button-addon2"
-                onclick="searchTagHandler()" 
+                onclick="searchTagHandler()"
               >
                 /
               </button>
@@ -46,17 +46,184 @@
                 placeholder="新增..."
               />
               <button
-                class="btn btn-warning text-white"
+                class="btn btn-warning text-white px-3"
                 type="button"
                 id="button-addon2"
-                onclick="addTagHandler()" 
+                onclick="addTagHandler()"
               >
-                +
+                標籤
+              </button>
+              <button
+                class="btn btn-info text-white px-3"
+                type="button"
+                id="button-addon2"
+                onclick="addTagHandler()"
+              >
+                屬性
               </button>
             </div>
-            <button type="button" onclick="editHandler()" class="btn btn-primary editBtn">編輯</button>
+            <button
+              type="button"
+              onclick="editHandler()"
+              class="btn btn-primary editBtn"
+            >
+              編輯
+            </button>
           </section>
           <section class="articleTags-list">
+            <div class="item-container tag">
+              <div class="name tag-Name">標籤</div>
+              <div class="list tag-List">
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+                <button
+                  type="button"
+                  onclick="editModalHandler()"
+                  class="btn btn-primary text-white tag-btn"
+                >
+                  飲料
+                  <a href="" onclick="removeTag()">x</a>
+                </button>
+              </div>
+            </div>
+            <div class="item-container type">
+              <div class="name type-Name">屬性</div>
+              <div class="list type-List"></div>
+            </div>
           </section>
         </section>
       </main>
@@ -84,9 +251,11 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="now-tagName">目前名稱: <span>我愛羅</span> </div>
+            <div class="now-tagName">目前名稱: <span>我愛羅</span></div>
             <div class="input-group input new-tagName">
-              <label for="addInput" class="form-label text-dark">修改名稱:</label>
+              <label for="addInput" class="form-label text-dark"
+                >修改名稱:</label
+              >
               <input
                 type="text"
                 class="form-control"
@@ -104,7 +273,13 @@
             >
               取消
             </button>
-            <button type="button" onclick="confirmModal()" class="btn btn-primary w-100 text-light">確定</button>
+            <button
+              type="button"
+              onclick="confirmModal()"
+              class="btn btn-primary w-100 text-light"
+            >
+              確定
+            </button>
           </div>
         </div>
       </div>
@@ -117,7 +292,7 @@
 <!-- 固定式 -->
 <script src="./js/innerHeight.js"></script>
 <script src="./js/navUI.js"></script>
-
+<script src="./js/tempData.js"></script>
 <!-- 特殊 -->
 
 <script src="./js/tagControl.js"></script>

@@ -2,7 +2,8 @@ section {
   &.filter-container {
     border-radius: 20px;
     border: 2px solid steelblue;
-    background-color: rgb(242, 239, 236);
+    // background-color: rgb(242, 239, 236);
+    background: linear-gradient(rgb(242, 239, 236), rgba(115, 183, 178,0.1));
     margin-top: 1rem;
     padding: 1rem 2rem 0 2rem;
     display: flex;

@@ -1,7 +1,8 @@
 section.filter-container {
   border-radius: 20px;
   border: 2px solid steelblue;
-  background-color: rgb(242, 239, 236);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(242, 239, 236)), to(rgba(115, 183, 178, 0.1)));
+  background: linear-gradient(rgb(242, 239, 236), rgba(115, 183, 178, 0.1));
   margin-top: 1rem;
   padding: 1rem 2rem 0 2rem;
   display: -webkit-box;
@@ -85,14 +86,34 @@ section.filter-container .btn-container button {
 }
 .list-container .header-page {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: end;
   letter-spacing: 0.5rem;
   margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.list-container .header-page .icon {
+  cursor: pointer;
+  border-radius: 10%;
+  margin: 0 0.5rem;
+  border: #774e4e 1px solid;
 }
 .list-container .table {
-  border-collapse: collapse;
-  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .list-container .table.table-striped {
   border-radius: 10px;
@@ -101,11 +122,32 @@ section.filter-container .btn-container button {
   border-radius: 10px 10px 0 0;
 }
 
+tbody {
+  vertical-align: middle !important;
+}
 tbody .type .type-item {
   display: inline;
   margin: 0;
   color: snow;
   background-color: rgb(166, 204, 114);
+}
+tbody .title {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+tbody .image img {
+  border-radius: 10px;
+}
+tbody .date {
+  text-align: end;
+}
+tbody .date .date-time {
+  font-size: smaller;
+  color: #774e4e;
+}
+tbody .date .date-date {
+  font-size: medium;
+  color: #774e4e;
 }
 tbody .other {
   text-align: end;

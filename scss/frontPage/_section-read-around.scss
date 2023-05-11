@@ -1,0 +1,39 @@
+section {
+  padding: 0;
+  .read-around {
+    margin: 1rem 0;
+    .title {
+      font-weight: 900;
+      border-bottom: 2px solid #cdcdcd;
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      .title-name {
+        font-size: 1.75rem;
+        color: #333333;
+      }
+      .title-more {
+        font-size: 1rem;
+        color: #666666;
+        cursor: pointer;
+      }
+    }
+    .content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      .content-card {
+        width: calc(100% / 3 - 1.5%);
+        .content-article-title {
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          line-height: 25px;
+          font-size: 1.25rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -70,6 +70,7 @@ const navbarUI = () => {
       <div class="accordion accordion-flush" id="accordionFlushExample">
         ${str}
       </div>
+      <button class="btn btn-primary w-100 " onclick="gotoFrontPage()">前往前台</button>
     `;
 };
 navbarUI();
@@ -83,4 +84,8 @@ if (currentPath===`/${id}.html`) {
   return
 }
   location.href = `../${id}.html`;
+}
+const gotoFrontPage=()=>{
+  console.log("qqqqq")
+  location.href = `../articleDemo/front_desk/frontPage.html`;
 }

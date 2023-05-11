@@ -1,0 +1,28 @@
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5rem;
+  &.carousel {
+    padding: 2.5rem 0 ;
+    .carousel-inner {
+      height: 300px;
+      .carousel-item {
+        height: 100%;
+        .background {
+          height: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        .background-one {
+          background-image: url("../../image/卡比.jpg");
+        }
+        .background-two {
+          background-image: url("../../image/皮克敏.jpg");
+        }
+        .background-three {
+          background-image: url("../../image/馬力歐.jpeg");
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+main {
+  &.detail-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: inherit;
+    article {
+      width: 70%;
+      border: 2px saddlebrown solid;
+      margin-right: 1rem;
+      .title {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        color: #333333;
+        border: 0;
+      }
+      .date {
+        color: #666666;
+        margin: 1rem 0 2rem 0;
+      }
+      .content {
+      }
+      .tagList {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+        .tag-item {
+          border-radius: 16px;
+          background-color: white;
+          padding: 4px 16px;
+          margin-right: 1rem;
+        }
+      }
+      .linkList {
+        display: flex;
+        align-items: center;
+        .link-item {
+          margin-left: 1rem;
+        }
+      }
+    }
+    section {
+      width: 30%;
+      //   border: skyblue 2px solid;
+      margin-left: 1rem;
+      padding: 0;
+      .hot-tag-container {
+        width: 100%;
+        border-radius: 4px;
+        background-color: #8b85854e;
+        // border: #333333 1px solid;
+        padding: 1.5rem 1rem;
+        .title {
+          font-size: 1.5rem;
+
+          color: #333333;
+          border: 0;
+        }
+        .tagList {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 1rem 0;
+          .tag-item {
+            border-radius: 16px;
+            background-color: white;
+            padding: 4px 16px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.75rem;
+          }
+        }
+      }
+    }
+    .follow-download {
+      margin: 2rem 0;
+      .title {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #333333;
+      }
+      .content {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        // justify-content:space-between ;
+        .btn{
+            color: white;
+            // width: 45%;
+            width: 100%;
+            padding: 1rem 0;
+            &.fb{
+                margin-right: 0.5rem;
+            }
+            &.line{
+                margin-left: 0.5rem;
+            }
+
+        }
+      }
+    }
+    .other{
+        .title{
+            margin-bottom: 0.5rem;
+        }
+        .content{
+            padding: 0.5rem 0;
+            .content-article-title{
+                font-family: 'Noto Sans TC';
+                padding-top: 1rem;
+                letter-spacing: 0.01rem;
+                font-size: 1rem;
+                line-height: 25px;
+            }
+        }
+    }
+  }
+}

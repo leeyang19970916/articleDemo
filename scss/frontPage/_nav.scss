@@ -1,0 +1,19 @@
+nav {
+  background-color: #24a8a7;
+  color: #ffffff;
+  display: flex;
+  justify-content: end;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+  }
+  .nav-item {
+    white-space: nowrap;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+}

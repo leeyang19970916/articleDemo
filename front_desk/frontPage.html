@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontPage</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/frontPage/frontPage.css" />
+  </head>
+  <body>
+    <!-- id="root" -->
+    <div class="container border p-0" id="root">
+      <header>
+        <div class="header-left">
+          <div><button class="btn btn-warning">title</button></div>
+          <div class="header-nav">
+            <div class="header-nav-item">預約掛號</div>
+            <div class="header-nav-item">健康報</div>
+            <div class="header-nav-item">商城</div>
+            <div class="header-nav-item">APP下載</div>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-primary text-white">追蹤臉書</button>
+          <button class="btn btn-success text-white">加入LINE</button>
+        </div>
+      </header>
+      <section class="w-100">
+        <div class="announce">
+          icon HOT 下載愛管家 iCare APP 掛號看診更方便!!
+        </div>
+        <div class="search-container">
+          <div class="search-card">
+            <div class="search-card-select">
+              <div class="search-card-select-item">找診所</div>
+              <div class="search-card-select-item">找附近</div>
+              <div class="search-card-select-item">查詢掛號</div>
+            </div>
+            <div class="search-card-input">
+              <div class="input-custom">
+                <div
+                  class="cityzone"
+                  data-bs-container="body"
+                  data-bs-toggle="popover"
+                  data-bs-placement="left"
+                  data-bs-content="Left popover"
+                  onclick="cityZoneHandler()"
+                >
+                  <span>台北市/內湖區</span>
+                </div>
+
+                <div class="line"></div>
+                <input
+                  type="text"
+                  class="inputValue"
+                  placeholder="Recipient's username"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+              </div>
+              <button class="btn btn-success">搜尋</button>
+              <div class="cityzone-selectContainer">
+                <div class="d-flex flex-wrap">
+                  <div class="mainZone-item normal active">北部</div>
+                  <div class="mainZone-item normal">中部</div>
+                  <div class="mainZone-item normal">南部</div>
+                  <div class="mainZone-item normal">東部</div>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <div class="minZone-item normal active">台北市</div>
+                  <div class="minZone-item normal">中部</div>
+                  <div class="minZone-item normal">南部</div>
+                  <div class="minZone-item normal">東部</div>
+                  <div class="minZone-item normal">北部</div>
+                  <div class="minZone-item normal">中部</div>
+                  <div class="minZone-item normal">南部</div>
+                  <div class="minZone-item normal">東部</div>
+                  <div class="minZone-item normal">東部</div>
+                  <div class="minZone-item normal">中部</div>
+                  <div class="minZone-item normal">南部</div>
+                  <div class="minZone-item normal">東部</div>
+                  <div class="minZone-item normal">東部</div>
+                </div>
+                <div class="mainZone-item normal active">區域</div>
+                <div class="d-flex">
+                  <div class="minZone-item">不分區</div>
+                  <div class="d-flex flex-wrap">
+                    <div class="minZone-item normal active">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">北部</div>
+                    <div class="minZone-item normal">中部</div>
+                    <div class="minZone-item normal">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">中部</div>
+                    <div class="minZone-item normal">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal active">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">北部</div>
+                    <div class="minZone-item normal">中部</div>
+                    <div class="minZone-item normal">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">中部</div>
+                    <div class="minZone-item normal">南部</div>
+                    <div class="minZone-item normal">東部</div>
+                    <div class="minZone-item normal">東部</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-card-more">
+              診所快選 :
+              <span class="clinic-btn">家醫科</span
+              ><span class="clinic-btn">耳鼻喉科</span
+              ><span class="clinic-btn">皮膚科</span
+              ><span class="clinic-btn">復健科</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="height: 100px; background-color: #f5f5f5"></div>
+      <main class="main-container">
+        <div class="video-container">
+          <div class="title">
+            <div class="title-name">醫師開講</div>
+            <div class="title-more">查看更多</div>
+          </div>
+          <dd class="content">
+            <div class="video-title">
+              濕氣重好疲倦！日中醫：6類食物促發汗排濕，還顧脾健胃
+            </div>
+            <div class="video">video</div>
+          </dd>
+        </div>
+        <div class="article-container">
+          <div class="title">
+            <div class="title-name">健康新知</div>
+            <div class="title-more">查看更多</div>
+          </div>
+          <dd class="content">
+            <div class="article-item">
+              <div class="article-image">image</div>
+              <div class="article-title">
+                <div class="title">
+                  新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗
+                </div>
+                <div class="date">2023 年 04 月 12 日</div>
+              </div>
+            </div>
+            <div class="article-item">
+              <div class="article-image">image</div>
+              <div class="article-title">
+                <div class="title">
+                  新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗
+                </div>
+                <div class="date">2023 年 04 月 12 日</div>
+              </div>
+            </div>
+            <div class="article-item">
+              <div class="article-image">image</div>
+              <div class="article-title">
+                <div class="title">
+                  新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗
+                </div>
+                <div class="date">2023 年 04 月 12 日</div>
+              </div>
+            </div>
+          </dd>
+        </div>
+      </main>
+      <footer>
+        <div class="list">
+          <div class="footer-item">臉書粉絲團</div>
+          <div class="footer-item">關於愛管家</div>
+          <div class="footer-item">服務條款</div>
+          <div class="footer-item">隱私權政策</div>
+          <div class="footer-item">聯絡客服</div>
+        </div>
+        <div class="copyright">
+          Copyright © 2023 Sprinf iCare Corporation. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/innerHeight.js"></script>
+<!-- <script src="../twPartition.json"></script> -->
+<script src="../js/twPartitionHandler.js"></script>

@@ -3,6 +3,9 @@ main {
     width: 20%;
     border-right: 1px rgb(218, 218, 218) solid;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .second-nav-item{
         font-weight: bolder;
         font-size: 1.5rem;

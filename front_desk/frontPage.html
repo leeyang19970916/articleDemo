@@ -11,6 +11,10 @@
   <body>
     <!-- id="root" -->
     <div class="container border p-0" id="root">
+      <div
+        class="search-modal-control"
+        onclick="cityZoneContainerHandler('remove')"
+      ></div>
       <header>
         <div class="header-left">
           <div><button class="btn btn-warning">title</button></div>
@@ -45,9 +49,12 @@
                   data-bs-toggle="popover"
                   data-bs-placement="left"
                   data-bs-content="Left popover"
-                  onclick="cityZoneHandler()"
+                  onclick="cityZoneContainerHandler('open')"
                 >
-                  <span>台北市/內湖區</span>
+                  <span>
+                    <span class="nowCity">台北市</span> /
+                    <span class="nowDistrict">內湖區</span></span
+                  >
                 </div>
 
                 <div class="line"></div>
@@ -61,54 +68,12 @@
               </div>
               <button class="btn btn-success">搜尋</button>
               <div class="cityzone-selectContainer">
-                <div class="d-flex flex-wrap">
-                  <div class="mainZone-item normal active">北部</div>
-                  <div class="mainZone-item normal">中部</div>
-                  <div class="mainZone-item normal">南部</div>
-                  <div class="mainZone-item normal">東部</div>
-                </div>
-                <div class="d-flex flex-wrap">
-                  <div class="minZone-item normal active">台北市</div>
-                  <div class="minZone-item normal">中部</div>
-                  <div class="minZone-item normal">南部</div>
-                  <div class="minZone-item normal">東部</div>
-                  <div class="minZone-item normal">北部</div>
-                  <div class="minZone-item normal">中部</div>
-                  <div class="minZone-item normal">南部</div>
-                  <div class="minZone-item normal">東部</div>
-                  <div class="minZone-item normal">東部</div>
-                  <div class="minZone-item normal">中部</div>
-                  <div class="minZone-item normal">南部</div>
-                  <div class="minZone-item normal">東部</div>
-                  <div class="minZone-item normal">東部</div>
-                </div>
+                <div class="d-flex flex-wrap area"></div>
+                <div class="d-flex flex-wrap city"></div>
                 <div class="mainZone-item normal active">區域</div>
-                <div class="d-flex">
+                <div class="d-flex district">
                   <div class="minZone-item">不分區</div>
-                  <div class="d-flex flex-wrap">
-                    <div class="minZone-item normal active">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">北部</div>
-                    <div class="minZone-item normal">中部</div>
-                    <div class="minZone-item normal">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">中部</div>
-                    <div class="minZone-item normal">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal active">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">北部</div>
-                    <div class="minZone-item normal">中部</div>
-                    <div class="minZone-item normal">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">中部</div>
-                    <div class="minZone-item normal">南部</div>
-                    <div class="minZone-item normal">東部</div>
-                    <div class="minZone-item normal">東部</div>
-                  </div>
+                  <div class="d-flex flex-wrap district-list"></div>
                 </div>
               </div>
             </div>
@@ -190,5 +155,114 @@
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/innerHeight.js"></script>
+<script src="../AreaManager.js"></script>
 <!-- <script src="../twPartition.json"></script> -->
-<script src="../js/twPartitionHandler.js"></script>
+<!-- <script src="../js/twPartitionHandler.js"></script> -->
+<script>
+  let manager = new AreaManager();
+  manager
+    .onAreaChange((initial, items) => {
+      areaUIRender(initial, items);
+    })
+    .onCityChange((initial, items) => {
+      cityUIRender(initial, items);
+    })
+    .onDistrictChange((initial, items) => {
+      districtUIRender(initial, items);
+    })
+    .start();
+
+  function cityZoneContainerHandler(state) {
+    let dom = document.querySelector(".cityzone-selectContainer");
+    let backgroundDom = document.querySelector(".search-modal-control");
+    if (state === "open") {
+      dom.classList.toggle("active");
+      backgroundDom.classList.add("d-block");
+    } else {
+      dom.classList.remove("active");
+      backgroundDom.classList.remove("d-block");
+    }
+  }
+  function closeModal(params) {
+    let dom = document.querySelector(".cityzone-selectContainer");
+    dom.classList.remove("active");
+  }
+  function areaUIRender(initial, items) {
+    let dom = document.querySelector(".cityzone-selectContainer .area");
+    let str = "";
+    items.forEach((item) => {
+      str += `<div data-id="${item}" onclick="addrChange('${item}','area')"
+      class="mainZone-item normal ${item === `${initial}` ? "active" : ""}">
+      ${item}</div>`;
+    });
+    dom.innerHTML = str;
+  }
+
+  function cityUIRender(initial, items) {
+    let dom = document.querySelector(".cityzone-selectContainer .city");
+    let str = "";
+    items.forEach((item) => {
+      str += `<div data-id="${item}" onclick="addrChange('${item}','city')"
+      class="minZone-item normal ${item === `${initial}` ? "active" : ""}">
+      ${item}</div>`;
+    });
+    dom.innerHTML = str;
+    let nowCity = document.querySelector(".cityzone .nowCity");
+    nowCity.innerHTML = initial;
+  }
+
+  function districtUIRender(initial, items) {
+    let dom = document.querySelector(".cityzone-selectContainer .district");
+    let firstStr = ``;
+    let otherStr = ``;
+    items.forEach((item, index) => {
+      if (index === 0) {
+        firstStr = `<div data-id="${item.text}" onclick="addrChange('${
+          item.text
+        }','district')"
+        class="minZone-item normal ${
+          item.text === `${initial}` ? "active" : ""
+        }">
+        ${item.text}</div>`;
+      } else {
+        otherStr += `<div data-id="${item.text}" onclick="addrChange('${
+          item.text
+        }','district')" class="minZone-item normal ${
+          item.text === `${initial}` ? "active" : ""
+        }">${item.text}</div>`;
+      }
+    });
+    dom.innerHTML = `${firstStr}<div class="d-flex flex-wrap district-list">${otherStr}</div>`;
+
+    let nowDistrict = document.querySelector(".cityzone .nowDistrict");
+    nowDistrict.innerHTML = initial;
+  }
+
+  function addrChange(item, state) {
+    if (state === "area") {
+      let dom = document
+        .querySelector(".cityzone-selectContainer .area .normal.active")
+        .getAttribute("data-id");
+      if (item === dom) {
+        return;
+      }
+      manager.selectArea(item);
+    } else if (state === "city") {
+      let dom = document
+        .querySelector(".cityzone-selectContainer .city .normal.active")
+        .getAttribute("data-id");
+      if (item === dom) {
+        return;
+      }
+      manager.selectCity(item);
+    } else {
+      let dom = document
+        .querySelector(".cityzone-selectContainer .district .normal.active")
+        .getAttribute("data-id");
+      if (item === dom) {
+        return;
+      }
+      manager.selectDistrict(item);
+    }
+  }
+</script>

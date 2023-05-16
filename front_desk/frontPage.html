@@ -16,19 +16,6 @@
         onclick="cityZoneContainerHandler('remove')"
       ></div>
       <header>
-        <div class="header-left">
-          <div><button class="btn btn-warning">title</button></div>
-          <div class="header-nav">
-            <div class="header-nav-item">預約掛號</div>
-            <div class="header-nav-item">健康報</div>
-            <div class="header-nav-item">商城</div>
-            <div class="header-nav-item">APP下載</div>
-          </div>
-        </div>
-        <div class="header-right">
-          <button class="btn btn-primary text-white">追蹤臉書</button>
-          <button class="btn btn-success text-white">加入LINE</button>
-        </div>
       </header>
       <section class="w-100">
         <div class="announce">
@@ -91,8 +78,7 @@
       <main class="main-container">
         <div class="video-container">
           <div class="title">
-            <div class="title-name">醫師開講</div>
-            <div class="title-more">查看更多</div>
+
           </div>
           <dd class="content">
             <div class="video-title">
@@ -103,8 +89,7 @@
         </div>
         <div class="article-container">
           <div class="title">
-            <div class="title-name">健康新知</div>
-            <div class="title-more">查看更多</div>
+
           </div>
           <dd class="content">
             <div class="article-item">
@@ -138,16 +123,6 @@
         </div>
       </main>
       <footer>
-        <div class="list">
-          <div class="footer-item">臉書粉絲團</div>
-          <div class="footer-item">關於愛管家</div>
-          <div class="footer-item">服務條款</div>
-          <div class="footer-item">隱私權政策</div>
-          <div class="footer-item">聯絡客服</div>
-        </div>
-        <div class="copyright">
-          Copyright © 2023 Sprinf iCare Corporation. All rights reserved.
-        </div>
       </footer>
     </div>
   </body>
@@ -156,8 +131,17 @@
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/innerHeight.js"></script>
 <script src="../AreaManager.js"></script>
-<!-- <script src="../twPartition.json"></script> -->
-<!-- <script src="../js/twPartitionHandler.js"></script> -->
+<script src="../component/Header.js "></script>
+<script src="../component/Footer.js"></script>
+<script src="../component/Title-line.js"></script>
+<script>
+  Header()
+  Footer()
+  let video_title_dom=document.querySelector(".video-container .title")
+  titleLine(video_title_dom,"醫師開講","more")
+  let article_container_dom=document.querySelector(".article-container .title")
+  titleLine(article_container_dom,"健康新知","more")
+</script>
 <script>
   let manager = new AreaManager();
   manager

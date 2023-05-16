@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>健康報_首頁</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/frontPage/frontPage.css" />
+  </head>
+  <body>
+    <div class="container p-0 border">
+      <header></header>
+      <nav></nav>
+      <section class="carousel one"></section>
+      <main class="main-container">
+        <div class="article-container margin-change">
+          <div class="title"></div>
+          <dd class="content"></dd>
+        </div>
+        <div class="video-container margin-change">
+          <div class="title"></div>
+          <dd class="content">
+            <div class="video-title">
+              濕氣重好疲倦！日中醫：6類食物促發汗排濕，還顧脾健胃
+            </div>
+            <div class="video">video</div>
+          </dd>
+        </div>
+      </main>
+      <main class="main-container">
+        <div class="hot-container w-100">
+          <div class="title"></div>
+          <div class="content">
+            <div class="articleList"></div>
+            <div class="hashTagContainer"></div>
+          </div>
+        </div>
+      </main>
+      <main class="main-container">
+        <div class="edit_featured-container w-100">
+          <div class="title"></div>
+          <div class="content">
+            <div class="article-item cardStraight">
+              <div class="image">image</div>
+              <div class="title">
+                走樓梯膝蓋痛、總是有卡卡聲？可能是膝蓋骨頭軟化啦！
+              </div>
+            </div>
+            <div class="article-item cardStraight">
+              <div class="image">image</div>
+              <div class="title">
+                走樓梯膝蓋痛、總是有卡卡聲？可能是膝蓋骨頭軟化啦！
+              </div>
+            </div>
+            <div class="article-item cardStraight">
+              <div class="image">image</div>
+              <div class="title">
+                走樓梯膝蓋痛、總是有卡卡聲？可能是膝蓋骨頭軟化啦！
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="carousel two"></section>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../component/Footer.js"></script>
+<script src="../component/Carousel.js"></script>
+<script src="../component/Header.js"></script>
+<script src="../component/Navbar.js"></script>
+<script src="../component/Title-line.js"></script>
+<script src="../component/Card.js"></script>
+<script src="../component/HashTagContainer.js"></script>
+
+
+<script>
+  Header();
+  Navbar();
+  Carousel('.one');
+  Footer()
+  let video_title_dom = document.querySelector(".video-container .title");
+  titleLine(video_title_dom, "醫師開講", "more");
+  let article_container_dom = document.querySelector(
+    ".article-container .title"
+  );
+  titleLine(article_container_dom, "最新文章", "more");
+  let hot_container_dom = document.querySelector(".hot-container .title");
+  titleLine(hot_container_dom, "熱門文章", "more");
+  let article_container_CardDom = document.querySelector(
+    ".article-container .content"
+  );
+  let tempData = [
+    {
+      id: 1,
+      title: " 新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗",
+      date: "2023 年 04 月 12 日",
+      image: "",
+      content: "內容內容內容",
+    },
+    {
+      id: 2,
+      title: " 新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗",
+      date: "2023 年 04 月 12 日",
+      image: "",
+      content: "內容內容內容",
+    },
+    {
+      id: 3,
+      title: " 新北高雄各增1例本土猴痘「仍在住院中」超過1.8萬名額登記接種疫苗",
+      date: "2023 年 04 月 12 日",
+      image: "",
+      content: "內容內容內容",
+    },
+  ];
+  CardHorizontal(article_container_CardDom, tempData);
+
+  let hotcontainer_articleList_dom = document.querySelector(
+    ".hot-container .content .articleList"
+  );
+  CardHorizontal(hotcontainer_articleList_dom, tempData, "content");
+  HashTagContainer("hashTagContainer");
+
+  let edit_dom = document.querySelector(".edit_featured-container .title");
+  titleLine(edit_dom, "編輯精選", "more");
+  Carousel(".two");
+</script>

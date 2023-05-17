@@ -3,15 +3,10 @@ let articleArr = [
   {
     id: Math.random(),
     type: [
-      {
-        id: "new",
-        name: "最新",
-      },
-      {
-        id: "hot",
-        name: "熱門",
-      },
+      { id: "hot", name: "熱門" },
+      { id: "edit", name: "精選" },
     ],
+    category: "身心科",
     image: "./image/卡比.jpg",
     majorTitle: "標題標題標題",
     tag: [
@@ -38,15 +33,10 @@ let articleArr = [
   {
     id: Math.random(),
     type: [
-      {
-        id: "other",
-        name: "其他",
-      },
-      {
-        id: "hot",
-        name: "熱門",
-      },
+      { id: "hot", name: "熱門" },
+      { id: "edit", name: "精選" },
     ],
+    category: "身心科",
     image: "./image/卡比.jpg",
     majorTitle: "大標題題題題題",
     tag: [
@@ -81,15 +71,10 @@ let articleArr = [
   {
     id: Math.random(),
     type: [
-      {
-        id: "other",
-        name: "其他",
-      },
-      {
-        id: "hot",
-        name: "熱門",
-      },
+      { id: "hot", name: "熱門" },
+      { id: "edit", name: "精選" },
     ],
+    category: "身心科",
     image: "./image/卡比.jpg",
     majorTitle: "第三個標題",
     tag: [
@@ -127,19 +112,18 @@ const listTableUI = () => {
   let table_tbody_DOM = document.querySelector(".list-container tbody");
   for (let i = 0; i < articleArr.length; i++) {
     const element = articleArr[i];
+    console.log(element, "element");
     listStr += `
     <tr data-id="${element.id}">
-    <th scope="row" class="type">
-    ${element.type
-      .map((item) => `<p data-id=${item.id} class="type-item">${item.name}</p>`)
-      .join(" ")}
-    </th>
-
     <td class="image">
       <img src="${element.image}"  class="w-100" alt="">
     </td>
     <td class="title">
       <div class="text-dark mainTitle">${element.majorTitle}</div>
+    </td>
+    <td class="category">
+    <div >${element.category}</div>
+    <div class="text-end">${element.category}</div>
     </td>
     <td>
       <div class="d-flex">
@@ -153,6 +137,7 @@ const listTableUI = () => {
         
       </div>
     </td>
+    
     <td>${element.status}</td>
     <td class="date">
       <div class="date-time">${element.date.time}</div>

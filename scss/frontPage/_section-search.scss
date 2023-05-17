@@ -13,6 +13,9 @@
     width: 100%;
     display: flex;
     align-items: center;
+    @media (max-width: 576px) {
+      padding: 0.5rem;
+    }
     .cityzone {
       height: 100%;
       display: flex;
@@ -20,11 +23,15 @@
       justify-content: center;
       text-align: center;
       width: 30%;
-
       cursor: pointer;
+      @media (max-width: 576px) {
+        width: 50%;
+      }
     }
     .line {
-      width: 1px;
+      width: 2px;
+      color: transparent;
+      // color: #bbb9b9;
       height: 70%;
       background-color: #bbb9b9;
     }
@@ -35,6 +42,9 @@
       padding: 0 0.75rem;
       width: 70%;
       font-size: 1.25rem;
+      @media (max-width: 576px) {
+        // width: 50%;
+      }
       &:active,
       &:focus {
         border: 0;
@@ -56,6 +66,10 @@
     border-radius: 10px;
     z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @media (max-width: 576px) {
+      width: 100%;
+      top: 60%;
+    }
     &.active {
       visibility: visible;
       opacity: 1;

@@ -15,8 +15,7 @@
         class="search-modal-control"
         onclick="cityZoneContainerHandler('remove')"
       ></div>
-      <header>
-      </header>
+      <header></header>
       <section class="w-100">
         <div class="announce">
           icon HOT 下載愛管家 iCare APP 掛號看診更方便!!
@@ -44,7 +43,7 @@
                   >
                 </div>
 
-                <div class="line"></div>
+                <div class="line">|</div>
                 <input
                   type="text"
                   class="inputValue"
@@ -65,11 +64,13 @@
               </div>
             </div>
             <div class="search-card-more">
-              診所快選 :
-              <span class="clinic-btn">家醫科</span
-              ><span class="clinic-btn">耳鼻喉科</span
-              ><span class="clinic-btn">皮膚科</span
-              ><span class="clinic-btn">復健科</span>
+              <div class="clinic-title">診所快選 :</div>
+              <div class="clinic-btn-list">
+                <span class="clinic-btn">家醫科</span
+                ><span class="clinic-btn">耳鼻喉科</span
+                ><span class="clinic-btn">皮膚科</span
+                ><span class="clinic-btn">復健科</span>
+              </div>
             </div>
           </div>
         </div>
@@ -77,9 +78,7 @@
       <div style="height: 100px; background-color: #f5f5f5"></div>
       <main class="main-container">
         <div class="video-container">
-          <div class="title">
-
-          </div>
+          <div class="title"></div>
           <dd class="content">
             <div class="video-title">
               濕氣重好疲倦！日中醫：6類食物促發汗排濕，還顧脾健胃
@@ -88,9 +87,7 @@
           </dd>
         </div>
         <div class="article-container">
-          <div class="title">
-
-          </div>
+          <div class="title"></div>
           <dd class="content">
             <div class="article-item">
               <div class="article-image">image</div>
@@ -122,8 +119,7 @@
           </dd>
         </div>
       </main>
-      <footer>
-      </footer>
+      <footer></footer>
     </div>
   </body>
 </html>
@@ -135,12 +131,14 @@
 <script src="../component/Footer.js"></script>
 <script src="../component/Title-line.js"></script>
 <script>
-  Header()
-  Footer()
-  let video_title_dom=document.querySelector(".video-container .title")
-  titleLine(video_title_dom,"醫師開講","more")
-  let article_container_dom=document.querySelector(".article-container .title")
-  titleLine(article_container_dom,"健康新知","more")
+  Header();
+  Footer();
+  let video_title_dom = document.querySelector(".video-container .title");
+  titleLine(video_title_dom, "醫師開講", "more");
+  let article_container_dom = document.querySelector(
+    ".article-container .title"
+  );
+  titleLine(article_container_dom, "健康新知", "more");
 </script>
 <script>
   let manager = new AreaManager();

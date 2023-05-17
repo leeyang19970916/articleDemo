@@ -2,6 +2,9 @@ section {
   padding: 0;
   .read-around {
     margin: 1rem 0;
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
     .title {
       font-weight: 900;
       border-bottom: 2px solid #cdcdcd;
@@ -24,8 +27,15 @@ section {
       align-items: flex-start;
       justify-content: space-between;
       margin-top: 1.5rem;
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
       .content-card {
         width: calc(100% / 3 - 1.5%);
+        @media (max-width: 576px) {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
         .content-article-title {
           font-weight: 700;
           letter-spacing: 0.02em;

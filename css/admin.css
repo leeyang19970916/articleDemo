@@ -118,6 +118,9 @@ main .article #cke_editor .cke_contents {
   height: 500px !important;
 }
 
+#tagModal .modal-dialog {
+  --bs-modal-width:90%;
+}
 #tagModal .modal-body {
   padding-top: 0;
 }

@@ -1,4 +1,7 @@
 #tagModal {
+  .modal-dialog{
+    --bs-modal-width:90%;
+  }
   .modal-body {
     padding-top: 0;
     .body-block {

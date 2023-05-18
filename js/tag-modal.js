@@ -34,7 +34,18 @@ class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
       </div>
     </div>
     <div class="body-block">
-      <div class="body_title">一般標籤:</div>
+    <div class="body_title">分類:</div>
+    <div class="mt-2 body-tag">
+    ${typeTagListArr
+      .map(
+        (item) =>
+          `<button data-id=${item.id} type="button" class="btn btn-warning">${item.name}</button>`
+      )
+      .join(" ")}
+    </div>
+  </div>
+    <div class="body-block">
+      <div class="body_title">標籤:</div>
       <div class="mt-2 body-tag normalTag-container">
       ${normalTaglistArr
         .map(
@@ -48,17 +59,6 @@ class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
         .join(" ")}
     </div>
     </div>
-    <div class="body-block">
-    <div class="body_title">屬性標籤:</div>
-    <div class="mt-2 body-tag">
-    ${typeTagListArr
-      .map(
-        (item) =>
-          `<button data-id=${item.id} type="button" class="btn btn-warning">${item.name}</button>`
-      )
-      .join(" ")}
-    </div>
-  </div>
     <div class="body-block">
       <div class="body_title">目前標籤:</div>
       <div class="mt-2 body-tag">
@@ -96,11 +96,11 @@ tagModalUI();
 // }
 // normalTagUI()
 function currentTagHandler(typeName, item) {
-  let id="123"
-  let index=currentTagArr.findIndex(tag=>tag.id===id)
+  let id = "123";
+  let index = currentTagArr.findIndex((tag) => tag.id === id);
   if (index !== -1) {
-    currentTagArr = currentTagArr.filter(tag => tag.id !== id);
-  }else{
-    currentTagArr.push()
+    currentTagArr = currentTagArr.filter((tag) => tag.id !== id);
+  } else {
+    currentTagArr.push();
   }
 }

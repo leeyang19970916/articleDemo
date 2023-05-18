@@ -112,7 +112,6 @@ const listTableUI = () => {
   let table_tbody_DOM = document.querySelector(".list-container tbody");
   for (let i = 0; i < articleArr.length; i++) {
     const element = articleArr[i];
-    console.log(element, "element");
     listStr += `
     <tr data-id="${element.id}">
     <td class="image">
@@ -123,7 +122,6 @@ const listTableUI = () => {
     </td>
     <td class="category">
     <div >${element.category}</div>
-    <div class="text-end">${element.category}</div>
     </td>
     <td>
       <div class="d-flex">
@@ -138,6 +136,8 @@ const listTableUI = () => {
       </div>
     </td>
     
+    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
     <td>${element.status}</td>
     <td class="date">
       <div class="date-time">${element.date.time}</div>
@@ -158,6 +158,8 @@ const listTableUI = () => {
           <li><a class="dropdown-item" href="#">預覽文章</a></li>
           <li><a class="dropdown-item" href="#">編輯文章</a></li>
           <li><a class="dropdown-item" href="#">刪除文章</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li class=""><a class="dropdown-item bg-primary text-white" href="#">發布</a></li>
         </ul>
       </div>
     </td>

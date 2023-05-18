@@ -40,6 +40,34 @@ section.filter-container .input-title-date .filter-title {
 section.filter-container .input-title-date .filter-date {
   width: 30%;
 }
+section.filter-container .input-status-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+section.filter-container .input-status-checkbox .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+section.filter-container .input-status-checkbox .form-check .form-check-input {
+  margin: 0;
+}
+section.filter-container .input-status-checkbox .form-check .form-check-label {
+  white-space: nowrap;
+  padding: 0 1rem 0 0.5rem;
+}
 section.filter-container .tagsList {
   width: 100%;
   border-radius: 10px;

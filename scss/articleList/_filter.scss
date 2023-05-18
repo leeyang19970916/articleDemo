@@ -32,6 +32,25 @@ section {
         width: 30%;
       }
     }
+    .input-status-checkbox{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1rem;
+      .form-check{
+        display: flex;
+        align-items: center;
+
+        padding: 0;
+        .form-check-input{
+          margin: 0;
+        }
+        .form-check-label{
+          white-space: nowrap;
+          padding: 0 1rem 0 0.5rem;
+        }
+      }
+    }
     .tagsList {
       width: 100%;
       border-radius: 10px;

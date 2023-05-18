@@ -18,16 +18,6 @@
           <div class="mjr_title">文章列表</div>
           <section class="filter-container">
             <div class="input-title-date">
-              <div class="filter-tag">
-                <button
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#tagModal"
-                  class="btn btn-success text-light w-100"
-                >
-                  搜尋標籤:
-                </button>
-              </div>
               <div class="inputControl filter-title">
                 <span>搜尋標題:</span>
                 <input
@@ -43,6 +33,56 @@
                   class="form-control"
                   placeholder="搜尋日期"
                 />
+              </div>
+              <div class="filter-tag">
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#tagModal"
+                  class="btn btn-success text-light w-100"
+                >
+                  搜尋標籤:
+                </button>
+              </div>
+            </div>
+            <div class="input-status-checkbox">
+
+              <div class="form-check">
+                <label
+                  class="form-check-label fw-bolder  p-0"
+                  for="flexCheckChecked"
+                >
+                  狀態搜尋:
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">待審核</option>
+                  <option value="2">已上架</option>
+                  <option value="3"></option>
+                </select>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  熱門文章
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  編輯精選
+                </label>
               </div>
             </div>
             <div class="tagsList">
@@ -90,6 +130,8 @@
                     分類
                   </th>
                   <th scope="col" style="width: 20%">標籤</th>
+                  <th scope="col" style="width: 5%">熱門</th>
+                  <th scope="col" style="width: 5%">精選</th>
                   <th scope="col" style="width: 5%">狀態</th>
                   <th scope="col" class="text-end" style="width: 5%">日期</th>
                   <th scope="col" class="text-center" style="width: 3%">
@@ -118,7 +160,98 @@
       tabindex="-1"
       aria-labelledby="tagModalLabel"
       aria-hidden="true"
-    ></div>
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title" id="tagModalLabel">新增標籤</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="body-block">
+              <div class="add-newTag">
+                <span>新增自訂標籤:</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="新增自訂標籤"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="body-block">
+              <div class="body_title">分類:</div>
+              <div class="mt-2 body-tag">
+                <button class="btn btn-warning">身心科</button>
+                <button class="btn btn-warning">身心科</button>
+                <button class="btn btn-warning">身心科</button>
+                <!-- ${typeTagListArr .map( (item) => `<button
+                  data-id="${item.id}"
+                  type="button"
+                  class="btn btn-warning"
+                >
+                  ${item.name}</button
+                >` ) .join(" ")} -->
+              </div>
+            </div>
+            <div class="body-block">
+              <div class="body_title">標籤:</div>
+              <div class="mt-2 body-tag normalTag-container">
+                <button class="btn btn-success">一般標籤</button>
+                <button class="btn btn-success">一般標籤</button>
+                <button class="btn btn-success">一般標籤</button>
+                <!-- ${normalTaglistArr .map( (item) => `
+                <button
+                  data-id="${item.id}"
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="currentTagHandler()"
+                >
+                  ${item.name}
+                </button>
+                ` ) .join(" ")} -->
+              </div>
+            </div>
+            <div class="body-block">
+              <div class="body_title">目前標籤:</div>
+              <div class="mt-2 body-tag">
+                <button type="button" class="btn btn-primary">熱門</button
+                ><button type="button" class="btn btn-warning">身心科</button
+                ><button type="button" class="btn btn-success">一般標籤</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary w-25">確定</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+          </div>
+        </div>
+      </div>
+      `
+    </div>
   </body>
 </html>
 <script></script>
@@ -134,4 +267,4 @@
 
 <script src="/js/filterUI.js"></script>
 <script src="/js/list-table.js"></script>
-<script src="/js/tag-modal.js"></script>
+<!-- <script src="/js/tag-modal.js"></script> -->

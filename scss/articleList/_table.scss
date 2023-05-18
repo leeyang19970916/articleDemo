@@ -40,10 +40,6 @@
 tbody {
   vertical-align: middle !important;
   .type {
-    // white-space:nowrap;
-    // display: flex;
-    // // flex-direction: column;
-    // flex-wrap: wrap;
     .type-item {
       display: inline;
       margin: 0;
@@ -63,6 +59,9 @@ tbody {
       border-radius: 10px;
     }
   }
+
+
+   
   .date {
     text-align: end;
     .date-time {

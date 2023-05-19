@@ -10,6 +10,7 @@
     <script src="./node_modules/ckeditor4/ckeditor.js"></script>
   </head>
   <body>
+    <header id="header"></header>
     <div class="w-100 bg-light d-flex" id="root">
       <nav class="h-100"></nav>
       <main class="h-100 d-flex ">
@@ -33,6 +34,82 @@
       aria-labelledby="tagModalLabel"
       aria-hidden="true"
     >
+
+    <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+    >
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-light">
+        <h5 class="modal-title " id="tagModalLabel">屬性管理</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="tag-container">
+        <div class="body-block w-50">
+          <div class="add-newTag">
+            <span>新增自訂標籤:</span>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="新增自訂標籤"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-warning"
+                type="button"
+                id="button-addon2"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 d-flex flex-nowrap">
+        <div class="body-block ">
+          <div class="body_title">常用標籤:</div>
+          <div class="mt-2 body-tag normalTag-container">
+          ${normalTaglistArr
+            .map(
+              (item) => `
+            <button data-id="${item.id}" type="button" 
+              class="btn btn-primary" onclick="currentTagHandler()">
+              ${item.name}
+            </button>
+          `
+            )
+            .join(" ")}
+        </div>
+        </div>
+        <div class="body-block">
+          <div class="body_title">目前標籤:</div>
+          <div class="mt-2 body-tag">
+            <button type="button" class="btn btn-primary">Primary</button
+            ><button type="button" class="btn btn-primary">Primary</button
+            ><button type="button" class="btn btn-primary">Primary</button>
+          </div>
+        </div>
+      </div>
+      </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary w-25">確定</button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          取消
+        </button>
+      </div>
+    </div>
+    </div>`;
       </div>
     </div>
   </body>
@@ -51,4 +128,8 @@
 <script src="./js/navUI.js"></script>
 <script src="./js/second-navUI.js"></script>
 <script src="./js/tab-content.js"></script>
-<script src="./js/tag-modal.js"></script>
+<script src="./js/admin-header.js"></script>
+<script>
+  Header()
+</script>
+<!-- <script src="./js/tag-modal.js"></script> -->

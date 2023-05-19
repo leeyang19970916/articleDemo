@@ -1,8 +1,12 @@
 nav {
-  width: 10%;
+  width: 12%;
   min-width: 180px;
-  background-color: #343a40 !important;
-
+  background-color: #3d3d3d !important;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
 .accordion-button::before,
 .accordion-button::after {
@@ -10,39 +14,52 @@ nav {
 }
 .accordion-item {
   background-color: transparent;
-  border: black solid 1px;
 }
 .accordion-button {
   border-color: transparent;
   box-shadow: none;
   outline: none;
   background: transparent;
-  color: white;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
   &:focus {
     background-color: transparent;
-    color:white ;
+    // color:white ;
     outline: none;
     // border: none;
     box-shadow: none;
   }
-  &:not(.collapsed){
+  &:not(.collapsed) {
+    // 選取顏色變換
+    color: rgb(223, 169, 100);
     background-color: transparent;
-    color: white;
+    // color: white;
   }
 }
-.accordion-body{
+.accordion-body {
   padding-top: 0;
   padding-bottom: 0;
-  width: auto;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
-  .item{
-    padding-top:0.5rem ;
-    padding-bottom: 0.25rem;
+  padding: 0;
+  .item {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    letter-spacing: 0.2rem;
     cursor: pointer;
-    &:hover{
-      background-color: tan ;
-      color: teal ;
+    &.active{
+      color: #dbaa2f;
+      background: #4d4d4d;
+      border-radius: 50px;
+    }
+    &:hover {
+      color: white;
+      background: #4d4d4d;
+      border-radius: 50px;
+      // background-color: tan ;
+      // color: teal ;
     }
   }
 }

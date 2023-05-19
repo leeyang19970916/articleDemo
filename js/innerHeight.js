@@ -6,7 +6,7 @@ function innerHeightHandler() {
 const heightHandler = () => {
   let innerHeight = innerHeightHandler();
   let root = document.querySelector("#root");
-  root.style.height = `${innerHeight}px`;
+  root.style.height = `${innerHeight - 50 }px`;
 };
 heightHandler();
 window.addEventListener("resize", function () {

@@ -32,8 +32,23 @@ let articleContentUI = `<div class="article">
 </label>
 </div></div>
 </div>
+<div class="category-container">
+<span>分類:</span>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
 <div class="tag_btn">
-  <button type="button"  class="btn btn-outline-info"  data-bs-toggle="modal" data-bs-target="#tagModal">標籤管理</button>
+  <button type="button"  class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#tagModal">標籤管理</button>
+  <div class="tagList">
+  <div class="tag-item">#心臟病</div>
+  <div class="tag-item">#心血管</div>
+  <div class="tag-item">#XXX</div>
+  <div class="tag-item">#我不知道</div>
+  </div>
 </div>
 <textarea  name="editor" id="editor" rows="10" cols="80">
 </textarea>

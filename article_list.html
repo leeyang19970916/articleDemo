@@ -11,6 +11,7 @@
     <!-- <script src="./node_modules/ckeditor4/ckeditor.js"></script> -->
   </head>
   <body>
+    <header id="header"></header>
     <div class="w-100 bg-light d-flex" id="root">
       <nav class="h-100"></nav>
       <main class="h-100 d-flex">
@@ -46,10 +47,9 @@
               </div>
             </div>
             <div class="input-status-checkbox">
-
               <div class="form-check">
                 <label
-                  class="form-check-label fw-bolder  p-0"
+                  class="form-check-label fw-bolder p-0"
                   for="flexCheckChecked"
                 >
                   狀態搜尋:
@@ -267,4 +267,8 @@
 
 <script src="/js/filterUI.js"></script>
 <script src="/js/list-table.js"></script>
+<script src="./js/admin-header.js"></script>
+<script>
+  Header();
+</script>
 <!-- <script src="/js/tag-modal.js"></script> -->

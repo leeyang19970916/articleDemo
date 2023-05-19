@@ -86,6 +86,5 @@ if (currentPath===`/${id}.html`) {
   location.href = `../${id}.html`;
 }
 const gotoFrontPage=()=>{
-  console.log("qqqqq")
   location.href = `../articleDemo/front_desk/frontPage.html`;
 }

@@ -2,11 +2,35 @@ let fileImage = "";
 
 let articleContentUI = `<div class="article">
 <div class="mjr_title">撰寫文章內容:</div>
+<div class="d-flex w-100 justify-content-between mt-3">
+
 <div class="maj-title">
   <span>標題:</span> <input class="form-control" type="text">
 </div>
-<div class="min-title">
-  <span>副標:</span> <input class="form-control" type="text">
+<div class="checkbox-zone">             
+ <div class="form-check">
+<input
+  class="form-check-input"
+  type="checkbox"
+  value=""
+  id="flexCheckDefault"
+/>
+<label class="form-check-label" for="flexCheckDefault">
+  熱門文章
+</label>
+</div>
+<div class="form-check">
+<input
+  class="form-check-input"
+  type="checkbox"
+  value=""
+  id="flexCheckChecked"
+  checked
+/>
+<label class="form-check-label" for="flexCheckChecked">
+  編輯精選
+</label>
+</div></div>
 </div>
 <div class="tag_btn">
   <button type="button"  class="btn btn-outline-info"  data-bs-toggle="modal" data-bs-target="#tagModal">標籤管理</button>

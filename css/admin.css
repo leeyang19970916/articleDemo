@@ -87,16 +87,16 @@ main .tab-content {
   padding: 1.5rem;
   overflow-y: scroll;
 }
-main .article .maj-title, main .article .min-title {
+main .article .maj-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1rem;
+  width: 50%;
 }
-main .article .maj-title span, main .article .min-title span {
+main .article .maj-title span {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   white-space: nowrap;
@@ -105,8 +105,35 @@ main .article .maj-title span, main .article .min-title span {
   padding-right: 1rem;
   font-weight: 900;
 }
-main .article .maj-title input, main .article .min-title input {
-  width: 50%;
+main .article .checkbox-zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 1.25rem;
+}
+main .article .checkbox-zone .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+main .article .checkbox-zone .form-check .form-check-input {
+  margin: 0;
+}
+main .article .checkbox-zone .form-check .form-check-label {
+  white-space: nowrap;
+  padding: 0 1.5rem 0 1rem;
 }
 main .article .tag_btn {
   margin-top: 1rem;

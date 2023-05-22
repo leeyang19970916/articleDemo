@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>撰寫文章介面</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/articleTags/tagAndCategory.css" />
+    <script src="./node_modules/ckeditor4/ckeditor.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="w-100 bg-light d-flex" id="root">
+      <nav class="h-100"></nav>
+      <main class="h-100 d-flex">
+        <section class="h-100 bg-light second-nav"></section>
+        <div class="h-100 bg-light tab-content fade" id="v-pills-category">
+          <div class="mjr_title">分類管理:</div>
+          <div class="content d-flex flex-nowrap">
+            <section class="w-100 listControl me-3">
+              <div class="input-container">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Recipient's username"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="btn btn-info" onclick="editStateHandler()">edit</div>
+              </div>
+
+              <div class="list">
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()" >
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+                <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+                  分類 <a href="" onclick="removeTagHandler()">x</a>
+                </button>
+              
+            </div>
+            </section>
+            <section class="w-100 ms-3">詳細資料</section>
+          </div>
+        </div>
+        <!-- <div class="h-100 bg-light tab-content fade" id="v-pills-tag">
+          <div class="mjr_title">標籤管理:</div>
+          qqqqq
+        </div> -->
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title" id="staticBackdropLabel">修改</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="now-tagName">目前名稱: <span>我愛羅</span></div>
+            <div class="input-group input new-tagName">
+              <label for="addInput" class="form-label text-dark"
+                >修改名稱:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="newNameInput"
+                aria-describedby="emailHelp"
+                placeholder="修改名稱..."
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary w-100"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button
+              type="button"
+              onclick="confirmModal()"
+              class="btn btn-primary w-100 text-light"
+            >
+              確定
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let secondNavArr = [
+    { id: "category", name: "分類" },
+    { id: "tag", name: "標籤" },
+  ];
+</script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/innerHeight.js"></script>
+<script src="./js/tempData.js"></script>
+<script src="./js/navUI.js"></script>
+<script src="./js/second-navUI.js"></script>
+<script src="./js/tab-content.js"></script>
+<script src="./js/admin-header.js"></script>
+<script>
+  Header();
+  // 這裡會做幾件事
+  // 新增
+  // 搜尋
+  // 編輯 案件 切狀態 讓user可以刪除或是編輯修改
+  // 右邊是數據列表 要顯示什麼不知道在說
+  let edit =false
+  function editStateHandler() {
+    edit=!edit
+  }
+  function editModalHandler(params) {
+    console.log("改他名字")
+  }
+  function removeTagHandler(e) {
+    e.preventDefault()
+    console.log("移除tag 應該要跳alert")
+  }
+</script>
+<!-- <script src="./js/tag-modal.js"></script> -->

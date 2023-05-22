@@ -4,7 +4,7 @@ const navbarUI = () => {
       id: "home",
       name: "首頁",
       item: [
-        { id: "article_tags", name: "標籤管理" },
+        { id: "article_tags_category", name: "標籤管理" },
         { id: "article_content", name: "文章內容" },
       ],
     },
@@ -14,14 +14,14 @@ const navbarUI = () => {
       item: [
         { id: "article_list", name: "文章列表" },
         { id: "article_content", name: "文章內容" },
-        { id: "article_tags", name: "標籤管理" },
+        { id: "article_tags_category", name: "標籤管理" },
       ],
     },
     {
       id: "store",
       name: "商城",
       item: [
-        { id: "article_tags", name: "標籤管理" },
+        { id: "article_tags_category", name: "標籤管理" },
         { id: "article_content", name: "文章內容" },
       ],
     },

@@ -134,6 +134,66 @@ let metaUI = `
 </section>
 </div>
 `;
+// 標籤管理葉面
+
+let testing = `<div class="mjr_title">分類管理:</div>
+<div class="content d-flex flex-nowrap">
+  <section class="w-100 listControl me-3">
+    <div class="input-container">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          +
+        </button>
+      </div>
+      <div class="btn btn-info" onclick="editStateHandler()">edit</div>
+    </div>
+
+    <div class="list">
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()" >
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+      <button class="btn btn-primary tag-btn" onclick="editModalHandler()">
+        分類 <a href="" onclick="removeTagHandler()">x</a>
+      </button>
+    
+  </div>
+  </section>
+  <section class="w-100 ms-3">詳細資料</section>`;
 
 const tabContent = () => {
   let str = "";
@@ -153,6 +213,7 @@ const tabContent = () => {
 tabContent();
 
 const tabContentChange = (id) => {
+  console.log("id", id);
   if (!id) {
     console.log("tabContent id error");
     return;
@@ -164,6 +225,8 @@ const tabContentChange = (id) => {
     contentStr = articleContentUI;
   } else if (id === "articleImage") {
     contentStr = uploadImageUI;
+  } else if (id === "category" || id === "tag") {
+    contentStr = testing;
   } else {
     contentStr = metaUI;
   }

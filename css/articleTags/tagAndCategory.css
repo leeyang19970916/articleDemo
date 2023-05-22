@@ -1,0 +1,30 @@
+main .content {
+  font-size: 1rem;
+  padding: 1.5rem 0rem;
+}
+main .content section.listControl .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .content section.listControl .input-container .input-group {
+  width: 75%;
+}
+main .content section.listControl .list {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main .content section.listControl .list .btn {
+  margin: 0.5rem 0;
+  margin-right: 0.75rem;
+}

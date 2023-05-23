@@ -228,57 +228,6 @@ main .article #cke_editor .cke_contents {
   height: 500px !important;
 }
 
-#tagModal .modal-dialog {
-  --bs-modal-width: 90%;
-}
-#tagModal .modal-body {
-  padding-top: 0;
-}
-#tagModal .modal-body section.tag-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-#tagModal .modal-body section.tag-container .body-block {
-  width: 100%;
-  margin: 1rem 1.25rem 0;
-}
-#tagModal .modal-body section.tag-container .add-newTag {
-  font-weight: bolder;
-  color: saddlebrown;
-  font-size: larger;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#tagModal .modal-body section.tag-container .add-newTag span {
-  margin-right: 1rem;
-}
-#tagModal .modal-body section.tag-container .add-newTag .input-group {
-  width: 75%;
-}
-#tagModal .modal-body section.tag-container .add-newTag .input-group button {
-  border-radius: 0 0.375rem 0.375rem 0;
-}
-#tagModal .modal-body section.tag-container .body_title {
-  font-size: larger;
-  font-weight: bolder;
-  border-bottom: 2px solid saddlebrown;
-  padding-bottom: 0.5rem;
-  color: saddlebrown;
-}
-#tagModal .modal-body section.tag-container .body-tag button {
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-
 .image-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -369,6 +318,66 @@ main .article #cke_editor .cke_contents {
 }
 .meta .single-meta-container .meta-item .form-control {
   width: 100%;
+}
+
+.modal-body label {
+  margin-right: 1rem;
+}
+.modal-body .input-group {
+  width: 75%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+.modal-body .input-group .form-label {
+  margin-bottom: 0;
+}
+.modal-body .input-group button {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+.modal-body section.tag-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.modal-body section.tag-container .body-block {
+  width: 100%;
+  margin: 1rem 1.25rem 0;
+}
+.modal-body section.tag-container .add-newTag {
+  font-weight: bolder;
+  color: saddlebrown;
+  font-size: larger;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-body section.tag-container .add-newTag span {
+  margin-right: 1rem;
+}
+.modal-body section.tag-container .body_title {
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: 2px solid saddlebrown;
+  padding-bottom: 0.5rem;
+  color: saddlebrown;
+}
+.modal-body section.tag-container .body-tag button {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.modal-footer {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 main {

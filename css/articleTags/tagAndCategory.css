@@ -2,6 +2,12 @@ main .content {
   font-size: 1rem;
   padding: 1.5rem 0rem;
 }
+main .content section.detail-container .h2 {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.02rem;
+  font-size: 1.5rem;
+}
 main .content section.listControl .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,5 +32,5 @@ main .content section.listControl .list {
 }
 main .content section.listControl .list .btn {
   margin: 0.5rem 0;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
 }

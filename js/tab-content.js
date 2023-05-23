@@ -225,9 +225,12 @@ const tabContentChange = (id) => {
     contentStr = articleContentUI;
   } else if (id === "articleImage") {
     contentStr = uploadImageUI;
-  } else if (id === "category" || id === "tag") {
-    contentStr = testing;
-  } else {
+  }
+  //  else if (id === "category" || id === "tag") {
+  //   console.log("????")
+  //   contentStr = testing;
+  // } 
+  else {
     contentStr = metaUI;
   }
   tabDom.innerHTML = contentStr;

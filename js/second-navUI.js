@@ -1,8 +1,8 @@
 function secondNavUI(params) {
   let secondNav = document.querySelector(".second-nav");
   let str = "";
-  for (let i = 0; i < secondNavArr.length; i++) {
-    const element = secondNavArr[i];
+  for (let i = 0; i < params.length; i++) {
+    const element = params[i];
     str += `<button onclick="tabContentChange('${
       element.id
     }')" class="nav-link ${i === 0 && "active"}
@@ -16,7 +16,7 @@ function secondNavUI(params) {
   }
   secondNav.innerHTML += `<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">${str}</div>`;
 }
-secondNavUI();
+// secondNavUI();
 
 function stateButton(params) {
   let secondNav = document.querySelector(".second-nav");
@@ -26,4 +26,4 @@ function stateButton(params) {
   <button class="btn btn-danger w-50 mx-1 ">儲存文章</button>
   </div>`;
 }
-stateButton();
+// stateButton();

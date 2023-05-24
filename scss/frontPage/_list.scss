@@ -1,0 +1,219 @@
+@import "./pagination";
+.list {
+  // 可以對照這個東西
+  .list_title {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width: 576px) {
+      margin: 1.5rem 0;
+    }
+    .h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid gray;
+      font-weight: 900;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .content {
+      padding-top: 1rem;
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      letter-spacing: 0.02rem;
+      line-height: 2rem;
+      color: grey;
+
+      @media (max-width: 576px) {
+        width: 100%;
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
+  main {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem auto 0;
+    @media (max-width: 576px) {
+      width: 100%;
+      margin:0;
+    }
+    .list-container{
+      width: 65%;
+      @media (max-width: 576px) {
+        width: 100%;
+        padding: 0 1rem;
+      }
+    }
+    section {
+      &.articleList {
+        .cardItem {
+          display: flex;
+          margin-bottom: 1.25rem;
+          @media (max-width: 576px) {
+            flex-direction: column;
+            // border-bottom: 2px saddlebrown solid;
+
+          }
+          // align-items: center;
+          .image {
+            width: 30%;
+            @media (max-width: 576px) {
+              width: 100%;
+              padding: 0 15px;
+            }
+          }
+          .content {
+            width: 70%;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            @media (max-width: 576px) {
+              width: 100%;
+              padding: 0 1rem;
+            }
+            .content-title {
+              font-weight: 700;
+              letter-spacing: 2px;
+              line-height: 25px;
+              font-size: 1.25rem;
+              color: black;
+              @media (max-width: 576px) {
+                font-size: 1.25rem;
+                line-height: normal;
+                padding: 0.5rem 0;
+              }
+            }
+            .content-content {
+              color: grey;
+              font-size: 1rem;
+              letter-spacing: 1px;
+              @media (max-width: 576px) {
+                font-size: 1rem;
+                letter-spacing: normal;
+                padding-bottom: 0.5rem;
+              }
+            }
+            .content-date {
+              color: grey;
+              letter-spacing: 1px;
+              font-size: 1rem;
+              @media (max-width: 576px) {
+                letter-spacing: normal;
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    aside {
+      width: 35%;
+      margin-left: 1rem;
+      @media (max-width: 576px) {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+        // margin: 0 15px;
+      }
+      .tag-container {
+        background-color: #ededed;
+        padding: 1rem;
+        .tag-title {
+          font-weight: 700;
+          font-size: 1.5rem;
+          letter-spacing: 0.02rem;
+        }
+        .tag-list {
+          padding: 1rem 0;
+          display: flex;
+          flex-wrap: wrap;
+          .tagList-Item {
+            background-color: white;
+            padding: 4px 16px;
+            border-radius: 16px;
+            color: grey;
+            margin-bottom: 0.75rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .follow-container,
+      .download-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 1rem;
+        .title {
+          border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+          color: black;
+          letter-spacing: 0.02em;
+          font-size: 1.5rem;
+          @media (max-width: 576px) {
+            font-size: 1.25rem;
+          }
+        }
+        .content {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: space-between;
+          .btn {
+            width: 100%;
+            &.first {
+              margin-right: 0.5rem;
+            }
+            &.second {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.editChosen-container {
+  @media (max-width: 576px) {
+    padding: 0 15px;
+  }
+  .title {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+    color: black;
+    letter-spacing: 0.02em;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    margin: 1rem 0;
+    font-weight: 900;
+    @media (max-width: 576px) {
+      font-size: 1.25rem;
+      padding-bottom: 0.25rem;
+      margin: 0.5rem 0;
+      letter-spacing: normal;
+
+      
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+    .cardItem {
+      width: calc(100% / 3 - 15px);
+      @media (max-width: 576px) {
+       width: 100%;
+      }
+      .title {
+        font-size: 1.25rem;
+        // padding: 0.75rem 0;
+        border: 0;
+        // white-space: pre-wrap;
+      }
+    }
+  }
+}

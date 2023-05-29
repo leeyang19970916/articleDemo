@@ -24,6 +24,17 @@ header{
         // width: 20%;
         display: flex;
         justify-content: end;
+        .search{
+            display: flex;
+            align-items: center;
+            position: relative;
+            .seacrh-icon{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0%, -50%);
+            }
+        }
         .form-control{
             border-radius: 50px;
             min-width: 250px

@@ -380,6 +380,28 @@ main .article #cke_editor .cke_contents {
       flex-wrap: nowrap;
 }
 
+.breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: grey;
+  letter-spacing: 0.02rem;
+}
+@media (max-width: 996px) {
+  .breadcrumb {
+    margin: 1rem 0;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 576px) {
+  .breadcrumb {
+    margin: 1rem 0 0 0;
+    padding: 0 15px;
+  }
+}
+.breadcrumb .breakline {
+  padding: 0 1rem;
+}
+
 main {
   width: 90%;
 }

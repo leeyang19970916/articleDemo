@@ -11,7 +11,10 @@ function Header(params) {
       </div>
     </div>
     <div class="header-right">
-    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    <div class="search">
+    <input type="text" class="form-control" placeholder="搜尋" aria-label="Dollar amount (with dot and two decimal places)">
+<button class="seacrh-icon">搜</button>
+    </div>
 
       <button class="btn btn-primary text-white">追蹤臉書</button>
       <button class="btn btn-success text-white">加入LINE</button>

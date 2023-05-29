@@ -1,0 +1,113 @@
+@import "../frontPage/header";
+.content-container {
+  padding: 1.5rem 2.5rem;
+  background-color: #f5f5f5;
+}
+main,
+section {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.major-title {
+  font-weight: 900;
+  color: #333333;
+  font-size: 2rem;
+}
+.major-content {
+  background-color: white;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 2rem 3.5rem;
+  margin: 1rem 0;
+  //   width: 80%;
+  //   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .major-content-block {
+    margin-bottom: 1rem;
+    .major-content-title {
+      display: flex;
+      letter-spacing: 0.02em;
+      color: #333333;
+      font-weight: 700;
+      font-size: 20px;
+      padding-bottom: 0.75rem;
+      width: 100%;
+      border-bottom: #cdcdcd 1px solid;
+    }
+    .major-content-list {
+      .list-one-line {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .list-item {
+          &.active {
+            background: #24a8a7;
+            border-radius: 16px;
+            color: white !important;
+          }
+          &.zone {
+            color: black;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            margin: 1rem 0;
+            margin-right: 0.5rem;
+          }
+          &.city {
+            margin: 0 0.25rem;
+            padding: 6px 16px;
+            color: #666666;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+          }
+          &.district {
+            margin: 1rem 0;
+            margin-right: 0.5rem;
+            // margin: 0 0.25rem;
+            padding: 6px 16px;
+            color: #666666;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+          }
+          &.department {
+            margin: 1rem 0;
+            margin-right: 0.5rem;
+            // margin: 0 0.25rem;
+            padding: 6px 16px;
+            color: #666666;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+          }
+          &.condition {
+            margin: 1rem 0;
+            margin-right: 0.5rem;
+            // margin: 0 0.25rem;
+            padding: 6px 16px;
+            color: #666666;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+          }
+        }
+      }
+    }
+  }
+  button{
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: white
+  }
+  .switch-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .switch{
+        display: flex;
+        align-items: center
+    }
+    
+  }
+}
+@import "./nav";
+@import "../frontPage/footer";

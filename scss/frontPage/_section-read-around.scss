@@ -2,6 +2,9 @@ section {
   padding: 0;
   .read-around {
     margin: 1rem 0;
+    @media (max-width: 996px) {
+      padding: 0 15px;
+    }
     @media (max-width: 576px) {
       padding: 1rem;
     }

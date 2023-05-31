@@ -1,0 +1,56 @@
+.major-content-list {
+  .clinic-week {
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    margin: 2.5rem 0 1rem 0;
+
+    .clinic-week-col {
+      width: calc(100% / 8);
+      .item {
+        border: 1px solid #cdcdcd;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        height: 60px;
+        .active {
+          padding: 0;
+          width: 20px;
+          height: 20px;
+          background: #53b6b7;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .clinic-doctor {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    .doctor {
+      cursor: pointer;
+      margin-right: 1rem;
+      padding: 1rem 3rem;
+      background: #ffffff;
+      border: 1px solid rgba(205, 205, 205, 0.5);
+      border-radius: 4px;
+      letter-spacing: 0.01em;
+      font-weight: 400;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      &.active {
+        border: 1px solid #53b6b7;
+        background: #eefcfb;
+        color: #53b6b7;
+      }
+    }
+  }
+}
+@import "./calendar";

@@ -70,6 +70,138 @@ header .header-right button {
   white-space: nowrap;
 }
 
+:root {
+  --primary: #23adad;
+  --greyLight: #23adade1;
+  --greyLight-2: #cbe0dd;
+  --greyDark: #2d4848;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.items-list {
+  max-width: 90vw;
+  margin: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .items-list {
+    -ms-grid-columns: 1fr 3rem 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  width: 10rem;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--greyDark);
+  cursor: pointer;
+}
+.item span {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+          box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  border-radius: 0.6rem;
+  padding: 2rem;
+  font-size: 3rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.item:hover span {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: var(--primary);
+}
+.item p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--greyLight);
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+          box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  width: 100%;
+}
+.page__numbers, .page__btn, .page__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.25rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.page__dots {
+  padding: 0.5rem 0.75rem;
+  color: var(--greyLight);
+  cursor: initial;
+}
+.page__numbers {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+}
+.page__numbers:hover {
+  color: var(--primary);
+}
+.page__numbers.active {
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+}
+.page__btn {
+  color: var(--greyLight);
+  pointer-events: none;
+}
+.page__btn.active {
+  color: var(--greyDark);
+  pointer-events: initial;
+}
+.page__btn.active:hover {
+  color: var(--primary);
+}
+
 .content-container {
   padding: 1.5rem 2.5rem;
   background-color: #f5f5f5;
@@ -119,6 +251,24 @@ section {
   padding-bottom: 0.75rem;
   width: 100%;
   border-bottom: #cdcdcd 1px solid;
+}
+.major-content .major-content-block .major-content-list .buttonItem {
+  margin-right: 0.5rem;
+  padding: 6px 16px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.major-content .major-content-block .major-content-list .buttonItem.active {
+  background: #24a8a7;
+  border-radius: 16px;
+  color: white !important;
 }
 .major-content .major-content-block .major-content-list .list-one-line {
   display: -webkit-box;
@@ -173,6 +323,43 @@ section {
   font-weight: 400;
   letter-spacing: 0.01em;
 }
+.major-content .major-content-block .major-content-list.clinic-inform {
+  font-size: 20px;
+  color: #666666;
+  letter-spacing: 0.01em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 1rem 0;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item {
+  width: auto;
+  height: auto;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item.green {
+  color: #53B6B7;
+}
 .major-content button {
   font-weight: 900;
   font-size: 1.25rem;
@@ -196,6 +383,91 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.major-content .switch-header .switch .active {
+  background: #24a8a7;
+  border-radius: 16px;
+  color: white !important;
+}
+.major-content .switch-header .switch .item {
+  color: grey;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 6px 16px;
+  width: auto;
+  height: auto;
+}
+.major-content .switch-header .total {
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.major-content .clinic-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem 0;
+}
+.major-content .clinic-list .clinic-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: #cdcdcd 1px solid;
+  padding: 0.5rem 0;
+}
+.major-content .clinic-list .clinic-item .department {
+  background: #efefef;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 8px 16px;
+  letter-spacing: 0.01em;
+  color: #666666;
+}
+.major-content .clinic-list .clinic-item .name {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.major-content .clinic-list .clinic-item .tel {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.major-content .clinic-list .clinic-item .address {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.major-content .clinic-list .clinic-item .btn-detail {
+  background: #24a8a7;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 24px;
+}
+
+.pagination-container-custom {
+  margin: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.pagination-container-custom .page {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 nav {
@@ -233,6 +505,107 @@ nav .button-container {
 }
 nav .button-container button {
   margin: 0.5rem;
+}
+
+.major-content-list .clinic-week {
+  width: 100%;
+  font-weight: 900;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  margin: 2.5rem 0 1rem 0;
+}
+.major-content-list .clinic-week .clinic-week-col {
+  width: 12.5%;
+}
+.major-content-list .clinic-week .clinic-week-col .item {
+  border: 1px solid #cdcdcd;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+  height: 60px;
+}
+.major-content-list .clinic-week .clinic-week-col .item .active {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: #53b6b7;
+  border-radius: 50%;
+}
+.major-content-list .clinic-doctor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+.major-content-list .clinic-doctor .doctor {
+  cursor: pointer;
+  margin-right: 1rem;
+  padding: 1rem 3rem;
+  background: #ffffff;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.major-content-list .clinic-doctor .doctor.active {
+  border: 1px solid #53b6b7;
+  background: #eefcfb;
+  color: #53b6b7;
+}
+
+.major-content-list .clinic-month {
+  margin: 2rem 0;
+}
+.major-content-list .clinic-month .monthHandler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.02em;
+  font-weight: 900;
+  font-size: 20px;
+}
+.major-content-list .clinic-month .date .week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.major-content-list .clinic-month .date .week .weekItem {
+  font-weight: 900;
+  padding: 1rem 0;
+  font-size: 20px;
+  width: 14.2857142857%;
 }
 
 footer {

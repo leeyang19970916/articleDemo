@@ -189,22 +189,152 @@
               <div class="major-content-list">
                 <div class="clinic-month">
                   <div class="monthHandler">
-                    <div class="prev">左邊</div>
+                    <div class="prev" onclick="monthChange('prev')">左邊</div>
                     <div class="month">2023年五月</div>
-                    <div class="next">右邊</div>
+                    <div class="next" onclick="monthChange('next')">右邊</div>
                   </div>
                   <div class="date">
                     <div class="week">
+                      <div class="weekItem">日</div>
                       <div class="weekItem">一</div>
                       <div class="weekItem">二</div>
                       <div class="weekItem">三</div>
                       <div class="weekItem">四</div>
                       <div class="weekItem">五</div>
                       <div class="weekItem">六</div>
-                      <div class="weekItem">日</div>
+                    </div>
+                    <div class="day"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="major-content-block">
+              <div class="major-content-title">約診時段</div>
+              <div class="major-content-list">
+                <div class="clinic-time">
+                  <div class="clinic-time-state">
+                    <label class="title" for="">早診</label>
+                    <div class="list">
+                      <div class="timeItem active">9:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
                     </div>
                   </div>
-                  <!-- <div class="calendar">
+                  <div class="clinic-time-state">
+                    <label class="title" for="">午診</label>
+                    <div class="list">
+                      <div class="timeItem active">9:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
+                      <div class="timeItem">19:00</div>
+                      <div class="timeItem">59:00</div>
+                    </div>
+                  </div>
+                  <div class="clinic-time-state">
+                    <label class="title" for="">晚診</label>
+                    <div class="list text-danger">此時段暫無可預約時段</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="btn btn-primary"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#reservationModal"
+            >
+              預約
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="reservationModal"
+        tabindex="-1"
+        aria-labelledby="reservationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reservationModalLabel">您的預約</h5>
+            </div>
+            <div class="modal-body">
+              <div class="reservation-inform">
+                <div class="informItem">
+                  <div class="title">醫師</div>
+                  <div class="content">陳醫師</div>
+                </div>
+                <div class="informItem">
+                  <div class="title">日期</div>
+                  <div class="content">2023 年 6 月 12 日</div>
+                </div>
+                <div class="informItem">
+                  <div class="title">時間</div>
+                  <div class="content">10:00</div>
+                </div>
+              </div>
+              <div class="personal-inform">
+                <div class="visit">
+                  <div class="button active">初診</div>
+                  <div class="button">複診</div>
+                </div>
+                <div class="inform-input">
+                  <input type="text" class="form-control" placeholder="姓名" />
+                  <input type="text" class="form-control" placeholder="姓名" />
+
+                  <input type="text" class="form-control" placeholder="姓名" />
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="" id="" />
+                  <span>我已知道並同意診所的約診注意事項</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary w-100">
+                確定預約
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="../../js/innerHeight.js"></script> -->
+<!-- <script src="../../js/cityZoneSelect.js"></script> -->
+<script src="../../component/Header.js"></script>
+<!-- <script src="../../component/Navbar.js"></script>
+<script src="../../component/Carousel.js"></script>
+<script src="../../component/HashTagContainer.js"></script>
+<script src="../../component/Title-line.js"></script> -->
+<script src="../../component/Calendar.js"></script>
+<script src="../../component/Footer.js"></script>
+<script>
+  Header();
+  //   Navbar();
+  //   Carousel("");
+  //   HashTagContainer("hashTagContainer");
+  // Calendar()
+  Footer();
+</script>
+
+<!-- <div class="calendar">
                     <div class="month">
                       <h2 id="month-year"></h2>
                     </div>
@@ -219,34 +349,6 @@
                     </div>
                     <div class="days" id="calendar-days"></div>
                   </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <footer></footer>
-    </div>
-  </body>
-</html>
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="../../js/innerHeight.js"></script> -->
-<!-- <script src="../../js/cityZoneSelect.js"></script> -->
-<script src="../../component/Header.js"></script>
-<!-- <script src="../../component/Navbar.js"></script>
-<script src="../../component/Carousel.js"></script>
-<script src="../../component/HashTagContainer.js"></script>
-<script src="../../component/Title-line.js"></script> -->
-<script src="../../component/Footer.js"></script>
-<script>
-  Header();
-  //   Navbar();
-  //   Carousel("");
-  //   HashTagContainer("hashTagContainer");
-  Footer();
-</script>
 
 <!-- <script>
   // 获取当前日期

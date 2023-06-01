@@ -38,7 +38,7 @@ section {
       border-bottom: #cdcdcd 1px solid;
     }
     .major-content-list {
-      .buttonItem{
+      .buttonItem {
         // margin: 1rem 0;
         margin-right: 0.5rem;
         padding: 6px 16px;
@@ -107,7 +107,7 @@ section {
           }
         }
       }
-      &.clinic-inform{
+      &.clinic-inform {
         font-size: 20px;
         color: #666666;
         letter-spacing: 0.01em;
@@ -116,15 +116,15 @@ section {
         flex-direction: column;
         align-items: start;
         padding: 1rem 0;
-        .item{
+        .item {
           width: auto;
           height: auto;
           padding-top: 1rem;
           display: flex;
           align-items: center;
           flex-direction: row;
-          &.green{
-            color: #53B6B7;
+          &.green {
+            color: #53b6b7;
           }
         }
       }
@@ -218,4 +218,94 @@ section {
 }
 @import "./nav";
 @import "./date";
+#reservationModal {
+  .modal-header {
+    display: flex;
+    align-items: center;
+    .modal-title {
+      width: 100%;
+      text-align: center;
+      color: #333333;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+  }
+  .modal-body {
+    padding: 2rem 1.5rem 0 ;
+    .reservation-inform {
+      border-bottom: #cdcdcd 1px solid;
+      padding-bottom: 1rem;
+      .informItem {
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.01em;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        .title {
+          white-space: nowrap;
+          width: 100px;
+        }
+        .content {
+          color: #24a8a7;
+        }
+      }
+    }
+    .personal-inform {
+      padding: 2rem 0 0 0;
+      .visit {
+        display: flex;
+        align-items: center;
+        .button {
+          border-radius: 4px;
+          width: calc(100% / 3 - 1rem);
+          height: 60px;
+          display: flex;
+          font-size: 20px;
+          margin-right: 1rem;
+          justify-content: center;
+          align-items: center;
+          background: #ffffff;
+          border: 1px solid rgba(205, 205, 205, 0.5);
+          &.active {
+            color: #24a8a7;
+            background: #eefcfb;
+            border: 1px solid #53b6b7;
+          }
+        }
+      }
+      .inform-input {
+        margin: 1rem 0;
+        .form-control {
+          margin: 1rem 0;
+        }
+      }
+      .checkbox {
+        margin: 2rem 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: 25px;
+          height: 25px;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
+          border-radius: 4px;
+          // transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+        span {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.01em;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+  .modal-footer {
+    margin-top: 1rem;
+    border: none;
+  }
+}
 @import "../frontPage/footer";

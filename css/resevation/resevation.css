@@ -803,6 +803,8 @@ nav .button-container button {
       -ms-flex-align: center;
           align-items: center;
   margin: 2rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 576px) {
   .major-content-list .clinic-doctor {
@@ -815,7 +817,8 @@ nav .button-container button {
 }
 .major-content-list .clinic-doctor .doctor {
   cursor: pointer;
-  margin-right: 1rem;
+  margin: 0.5rem;
+  margin-left: 0;
   padding: 1rem 3rem;
   background: #ffffff;
   border: 1px solid rgba(205, 205, 205, 0.5);
@@ -838,7 +841,6 @@ nav .button-container button {
             justify-content: space-between;
     padding: 1rem;
     display: block;
-    margin: 0;
     width: calc(50% - 0.5rem);
   }
 }
@@ -877,7 +879,6 @@ nav .button-container button {
 @media (max-width: 996px) {
   .major-content-list .clinic-time .clinic-time-state {
     width: auto;
-    padding: 0 1rem;
   }
 }
 .major-content-list .clinic-time .clinic-time-state .title {

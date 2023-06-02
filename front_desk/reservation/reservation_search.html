@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查詢掛號</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="../../css/frontPage/frontPage.css"> -->
+    <link rel="stylesheet" href="../../css/resevation/resevation.css" />
+  </head>
+  <body>
+    <div class="container border p-0">
+      <header></header>
+      <main class="search-container">
+        <div class="searchCard">
+<div class="title">查詢掛號</div>
+<div class="input"><input type="text" class="form-control" placeholder="身分證字號"></div>
+<div  class="input"><input type="text" class="form-control" placeholder="身分證字號"></div>
+<div  class="button"><button class="btn btn-primary">查詢</button></div>
+        </div>
+      </main>
+      
+      <div class="content-container">
+        <dl></dl>
+        <nav>
+          <div class="title-container">
+            <div class="title">看診線上預約</div>
+            <div class="title">即時叫號 主動推播提醒</div>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-primary">google</button>
+            <button class="btn btn-primary">apple</button>
+          </div>
+        </nav>
+        <section>
+          <div class="major-title">搜尋結果</div>
+          <div class="major-content">
+            <div class="switch-header">
+              <div class="switch">
+                <div class="item active">依科別排序</div>
+                <div class="item">以地圖呈現</div>
+              </div>
+              <div class="total">共38間診所</div>
+            </div>
+            <div class="clinic-list">
+              <dd class="clinic-item">
+                <div class="item department">家醫科</div>
+                <div class="item name">丁文內科診所</div>
+                <div class="item tel">02-12345678</div>
+                <div class="item address">新北市蘆洲區長安街23號</div>
+                <div class="item btn btn-detail">詳細內容</div>
+              </dd>
+              <dd class="clinic-item">
+                <div class="item department">家醫科</div>
+                <div class="item name">丁文內科診所</div>
+                <div class="item tel">02-12345678</div>
+                <div class="item address">新北市蘆洲區長安街23號</div>
+                <div class="item btn btn-detail">詳細內容</div>
+              </dd>
+              <dd class="clinic-item">
+                <div class="item department">家醫科</div>
+                <div class="item name">丁文內科診所</div>
+                <div class="item tel">02-12345678</div>
+                <div class="item address">新北市蘆洲區長安街23號</div>
+                <div class="item btn btn-detail">詳細內容</div>
+              </dd>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="../../js/innerHeight.js"></script> -->
+<!-- <script src="../../js/cityZoneSelect.js"></script> -->
+<script src="../../component/Header.js"></script>
+<!-- <script src="../../component/Navbar.js"></script>
+<script src="../../component/Carousel.js"></script>
+<script src="../../component/HashTagContainer.js"></script>
+<script src="../../component/Title-line.js"></script> -->
+<script src="../../component/Calendar.js"></script>
+<script src="../../component/Footer.js"></script>
+<script>
+  Header();
+  //   Navbar();
+  //   Carousel("");
+  //   HashTagContainer("hashTagContainer");
+  // Calendar()
+  Footer();
+</script>
+
+<!-- <div class="calendar">
+                    <div class="month">
+                      <h2 id="month-year"></h2>
+                    </div>
+                    <div class="weekdays">
+                      <div class="day">Sun</div>
+                      <div class="day">Mon</div>
+                      <div class="day">Tue</div>
+                      <div class="day">Wed</div>
+                      <div class="day">Thu</div>
+                      <div class="day">Fri</div>
+                      <div class="day">Sat</div>
+                    </div>
+                    <div class="days" id="calendar-days"></div>
+                  </div> -->
+
+<!-- <script>
+  // 获取当前日期
+  const currentDate = new Date();
+
+  // 获取年份和月份
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+
+  // 设置月份和年份显示
+  document.getElementById("month-year").textContent = `${
+    currentMonth + 1
+  }/${currentYear}`;
+
+  // 获取当前月份的天数
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+  // 获取当前月份的第一天是星期几
+  const firstDayOfWeek = new Date(currentYear, currentMonth, 1).getDay();
+
+  // 获取日历的容器元素
+  const calendarDays = document.getElementById("calendar-days");
+
+  // 渲染日历日期
+  for (let i = 1; i <= daysInMonth; i++) {
+    const day = document.createElement("div");
+    day.classList.add("day");
+    day.textContent = i;
+
+    // 判断是否是当前月份的日期
+    if (i < firstDayOfWeek || i >= firstDayOfWeek + daysInMonth) {
+      day.classList.add("disabled");
+    }
+
+    calendarDays.appendChild(day);
+  }
+</script> -->

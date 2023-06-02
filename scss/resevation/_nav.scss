@@ -6,7 +6,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .title-container{
+  @media (max-width: 996px) {
+    padding: 0 1rem;
+  }
+  .title-container {
     color: white;
     font-weight: 900;
     letter-spacing: 0.02rem;
@@ -14,15 +17,24 @@ nav {
     padding: 0.75rem 0;
     font-size: 1.5rem;
     font-family: "Noto Sans TC ";
-    .title{
-        padding: 1rem 0;
+    @media (max-width: 996px) {
+      font-size: 1.25rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+    .title {
+      padding: 1rem 0;
     }
   }
-  .button-container{
+  .button-container {
     display: flex;
     font-size: 1.5rem;
-    button{
-        margin: 0.5rem;
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+    button {
+      margin: 0.5rem;
     }
   }
 }

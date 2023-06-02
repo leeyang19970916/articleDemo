@@ -25,6 +25,10 @@
           height: 20px;
           background: #53b6b7;
           border-radius: 50%;
+          @media (max-width: 576px) {
+            width: 15px;
+            height: 15px;
+          }
         }
       }
     }
@@ -33,6 +37,11 @@
     display: flex;
     align-items: center;
     margin: 2rem 0;
+    @media (max-width: 576px) {
+      width: 100%;
+      margin: 1rem 0;
+      justify-content: space-between;
+    }
     .doctor {
       cursor: pointer;
       margin-right: 1rem;
@@ -45,6 +54,14 @@
       font-size: 20px;
       display: flex;
       align-items: center;
+      @media (max-width: 576px) {
+        white-space: nowrap;
+        justify-content: space-between;
+        padding: 1rem;
+        display: block;
+        margin: 0;
+        width: calc(50% - 0.5rem);
+      }
       &.active {
         border: 1px solid #53b6b7;
         background: #eefcfb;
@@ -64,7 +81,11 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      margin-bottom: 1.5rem ;
+      margin-bottom: 1.5rem;
+      @media (max-width: 996px) {
+        width: auto;
+        padding: 0 1rem;
+      }
       .title {
         text-align: start;
         margin-bottom: 0.75rem;
@@ -85,11 +106,15 @@
           background: #ffffff;
           border: 1px solid rgba(205, 205, 205, 0.5);
           border-radius: 4px;
+          @media (max-width: 996px) {
+            width: auto;
+            padding: 0 1rem;
+          }
           &.active {
             background: #eefcfb;
             border: 1px solid #53b6b7;
             border-radius: 4px;
-            color: #24A8A7
+            color: #24a8a7;
           }
         }
       }

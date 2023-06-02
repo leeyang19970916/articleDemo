@@ -1,0 +1,57 @@
+main {
+  &.search-container {
+    background: linear-gradient(0deg, #37797c 0%, #289091 64.19%);
+    height: 300px;
+    margin: 0;
+    position: relative;
+    @media (max-width: 576px) {
+        height: 250px;
+      }
+    .searchCard {
+      position: absolute;
+      bottom: 75%;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      width: 75%;
+      background: #ffffff;
+      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 3rem;
+      @media (max-width: 996px) {
+        padding: 2rem 1rem;
+        width: 75%;
+      }
+      @media (max-width: 576px) {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      .title {
+        text-align: start;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #333333;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        @media (max-width: 996px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .input {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+      .button {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

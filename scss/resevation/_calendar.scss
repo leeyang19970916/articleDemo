@@ -28,6 +28,9 @@
           padding: 1rem 0;
           font-size: 20px;
           width: calc(100% / 7);
+          @media (max-width: 576px) {
+            // padding: 1rem;
+          }
         }
       }
       .day {
@@ -48,6 +51,13 @@
           border: 1px solid rgba(205, 205, 205, 0.5);
           border-radius: 4px;
           margin: 0.5rem 0.5rem;
+          @media (max-width: 576px) {
+            width: calc(100% / 7 - 0.5rem);
+            font-size: 1rem;
+            // width: calc(100% / 7);
+            margin:0.5rem  0.25rem;
+            // padding:0 1rem
+          }
           &.none{
             // 空拍
             cursor:auto; 
@@ -70,55 +80,3 @@
     }
   }
 }
-
-// .major-content-list {
-//   .clinic-month {
-//     margin: 2rem 0;
-//     .calendar {
-//       font-family: Arial, sans-serif;
-//     }
-
-//     .calendar .month {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       margin-bottom: 10px;
-//     }
-
-//     .calendar .weekdays {
-//       display: flex;
-//       justify-content: center;
-//     }
-
-//     .calendar .weekdays .day {
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       background-color: #f2f2f2;
-//       border: 1px solid #ccc;
-//     }
-
-//     .calendar .days {
-//       display: grid;
-//       grid-template-columns: repeat(7, 1fr);
-//       gap: 5px;
-//     }
-
-//     .calendar .days .day {
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       background-color: #fff;
-//       border: 1px solid #ccc;
-//       cursor: pointer;
-//     }
-
-//     .calendar .days .day:hover {
-//       background-color: #f9f9f9;
-//     }
-//   }
-// }

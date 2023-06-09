@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>預約掛號_日期</title>
+    <title>診所內容_預約掛號_日期</title>
     <link rel="stylesheet" href="../../css/bootstrap.css" />
     <link rel="stylesheet" href="../../css/resevation/resevation.css" />
   </head>
@@ -43,7 +43,7 @@
               >
                 注意事項
               </div>
-              <div class="major-content-list clinic-inform">
+              <div class="major-content-list clinic-inform text-start">
                 <div
                   id="panelsStayOpen-collapseOne"
                   class="accordion-collapse collapse show"
@@ -341,7 +341,44 @@
   // Calendar()
   Footer();
 </script>
+<script>
+  //   function textUIRender() {
+  //     let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。
+  // 然后，在 JavaScript 中定义 redirectTo 函数来处理跳转逻辑：`;
+  // let dom=document.querySelector(".clinic-inform")
+  // dom.innerHTML=str
+  //   }
+  //   textUIRender()
+  function textUIRender() {
+    let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。
+  然后，在 JavaScript 中定义 redirectTo 函数来处理跳转逻辑：`;
+    const maxChars = 10; // 最大字符数
+    let truncatedStr = str.substring(0, maxChars); // 截取前 maxChars 个字符
+    let isTruncated = str.length > maxChars; // 检查是否有截断
+    let dom = document.querySelector(".clinic-inform");
 
+    if (isTruncated) {
+      // 如果有截断，添加 "查看更多" 按钮
+      truncatedStr += "...";
+      dom.innerHTML = `
+      <div class="text-truncate">${truncatedStr}</div>
+      <button onclick="expandText()" class="btn btn-link">查看更多</button>
+    `;
+    } else {
+      // 如果没有截断，直接显示全部内容
+      dom.innerHTML = str;
+    }
+  }
+
+  function expandText() {
+    let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。
+  然后，在 JavaScript 中定义 redirectTo 函数来处理跳转逻辑：`;
+    let dom = document.querySelector(".clinic-inform");
+    dom.innerHTML = str;
+  }
+
+  textUIRender();
+</script>
 <!-- <div class="calendar">
                     <div class="month">
                       <h2 id="month-year"></h2>

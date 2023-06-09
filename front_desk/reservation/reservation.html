@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>detail-demo</title>
+    <title>
+      預約掛號-搜尋-結果 
+    </title>
     <link rel="stylesheet" href="../../css/bootstrap.css" />
     <link rel="stylesheet" href="../../css/resevation/resevation.css" />
   </head>
@@ -26,7 +28,14 @@
           <div class="major-title">預約掛號</div>
           <div class="major-content">
             <div class="major-content-block">
-              <div class="major-content-title">選擇城市</div>
+              <div class="major-content-title">搜尋關鍵字
+                <input type="text " placeholder="關鍵字搜尋..." class="form-control keyword ">
+              </div>
+            </div>
+            <div class="major-content-block">
+              <div class="major-content-title">選擇城市
+                <button class="btn notLimited"> 不限</button>
+              </div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item zone">北部</div>
@@ -68,7 +77,7 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">選擇區域(可複選)</div>
+              <div class="major-content-title">選擇區域(可複選) <button class="btn notLimited"> 不限</button></div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item district active">中山區</div>
@@ -83,7 +92,7 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">選擇科別(可複選)</div>
+              <div class="major-content-title">選擇科別(可複選) <button class="btn notLimited"> 不限</button></div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item department active">不分科</div>
@@ -99,7 +108,7 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">更多條件(可複選)</div>
+              <div class="major-content-title">更多條件(可複選) <button class="btn notLimited"> 不限</button></div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item condition active">週六看診</div>
@@ -119,33 +128,43 @@
           <div class="major-title">搜尋結果</div>
           <div class="major-content">
             <div class="switch-header">
-              <div class="switch">
-                <div class="item active">依科別排序</div>
-                <div class="item">以地圖呈現</div>
-              </div>
               <div class="total">共38間診所</div>
             </div>
             <div class="clinic-list">
               <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
+                <dl class="inform">
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">新北市蘆洲區長安街23號</div>
+                  <div class="item btn btn-detail">詳細內容</div>
+                </dl>
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                </div>
               </dd>
               <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
+                <dl class="inform"> 
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">新北市蘆洲區長安街23號</div>
+                  <div class="item btn btn-detail">詳細內容</div>
+                </dl>
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                </div>
               </dd>
               <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
+                <dl class="inform">
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">新北市蘆洲區長安街23號</div>
+                  <div class="item btn btn-detail">詳細內容</div>
+                </dl>
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                </div>
               </dd>
             </div>
             <section class="pagination-container pagination-container-custom">
@@ -185,3 +204,5 @@
   //   HashTagContainer("hashTagContainer");
   Footer();
 </script>
+
+<script></script>

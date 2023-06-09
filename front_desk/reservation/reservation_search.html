@@ -14,13 +14,30 @@
       <header></header>
       <main class="search-container">
         <div class="searchCard">
-<div class="title">查詢掛號</div>
-<div class="input"><input type="text" class="form-control" placeholder="身分證字號"></div>
-<div  class="input"><input type="text" class="form-control" placeholder="身分證字號"></div>
-<div  class="button"><button class="btn btn-primary">查詢</button></div>
+          <div class="title">查詢掛號</div>
+          <div class="input">
+            <input
+              type="text"
+              class="form-control patientId"
+              placeholder="身分證字號"
+            />
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              class="form-control patientDate"
+              placeholder="出生年月日 2000/01/01"
+            />
+          </div>
+          <div class="alert"></div>
+          <div class="button">
+            <button class="btn btn-primary" onclick="searchRegister()">
+              查詢
+            </button>
+          </div>
         </div>
       </main>
-      
+
       <div class="content-container">
         <dl></dl>
         <nav>
@@ -36,40 +53,71 @@
         <section>
           <div class="major-title">搜尋結果</div>
           <div class="major-content">
-            <div class="switch-header">
-              <div class="switch">
-                <div class="item active">依科別排序</div>
-                <div class="item">以地圖呈現</div>
-              </div>
-              <div class="total">共38間診所</div>
+            <div class="switch-header d-center">
+              <div class="total">共3個預約紀錄</div>
             </div>
             <div class="clinic-list">
               <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
-              </dd>
-              <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
-              </dd>
-              <dd class="clinic-item">
-                <div class="item department">家醫科</div>
-                <div class="item name">丁文內科診所</div>
-                <div class="item tel">02-12345678</div>
-                <div class="item address">新北市蘆洲區長安街23號</div>
-                <div class="item btn btn-detail">詳細內容</div>
+                <dl class="inform">
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">早診 09:00-12:00</div>
+                  <div class="item address">莊耀熙醫師</div>
+                  <div
+                    class="item btn btn-detail"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteModal"
+                    onclick="deleRegisterModal('id帶進來')"
+                  >
+                    取消預約
+                  </div>
+                </dl>
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                </div>
               </dd>
             </div>
           </div>
         </section>
       </div>
       <footer></footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger" id="deleteModalLabel">
+              確定刪除?
+            </h5>
+          </div>
+          <div class="modal-body">刪除後預約無法復原,確定要刪除?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger w-100"
+              onclick="deleRegister('預約的ID')"
+            >
+              確定刪除
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary w-100"
+              onclick="deleRegisterModal()"
+            >
+              返回
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -86,62 +134,45 @@
 <script src="../../component/Footer.js"></script>
 <script>
   Header();
-  //   Navbar();
-  //   Carousel("");
-  //   HashTagContainer("hashTagContainer");
-  // Calendar()
   Footer();
 </script>
-
-<!-- <div class="calendar">
-                    <div class="month">
-                      <h2 id="month-year"></h2>
-                    </div>
-                    <div class="weekdays">
-                      <div class="day">Sun</div>
-                      <div class="day">Mon</div>
-                      <div class="day">Tue</div>
-                      <div class="day">Wed</div>
-                      <div class="day">Thu</div>
-                      <div class="day">Fri</div>
-                      <div class="day">Sat</div>
-                    </div>
-                    <div class="days" id="calendar-days"></div>
-                  </div> -->
-
-<!-- <script>
-  // 获取当前日期
-  const currentDate = new Date();
-
-  // 获取年份和月份
-  const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth();
-
-  // 设置月份和年份显示
-  document.getElementById("month-year").textContent = `${
-    currentMonth + 1
-  }/${currentYear}`;
-
-  // 获取当前月份的天数
-  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-  // 获取当前月份的第一天是星期几
-  const firstDayOfWeek = new Date(currentYear, currentMonth, 1).getDay();
-
-  // 获取日历的容器元素
-  const calendarDays = document.getElementById("calendar-days");
-
-  // 渲染日历日期
-  for (let i = 1; i <= daysInMonth; i++) {
-    const day = document.createElement("div");
-    day.classList.add("day");
-    day.textContent = i;
-
-    // 判断是否是当前月份的日期
-    if (i < firstDayOfWeek || i >= firstDayOfWeek + daysInMonth) {
-      day.classList.add("disabled");
+<script>
+  // delete
+  function deleRegisterModal(rigisterId = null) {
+    $("#deleteModal").modal("toggle");
+    if (!rigisterId) {
+      return;
     }
-
-    calendarDays.appendChild(day);
+    let dom = document.querySelector("#deleteModal .modal-content");
+    dom.setAttribute("data-id", rigisterId);
   }
-</script> -->
+  function deleRegister(params) {
+    $("#deleteModal").modal("toggle");
+    let registerId = document
+      .querySelector("#deleteModal .modal-content")
+      .getAttribute("data-id");
+    console.log(registerId, "registerId");
+    // do delete api and get the register ID
+    // render UI by yourself
+  }
+
+
+  // search
+
+  function searchRegister(){
+    let patientId=document.querySelector(".searchCard .patientId").value
+    let patientDate=document.querySelector(".searchCard .patientDate").value
+    let alertDom=document.querySelector(".searchCard .alert")
+    console.log(patientId,"patientId",patientDate,"patientDate")
+    if (!patientId || !patientDate) {
+      console.log("填寫格式有誤")
+
+      alertDom.innerHTML=`填寫格式有誤`
+      return
+    }else{
+      alertDom.innerHTML=""
+      // call search API and u should get the list
+      // render in your UI 
+    }
+  }
+</script>

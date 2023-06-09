@@ -1,3 +1,4 @@
+@import "../component/component.scss";
 @import "../frontPage/header";
 @import "../frontPage/pagination";
 @import "./search-container";
@@ -7,11 +8,7 @@
   }
 }
 .content-container {
-  padding: 1.5rem 2.5rem;
-  background-color: #f5f5f5;
-  @media (max-width: 996px) {
-    padding: 1rem;
-  }
+  @include content_container();
   dl {
     height: 100px;
     @media (max-width: 996px) {
@@ -41,9 +38,7 @@ section {
   border-radius: 8px;
   padding: 2rem 3.5rem;
   margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @include dflex(null,null,null,column);
   @media (max-width: 996px) {
     padding: 1.5rem 1rem;
   }
@@ -53,7 +48,7 @@ section {
   .major-content-block {
     margin-bottom: 1rem;
     .major-content-title {
-      display: flex;
+      // display: flex;
       letter-spacing: 0.02em;
       color: #333333;
       font-weight: 700;
@@ -61,6 +56,27 @@ section {
       padding-bottom: 0.75rem;
       width: 100%;
       border-bottom: #cdcdcd 1px solid;
+      white-space: nowrap;
+      // align-items: center;
+      @include dflex(null,center);
+      .keyword{
+        margin-left: 1.5rem;
+        width: 50%;
+        border-radius: 50px;
+      }
+      .notLimited{
+        background-color: white;
+        color: cadetblue;
+        padding: 0.25rem 0.75rem;
+        margin-left: 1.5rem;
+        border-radius: 50px ;
+        font-size: 1rem;
+        border: 1px cadetblue solid;
+        &:hover{
+          background-color: cadetblue;
+          color: white;
+        }
+      }
     }
     .major-content-list {
       .buttonItem {
@@ -79,10 +95,7 @@ section {
         }
       }
       .list-one-line {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-
+        @include dflex(null,center,wrap);
         .list-item {
           &.active {
             background: #24a8a7;
@@ -155,10 +168,10 @@ section {
             line-height: 2.5rem;
             color: #53b6b7;
           }
-          &.tagList{
+          &.tagList {
             justify-content: start;
             flex-wrap: wrap;
-            .buttonItem{
+            .buttonItem {
               margin-top: 0.5rem;
             }
           }
@@ -172,34 +185,12 @@ section {
     color: white;
   }
   .switch-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dflex(end, center);
+    &.d-center {
+      @include dflex(center);
+    }
     @media (max-width: 576px) {
       flex-direction: column;
-    }
-    .switch {
-      display: flex;
-      align-items: center;
-      @media (max-width: 576px) {
-        width: 100%;
-      }
-      .active {
-        background: #24a8a7;
-        border-radius: 16px;
-        color: white !important;
-      }
-      .item {
-        color: grey;
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        padding: 6px 16px;
-        width: auto;
-        height: auto;
-        @media (max-width: 576px) {
-          width: 100%;
-        }
-      }
     }
 
     .total {
@@ -216,29 +207,52 @@ section {
     }
   }
   .clinic-list {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0;
+    // display: flex;
+    // flex-direction: column;
+    @include dflex(null, null, null, column);
+    padding: 1rem 0;
     @media (max-width: 996px) {
-      padding:  0;
+      padding: 0;
       // flex-direction: row;
     }
     .clinic-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      @include dflex(space-between, center, wrap);
       border-bottom: #cdcdcd 1px solid;
       padding: 0.5rem 0;
+      width: 100%;
       @media (max-width: 996px) {
         // justify-content: flex-start;
         margin: 0.5rem 0;
         // font-size: 1.25rem
         // flex-direction: column;
       }
-      .item {
-        width: auto;
+      .inform {
         height: auto;
+        @include dflex(space-between, center, nowrap);
+        width: 100%;
+      }
+      .department-List {
+        height: auto;
+        @include dflex(start, center, wrap);
+        .department {
+          height: auto;
+          width: auto;
+          background: #efefef;
+          border: 1px solid #e2e2e2;
+          border-radius: 4px;
+          font-size: 1rem;
+          padding: 0.25rem;
+          margin-right: 0.5rem;
+          // padding: 8px 16px;
+          // width: calc(25% / 2);
+          // @media (max-width: 776px) {
+          //   width: 33%;
+          // }
+        }
+      }
+      .item {
+        width: auto !important;
+        height: auto !important;
         color: #666666;
         font-weight: 400;
         font-size: 20px;
@@ -248,53 +262,44 @@ section {
           font-size: 1rem;
           margin: 0.25rem 0;
         }
-        &.department {
-          background: #efefef;
-          border: 1px solid #e2e2e2;
-          border-radius: 4px;
-          padding: 8px 16px;
-          width: calc(25% / 2);
-          @media (max-width: 776px) {
-            width: 33%;
-          }
-        }
         &.name {
-          width: calc(75% / 2 / 2);
-          @media (max-width: 776px) {
-            width: 33%;
-          }
-          @media (max-width: 576px) {
-            display: block;
-            text-align: end;
-            width: 50%;
-          }
+          font-weight: 900;
+          // width: calc(75% / 2 / 2);
+          // @media (max-width: 776px) {
+          //   width: 33%;
+          // }
+          // @media (max-width: 576px) {
+          //   display: block;
+          //   text-align: end;
+          //   width: 50%;
+          // }
         }
         &.tel {
-          width: calc(75% / 2 / 2);
-          @media (max-width: 776px) {
-            display: block;
-            text-align: end;
-            width: 33%;
-          }
-          @media (max-width: 576px) {
-            display: block;
-            text-align: start;
-            width: 50%;
-            margin: 1rem 0;
-          }
+          // width: calc(75% / 2 / 2);
+          // @media (max-width: 776px) {
+          //   display: block;
+          //   text-align: end;
+          //   width: 33%;
+          // }
+          // @media (max-width: 576px) {
+          //   display: block;
+          //   text-align: start;
+          //   width: 50%;
+          //   margin: 1rem 0;
+          // }
         }
         &.address {
-          width: calc(75% / 2);
-          @media (max-width: 776px) {
-            text-align: start;
-            display: block;
-            width: 50%;
-          }
-          @media (max-width: 576px) {
-            text-align: end;
-            white-space:normal;
+          // width: calc(75% / 2);
+          // @media (max-width: 776px) {
+          //   text-align: start;
+          //   display: block;
+          //   width: 50%;
+          // }
+          // @media (max-width: 576px) {
+          //   text-align: end;
+          //   white-space:normal;
 
-          }
+          // }
         }
         &.btn-detail {
           background: #24a8a7;
@@ -310,7 +315,7 @@ section {
             width: 25%;
           }
           @media (max-width: 576px) {
-            width: 100%
+            width: 100%;
           }
         }
       }
@@ -328,8 +333,7 @@ section {
 @import "./date";
 #reservationModal {
   .modal-header {
-    display: flex;
-    align-items: center;
+    @include dflex(start,center);
     .modal-title {
       width: 100%;
       text-align: center;
@@ -369,11 +373,9 @@ section {
           border-radius: 4px;
           width: calc(100% / 3 - 1rem);
           height: 60px;
-          display: flex;
           font-size: 20px;
           margin-right: 1rem;
-          justify-content: center;
-          align-items: center;
+          @include dflex(center,center);
           background: #ffffff;
           border: 1px solid rgba(205, 205, 205, 0.5);
           &.active {
@@ -391,9 +393,7 @@ section {
       }
       .checkbox {
         margin: 2rem 0 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include dflex(center,center);
         @media (max-width: 996px) {
           width: 100%;
         }

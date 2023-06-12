@@ -1,0 +1,15 @@
+.resevation-inform {
+  text-align: start;
+  padding: 1rem 0 3rem 0;
+  .resevation-inform-item {
+    margin-top: 1rem;
+    @include fontSize(20px, #4a4a4a, 400);
+    letter-spacing: 0.14em;
+    .label {
+    }
+    .value {
+      padding-left: 2rem;
+      color: #53b6b7;
+    }
+  }
+}

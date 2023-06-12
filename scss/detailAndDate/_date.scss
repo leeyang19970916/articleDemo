@@ -1,0 +1,10 @@
+.btn-container {
+    @include dflex(center, center);
+  .nextStep {
+    @include fontSize(24px, white, 900);
+    width: 25%;
+    background: #53b6b7;
+    padding: 15px 40px;
+    border-radius: 10px;
+  }
+}

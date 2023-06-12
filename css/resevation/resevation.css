@@ -923,19 +923,28 @@ nav .button-container button {
   cursor: pointer;
   margin: 0.5rem;
   margin-left: 0;
+  margin-right: 1rem;
   padding: 1rem 3rem;
   background: #ffffff;
   border: 1px solid rgba(205, 205, 205, 0.5);
-  border-radius: 4px;
-  letter-spacing: 0.01em;
-  font-weight: 400;
-  font-size: 20px;
+  color: rgba(74, 74, 74, 0.3);
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
 }
 @media (max-width: 576px) {
   .major-content-list .clinic-doctor .doctor {
@@ -950,8 +959,8 @@ nav .button-container button {
 }
 .major-content-list .clinic-doctor .doctor.active {
   border: 1px solid #53b6b7;
-  background: #eefcfb;
-  color: #53b6b7;
+  color: #eefcfb;
+  background-color: #53b6b7;
 }
 .major-content-list .clinic-time {
   display: -webkit-box;
@@ -1017,7 +1026,7 @@ nav .button-container button {
   height: 60px;
   background: #ffffff;
   border: 1px solid rgba(205, 205, 205, 0.5);
-  border-radius: 4px;
+  border-radius: 10px;
 }
 @media (max-width: 996px) {
   .major-content-list .clinic-time .clinic-time-state .list .timeItem {
@@ -1026,10 +1035,9 @@ nav .button-container button {
   }
 }
 .major-content-list .clinic-time .clinic-time-state .list .timeItem.active {
-  background: #eefcfb;
+  color: #eefcfb;
   border: 1px solid #53b6b7;
-  border-radius: 4px;
-  color: #24a8a7;
+  background-color: #24a8a7;
 }
 
 .major-content-list .clinic-month {
@@ -1055,7 +1063,8 @@ nav .button-container button {
   font-weight: 900;
   font-size: 20px;
 }
-.major-content-list .clinic-month .monthHandler .prev, .major-content-list .clinic-month .monthHandler .next {
+.major-content-list .clinic-month .monthHandler .prev,
+.major-content-list .clinic-month .monthHandler .next {
   cursor: pointer;
   background-color: #24a8a7;
   padding: 0.5rem 1rem;
@@ -1085,6 +1094,9 @@ nav .button-container button {
   padding: 1rem 0;
   font-size: 20px;
   width: 14.2857142857%;
+}
+.major-content-list .clinic-month .date .week .weekItem.isWeekend {
+  color: #9c0e4e;
 }
 .major-content-list .clinic-month .date .day {
   display: -webkit-box;
@@ -1126,7 +1138,6 @@ nav .button-container button {
   width: calc(14.2857142857% - 1rem);
   height: 60px;
   background: #ffffff;
-  border: 1px solid rgba(205, 205, 205, 0.5);
   border-radius: 4px;
   margin: 0.5rem 0.5rem;
 }
@@ -1137,19 +1148,37 @@ nav .button-container button {
     margin: 0.5rem 0.25rem;
   }
 }
-.major-content-list .clinic-month .date .day .dayItem.none {
+.major-content-list .clinic-month .date .day .dayItem span.none {
   cursor: auto;
   border: none;
 }
-.major-content-list .clinic-month .date .day .dayItem.disabled {
+.major-content-list .clinic-month .date .day .dayItem span.disabled {
   background: rgba(222, 222, 222, 0.5);
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: #a7a7a7;
 }
-.major-content-list .clinic-month .date .day .dayItem.active {
-  background: #eefcfb;
-  color: #24a8a7;
+.major-content-list .clinic-month .date .day .dayItem span.active {
+  color: #eefcfb;
+  background: #24a8a7;
   border: 1px solid #53b6b7;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 50px;
 }
 
 #reservationModal .modal-header {

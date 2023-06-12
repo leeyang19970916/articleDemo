@@ -29,17 +29,38 @@
         <div class="schedule">
           <div class="clinic-week">
             <div class="clinic-week-col">
-              <div class="item"></div>
-              <div class="item">早診</div>
-              <div class="item">午診</div>
-              <div class="item">晚診</div>
+              <div class="item state">門診表</div>
+              <div class="item state">
+                <div class="stateName">早診</div>
+                <div class="range">09:00-13:00</div>
+              </div>
+              <div class="item state">
+                <div class="stateName">午診</div>
+                <div class="range">09:00-13:00</div>
+              </div>
+              <div class="item state">
+                <div class="stateName">晚診</div>
+                <div class="range">09:00-13:00</div>
+              </div>
+            </div>
+            <div class="clinic-week-col">
+              <div class="item isWeekend">日</div>
+              <div data-id="71" class="item isWeekend">
+                <span class="">休</span>
+              </div>
+              <div data-id="72" class="item isWeekend">
+                <span class="">休</span>
+              </div>
+              <div data-id="73" class="item isWeekend">
+                <span class="active isWeekend"></span>
+              </div>
             </div>
             <div class="clinic-week-col">
               <div class="item">一</div>
               <div data-id="11" class="item">
                 <span class="active"></span>
               </div>
-              <div data-id="12" class="item"><span class=""></span></div>
+              <div data-id="12" class="item"><span class="">休</span></div>
               <div data-id="13" class="item">
                 <span class="active"></span>
               </div>
@@ -49,12 +70,12 @@
               <div data-id="21" class="item">
                 <span class="active"></span>
               </div>
-              <div data-id="22" class="item"><span class=""></span></div>
-              <div data-id="23" class="item"><span class=""></span></div>
+              <div data-id="22" class="item"><span class="">休</span></div>
+              <div data-id="23" class="item"><span class="">休</span></div>
             </div>
             <div class="clinic-week-col">
               <div class="item">三</div>
-              <div data-id="31" class="item"><span class=""></span></div>
+              <div data-id="31" class="item"><span class="">休</span></div>
               <div data-id="32" class="item">
                 <span class="active"></span>
               </div>
@@ -83,34 +104,42 @@
               </div>
             </div>
             <div class="clinic-week-col">
-              <div class="item">六</div>
-              <div data-id="61" class="item">
-                <span class="active"></span>
+              <div class="item isWeekend">六</div>
+              <div data-id="61" class="item isWeekend">
+                <span class="active isWeekend"></span>
               </div>
-              <div data-id="62" class="item"><span class=""></span></div>
-              <div data-id="63" class="item">
-                <span class="active"></span>
+              <div data-id="62" class="item isWeekend">
+                <span class="">休</span>
               </div>
-            </div>
-            <div class="clinic-week-col">
-              <div class="item">日</div>
-              <div data-id="71" class="item"><span class=""></span></div>
-              <div data-id="72" class="item"><span class=""></span></div>
-              <div data-id="73" class="item">
-                <span class="active"></span>
+              <div data-id="63" class="item isWeekend">
+                <span class="active isWeekend"></span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="content-container">
-        <div class="condition"><span>週六看診</span><span>週六看診</span><span>週六看診</span></div>
+        <div class="condition-tagList">
+          <span class="item">週六看診</span><span class="item">週六看診</span
+          ><span class="item">週六看診</span>
+        </div>
 
         <section class="detail">
-          <div class="title">注意事項</div>
-          <div class="content alert">
+          <div class="title">
+            注意事項
+            <span
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              X</span
+            >
+          </div>
+          <div class="content alert close collapse" id="collapseExample">
             每人可預約額度每位病友有兩次的預約額度，預約時間需間隔最少三天。
-            例：已完成1月1日的門診預約，您最快可再預約1月4日的門診時段。 
+            例：已完成1月1日的門診預約，您最快可再預約1月4日的門診時段。
             線上預約掛號 開放時間於30天前開放預約
             例：想預約1月30日門診時段，請往前回推30天，您可於12月31日線上登記預約。
             線上預約規則細項 1.
@@ -161,8 +190,10 @@
             </ul>
           </div>
         </section>
-      </div>
 
+      </div>
+      <section class="bannerAD" style="display: flex;
+      justify-content: center; align-items: center; background-color: rgb(73, 189, 150);height: 100px;">bannerAD</section>
       <footer></footer>
     </div>
   </body>
@@ -180,20 +211,10 @@
 <script src="../../component/Footer.js"></script>
 <script>
   Header();
-  //   Navbar();
-  //   Carousel("");
-  //   HashTagContainer("hashTagContainer");
-  // Calendar()
   Footer();
 </script>
 <script>
-  //   function textUIRender() {
-  //     let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。
-  // 然后，在 JavaScript 中定义 redirectTo 函数来处理跳转逻辑：`;
-  // let dom=document.querySelector(".clinic-inform")
-  // dom.innerHTML=str
-  //   }
-  //   textUIRender()
+
   function textUIRender() {
     let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。
   然后，在 JavaScript 中定义 redirectTo 函数来处理跳转逻辑：`;
@@ -223,6 +244,12 @@
   }
 
   textUIRender();
+</script>
+<script>
+  function expandHandler(params) {
+    let dom = document.querySelector("section.detail .content.alert");
+    dom.classList.toggle("show");
+  }
 </script>
 <!-- <div class="calendar">
                     <div class="month">

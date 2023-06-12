@@ -227,13 +227,22 @@ footer .copyright {
   }
 }
 
-.btn-container {
+.content-container {
+  padding: 1.5rem 2.5rem;
+  background-color: #f5f5f5;
+}
+@media (max-width: 996px) {
+  .content-container {
+    padding: 1rem;
+  }
+}
+.content-container .condition-tagList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -244,25 +253,140 @@ footer .copyright {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.btn-container .nextStep {
-  font-size: 24px;
-  color: white;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  width: 25%;
-  background: #53b6b7;
-  padding: 15px 40px;
-  border-radius: 10px;
+.content-container .condition-tagList span.item {
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: #24a8a7 1px solid;
+  color: #53B6B7;
 }
 
-.schedule {
+.clinic-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 1rem;
+  background-color: #53b6b7;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(83, 182, 183)), color-stop(70%, hsla(181deg, 41%, 52%, 0))), url("../../image/卡比.jpg");
+  background-image: linear-gradient(to top, rgb(83, 182, 183) 0%, hsla(181deg, 41%, 52%, 0) 70%), url("../../image/卡比.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 774px;
+}
+.clinic-image .inform {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.clinic-image .inform .department {
+  padding-bottom: 1rem;
+}
+.clinic-image .inform .clinicName {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid white;
+  padding-bottom: 1rem;
+}
+.clinic-image .inform .phone,
+.clinic-image .inform .address {
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  padding: 0.5rem 0;
+}
+.clinic-image .inform .alert {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+}
+.clinic-image .schedule {
   background-color: white;
   border: 1px solid #e2e2e2;
   border-radius: 20px;
   padding: 20px;
-  -webkit-transform: translate(0px, 80px);
-          transform: translate(0px, 80px);
+}
+
+section.detail {
+  padding: 1rem 1rem 0 1rem;
+}
+section.detail .title {
+  font-size: 28px;
+  color: #53b6b7;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  border-bottom: 1px solid #cdcdcd;
+  padding: 1rem 2.5rem;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+}
+section.detail .content {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.08em;
+  padding: 1rem 0;
+}
+section.detail .content.alert {
+  padding: 1rem 2.5rem;
+}
+section.detail .content .list {
+  min-height: 300px;
+}
+section.detail .content .list li {
+  font-size: 20px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 0.75rem 0;
+}
+section.detail .content .list li .itemContent {
+  padding-left: 1rem;
+}
+
+.schedule {
   width: 50%;
 }
 .schedule .clinic-week {
@@ -276,30 +400,24 @@ footer .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 .schedule .clinic-week .clinic-week-col {
-  width: 11.4285714286%;
-}
-.schedule .clinic-week .clinic-week-col:first-child {
-  min-width: 20%;
-}
-.schedule .clinic-week .clinic-week-col:first-child .item {
-  border-left: none;
-}
-.schedule .clinic-week .clinic-week-col:last-child .item {
-  border-right: none;
+  width: 12.5%;
 }
 .schedule .clinic-week .clinic-week-col .item {
-  font-size: 1.25rem;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,43 +435,6 @@ footer .copyright {
           flex-direction: row;
   overflow: hidden;
   height: 60px;
-  border: 1px dotted #e2e2e2;
-}
-.schedule .clinic-week .clinic-week-col .item.state {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.schedule .clinic-week .clinic-week-col .item.state .stateName {
-  padding-top: 10px;
-}
-.schedule .clinic-week .clinic-week-col .item.state .range {
-  padding-top: 5px;
-  font-size: 1rem;
-}
-.schedule .clinic-week .clinic-week-col .item.isWeekend {
-  color: #9C0E4E;
-}
-.schedule .clinic-week .clinic-week-col .item.isRest {
-  color: #9C0E4E;
-}
-.schedule .clinic-week .clinic-week-col .item:first-child {
-  border-top: none;
-}
-.schedule .clinic-week .clinic-week-col .item:last-child {
-  border-bottom: none;
 }
 .schedule .clinic-week .clinic-week-col .item .active {
   padding: 0;
@@ -361,9 +442,6 @@ footer .copyright {
   height: 20px;
   background: #53b6b7;
   border-radius: 50%;
-}
-.schedule .clinic-week .clinic-week-col .item .active.isWeekend {
-  background-color: #9C0E4E;
 }
 @media (max-width: 576px) {
   .schedule .clinic-week .clinic-week-col .item .active {
@@ -526,234 +604,4 @@ footer .copyright {
   border: 1px solid #53b6b7;
   border-radius: 4px;
   color: #24a8a7;
-}
-
-.content-container {
-  padding: 1.5rem 2.5rem;
-  background-color: #f5f5f5;
-}
-@media (max-width: 996px) {
-  .content-container {
-    padding: 1rem;
-  }
-}
-.content-container .condition-tagList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.content-container .condition-tagList span.item {
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: #24a8a7 1px solid;
-  color: #53b6b7;
-  padding: 0.55rem 0.75rem;
-  margin-left: 1rem;
-}
-
-.clinic-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0 1rem;
-  background-color: #53b6b7;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(83, 182, 183)), color-stop(70%, hsla(181deg, 41%, 52%, 0))), url("../../image/卡比.jpg");
-  background-image: linear-gradient(to top, rgb(83, 182, 183) 0%, hsla(181deg, 41%, 52%, 0) 70%), url("../../image/卡比.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  height: 774px;
-}
-.clinic-image .inform {
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-}
-.clinic-image .inform .department {
-  padding-bottom: 1rem;
-}
-.clinic-image .inform .clinicName {
-  font-size: 48px;
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid white;
-  padding-bottom: 1rem;
-}
-.clinic-image .inform .phone,
-.clinic-image .inform .address {
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.08em;
-  padding: 0.5rem 0;
-}
-.clinic-image .inform .alert {
-  letter-spacing: 0.08em;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  padding: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  margin: 0;
-}
-
-section.detail {
-  padding: 1rem 1rem 0 1rem;
-}
-section.detail .title {
-  font-size: 28px;
-  color: #53b6b7;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  border-bottom: 1px solid #cdcdcd;
-  padding: 1rem 2.5rem;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-}
-section.detail .content {
-  font-size: 20px;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.08em;
-  padding: 1rem 0;
-}
-section.detail .content.alert {
-  padding: 1rem 2.5rem;
-}
-section.detail .content .list {
-  min-height: 300px;
-}
-section.detail .content .list li {
-  font-size: 20px;
-  color: #4a4a4a;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-bottom: 1px solid #cdcdcd;
-  padding: 0.75rem 0;
-}
-section.detail .content .list li .itemContent {
-  padding-left: 1rem;
-}
-
-section {
-  margin: 0;
-  margin-bottom: 2.5rem;
-}
-section.stepControl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
-}
-section.stepControl .step {
-  font-size: 20px;
-  color: #53b6b7;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  border: 1px solid #53b6b7;
-  background-color: white;
-  width: calc(33.3333333333% - 1rem);
-  padding: 1rem 0;
-  position: relative;
-  padding: 10px 20px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-}
-section.stepControl .step::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-top: none;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-}
-section.stepControl .step.active {
-  color: white;
-  background-color: #53b6b7;
-}
-
-.resevation-inform {
-  text-align: start;
-  padding: 1rem 0 3rem 0;
-}
-.resevation-inform .resevation-inform-item {
-  margin-top: 1rem;
-  font-size: 20px;
-  color: #4a4a4a;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.14em;
-}
-.resevation-inform .resevation-inform-item .value {
-  padding-left: 2rem;
-  color: #53b6b7;
 }

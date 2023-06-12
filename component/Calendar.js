@@ -1,18 +1,3 @@
-// const monthNames = [
-//     "一月",
-//     "二月",
-//     "三月",
-//     "四月",
-//     "五月",
-//     "六月",
-//     "七月",
-//     "八月",
-//     "九月",
-//     "十月",
-//     "十一月",
-//     "十二月",
-//   ];
-
 class Calendar {
   constructor() {
     (this.currentDate = new Date()),
@@ -37,6 +22,7 @@ class Calendar {
     this.lastDay = 0;
     this.firstDayWeek = 0;
     this.calculateDays();
+    this.holidays=[]
   }
   calculateDays() {
     this.year = this.currentDate.getFullYear();
@@ -49,18 +35,32 @@ class Calendar {
       this.currentDate.getMonth(),
       1
     ).getDay();
+    // this.getHoliday(new Date(
+    //   this.year,
+    //   this.currentDate.getMonth(),
+    // ).getDay())
+    this.getHoliday()
   }
-  onFirstDayWeek() {
-    // console.log(new Date(this.year, this.month, 1).getDay());
+  getHoliday(){
+    console.log(this.firstDayWeek,"this.firstDayWeek")
+    // const startDate = new Date(this.year, this.month, 1);
+    // const endDate = new Date(this.year, this.month+1, 0);
+  
+    // for (let date = 1; date <= this.lastDay; date++) {
+    //   const dayOfWeek = date.getDay();
+    //   console.log(date,"datee")
+    //   // 判断是否为星期六或星期日，即假日
+    //   if (dayOfWeek === 6 || dayOfWeek === 0) {
+    //     console.log(date,"datee")
+    //     // this.holidays.push(new Date(date)); // 将日期对象存入假日数组
+    //   }
+    // }
+    // this.holidays.push(date)
   }
   onMonthName() {
     this.monthName = this.monthNamesArr[this.month - 1];
     return this;
   }
-  onYear() {}
-  onMonth() {}
-  onCurrentDay() {}
-  onLastDay() {}
   nextMonth() {
     this.currentDate.setMonth(this.currentDate.getMonth() + 1);
     this.currentDate.setDate(1);
@@ -76,7 +76,6 @@ class Calendar {
 }
 
 let calendar = new Calendar();
-console.log(calendar, "calendar");
 
 let dateDOM = document.querySelector(".clinic-month");
 let monthDOM = dateDOM.querySelector(".monthHandler .month");
@@ -88,6 +87,7 @@ function monthUI() {
 }
 function dayUI() {
   let { firstDayWeek, currentDay, lastDay } = calendar;
+  console.log(calendar,"calendar")
   let week = 0;
   let str = "";
   if (firstDayWeek > 0) {
@@ -99,9 +99,9 @@ function dayUI() {
   }
   for (let i = 1; i <= lastDay; i++) {
     if (i === currentDay) {
-      str += `<div class="dayItem active">${i}</div>`;
+      str += `<div class="dayItem"> <span class="active">${i}</span></div>`;
     } else {
-      str += `<div class="dayItem">${i}</div>`;
+      str += `<div class="dayItem"> <span>${i}</span> </div>`;
     }
   }
 
@@ -111,7 +111,6 @@ monthUI();
 dayUI();
 
 function monthChange(e) {
-  // console.log("swdfas")
   if (e === "next") {
     calendar.nextMonth();
   } else {

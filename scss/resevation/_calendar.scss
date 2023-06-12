@@ -6,7 +6,8 @@
       letter-spacing: 0.02em;
       font-weight: 900;
       font-size: 20px;
-      .prev,.next{
+      .prev,
+      .next {
         cursor: pointer;
         background-color: #24a8a7;
         padding: 0.5rem 1rem;
@@ -15,7 +16,7 @@
     }
     .date {
       .week {
-        @include dflex("",center);
+        @include dflex("", center);
         width: 100%;
         margin-top: 1rem;
         .weekItem {
@@ -23,47 +24,56 @@
           padding: 1rem 0;
           font-size: 20px;
           width: calc(100% / 7);
+          &.isWeekend {
+            color: #9c0e4e;
+          }
           @media (max-width: 576px) {
           }
         }
       }
       .day {
-        @include dflex("",center,wrap);
+        @include dflex("", center, wrap);
         width: 100%;
         .dayItem {
           cursor: pointer;
           font-size: 20px;
           letter-spacing: 0.01em;
-          @include dflex(center,center);
+          @include dflex(center, center);
           width: calc(100% / 7 - 1rem);
           height: 60px;
           background: #ffffff;
-          border: 1px solid rgba(205, 205, 205, 0.5);
+          // border: 1px solid rgba(205, 205, 205, 0.5);
           border-radius: 4px;
           margin: 0.5rem 0.5rem;
           @media (max-width: 576px) {
             width: calc(100% / 7 - 0.5rem);
             font-size: 1rem;
             // width: calc(100% / 7);
-            margin:0.5rem  0.25rem;
+            margin: 0.5rem 0.25rem;
             // padding:0 1rem
           }
-          &.none{
-            // 空拍
-            cursor:auto; 
-            border: none;
-          }
-          &.disabled {
-            // 沒有可預約
-            background: rgba(222, 222, 222, 0.5);
-            border: 1px solid rgba(205, 205, 205, 0.5);
-            color: #a7a7a7;
-          }
-          &.active {
-            // 正在點選
-            background: #eefcfb;
-            color: #24a8a7;
-            border: 1px solid #53b6b7;
+          span {
+            &.none {
+              // 空拍
+              cursor: auto;
+              border: none;
+            }
+            &.disabled {
+              // 沒有可預約
+              background: rgba(222, 222, 222, 0.5);
+              border: 1px solid rgba(205, 205, 205, 0.5);
+              color: #a7a7a7;
+            }
+            &.active {
+              // 正在點選
+              color: #eefcfb;
+              background: #24a8a7;
+              border: 1px solid #53b6b7;
+              width: 50px;
+              height: 50px;
+              @include dflex(center,center);
+              border-radius: 50px;
+            }
           }
         }
       }

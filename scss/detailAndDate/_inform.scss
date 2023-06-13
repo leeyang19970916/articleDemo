@@ -5,11 +5,85 @@
     margin-top: 1rem;
     @include fontSize(20px, #4a4a4a, 400);
     letter-spacing: 0.14em;
-    .label {
-    }
+    // .label {
+    // }
     .value {
       padding-left: 2rem;
       color: #53b6b7;
+    }
+  }
+}
+
+.patient-inform {
+  @include dflex(null, center, nowrap, column);
+  .visit {
+    @include dflex(center, center, nowrap);
+    width: 40%;
+    margin: 1.5rem 0;
+    .visit-first,
+    .visit-followUp {
+      @include fontSize(24px, #4a4a4a, 500);
+      letter-spacing: 0.14em;
+      @include button();
+    }
+  }
+  .inform-input {
+    width: 50%;
+    margin-top: 1rem;
+    .input {
+      @include input();
+    }
+  }
+  .form-check {
+    @include dflex(null, end);
+    @include fontSize(20px, #4a4a4a, 500);
+    .form-check-label {
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.stepControl-button {
+  @include dflex(null, center, nowrap);
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  .button-prev,
+  .button-next {
+    @include fontSize(24px, #4a4a4a, 500);
+    letter-spacing: 0.14em;
+    @include button();
+  }
+}
+
+// finish
+
+.finishTitle {
+  @include fontSize(28px, #ab0f56, 900);
+  text-align: center;
+  letter-spacing: 0.14em;
+  margin:1.5rem 0;
+}
+.breakline {
+  @include breakline();
+}
+.personal-inform {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  .informItem {
+    margin-bottom: 1rem;
+    text-align: start;
+    @include dflex(start, center);
+    .field {
+      @include fontSize(1.25rem, #4a4a4a, 400);
+      width: 40%;
+      letter-spacing: 0.14em;
+    }
+    .value {
+      width: 60%;
+      @include fontSize(1.25rem, #53b6b7, 400);
+      letter-spacing: 0.14em;
     }
   }
 }

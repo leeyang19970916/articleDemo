@@ -1,0 +1,15 @@
+@mixin input(){
+    @include dflex(start,center,nowrap);
+    margin-bottom: 1.5rem;
+    label{
+      @include fontSize(18px,#4A4A4A,400);
+      white-space: nowrap;
+      min-width: 150px;
+      margin-right: 1rem;
+      text-align: start;
+    }
+}
+
+@mixin checkbox(){
+    
+}

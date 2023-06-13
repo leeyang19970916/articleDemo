@@ -35,9 +35,9 @@ section {
 .major-content {
   background-color: white;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   padding: 2rem 3.5rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   @include dflex(null,null,null,column);
   @media (max-width: 996px) {
     padding: 1.5rem 1rem;
@@ -49,10 +49,9 @@ section {
     margin-bottom: 1rem;
     .major-content-title {
       // display: flex;
+      
+      @include fontSize(20px,#333333,700);
       letter-spacing: 0.02em;
-      color: #333333;
-      font-weight: 700;
-      font-size: 20px;
       padding-bottom: 0.75rem;
       width: 100%;
       border-bottom: #cdcdcd 1px solid;
@@ -80,14 +79,10 @@ section {
     }
     .major-content-list {
       .buttonItem {
-        // margin: 1rem 0;
         margin-right: 0.5rem;
         padding: 6px 16px;
-        color: #666666;
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        display: flex;
-        align-items: center;
+        @include fontSize(1rem,#666666,400);
+        @include dflex(null,center);
         &.active {
           background: #24a8a7;
           border-radius: 16px;
@@ -103,8 +98,7 @@ section {
             color: white !important;
           }
           &.zone {
-            color: black;
-            font-weight: 400;
+            @include fontSize(1rem,black,400);
             letter-spacing: 0.01em;
             margin: 1rem 0;
             margin-right: 0.5rem;
@@ -112,56 +106,40 @@ section {
           &.city {
             margin: 0 0.25rem;
             padding: 6px 16px;
-            color: #666666;
-            font-weight: 400;
-            letter-spacing: 0.01em;
+            @include fontSize(1rem,#666666,400);
           }
           &.district {
             margin: 1rem 0;
             margin-right: 0.5rem;
             // margin: 0 0.25rem;
             padding: 6px 16px;
-            color: #666666;
-            font-weight: 400;
-            letter-spacing: 0.01em;
+            @include fontSize(1rem,#666666,400);
           }
           &.department {
             margin: 1rem 0;
             margin-right: 0.5rem;
             // margin: 0 0.25rem;
             padding: 6px 16px;
-            color: #666666;
-            font-weight: 400;
-            letter-spacing: 0.01em;
+            @include fontSize(1rem,#666666,400);
           }
           &.condition {
             margin: 1rem 0;
             margin-right: 0.5rem;
             // margin: 0 0.25rem;
             padding: 6px 16px;
-            color: #666666;
-            font-weight: 400;
-            letter-spacing: 0.01em;
+            @include fontSize(1rem,#666666,400);
           }
         }
       }
       &.clinic-inform {
-        font-size: 20px;
-        color: #666666;
-        letter-spacing: 0.01em;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: start;
+        @include dflex(flex-start,start,wrap,column);
+        @include fontSize(20px,#666666,400);
         padding: 1rem 0;
         .item {
           width: auto;
           height: auto;
           padding-top: 1rem;
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: wrap;
+          @include dflex(flex-start,center,wrap,row);
           // white-space: ;
           &.green {
             text-align: start;

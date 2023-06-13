@@ -529,12 +529,13 @@ footer .copyright {
 }
 
 .content-container {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2.5rem 0 2.5rem;
   background-color: #f5f5f5;
 }
 @media (max-width: 996px) {
   .content-container {
     padding: 1rem;
+    padding-bottom: 0;
   }
 }
 .content-container .condition-tagList {
@@ -710,34 +711,147 @@ section.stepControl {
   background-color: white;
 }
 section.stepControl .step {
+  background: 0;
+  border: 0;
+  position: relative;
+  width: 8em;
+  height: 2em;
   font-size: 20px;
   color: #53b6b7;
   font-weight: 400;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
-  border: 1px solid #53b6b7;
   background-color: white;
+  cursor: auto;
   width: calc(33.3333333333% - 1rem);
-  padding: 1rem 0;
-  position: relative;
-  padding: 10px 20px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
 }
-section.stepControl .step::after {
-  content: "";
+section.stepControl .step a {
+  color: white;
+  z-index: 1000000;
+  text-decoration: none;
+  cursor: auto;
   position: absolute;
-  right: -10px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-top: none;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 section.stepControl .step.active {
   color: white;
   background-color: #53b6b7;
+}
+
+.btn-right {
+  background: 0;
+  border: 0;
+  position: relative;
+  width: 8em;
+  height: 2em;
+  font-size: 20px;
+  color: #53b6b7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  background-color: white;
+  cursor: auto;
+  width: calc(33.3333333333% - 1rem);
+}
+.btn-right a {
+  color: white;
+  z-index: 1000000;
+  text-decoration: none;
+  cursor: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.btn-right.one::after {
+  background: #53b6b7;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  height: 1em;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  bottom: 0;
+}
+.btn-right.three::before {
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  top: 0;
+  background: #53b6b7;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  height: 1em;
+}
+
+:root {
+  --pointy: 15px;
+  --padding: 1rem;
+  --fontsize: 1rem;
+}
+
+.tp-dfwv {
+  top: 56%;
+}
+
+.btn {
+  background: #aa33ff;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.btn.active a {
+  background: darksalmon;
+}
+.btn a {
+  display: block;
+  font-size: var(--fontsize);
+  font-weight: bold;
+  text-decoration: none;
+  padding: var(--padding);
+  color: white;
+  text-align: center;
+}
+.btn a:hover {
+  background: orange;
+}
+
+.arrow {
+  -webkit-clip-path: polygon(0 0%, calc(100% - var(--pointy)) 0, 100% 50%, calc(100% - var(--pointy)) 100%, 0 100%, var(--pointy) 50%);
+          clip-path: polygon(0 0%, calc(100% - var(--pointy)) 0, 100% 50%, calc(100% - var(--pointy)) 100%, 0 100%, var(--pointy) 50%);
+}
+
+.arrow-reverse {
+  background: red;
+  -webkit-clip-path: polygon(var(--pointy) 0%, 100% 0, calc(100% - var(--pointy)) 50%, 100% 100%, var(--pointy) 100%, 0% 50%);
+          clip-path: polygon(var(--pointy) 0%, 100% 0, calc(100% - var(--pointy)) 50%, 100% 100%, var(--pointy) 100%, 0% 50%);
+}
+
+.flex {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  padding: 1em;
 }
 
 .resevation-inform {
@@ -756,4 +870,241 @@ section.stepControl .step.active {
 .resevation-inform .resevation-inform-item .value {
   padding-left: 2rem;
   color: #53b6b7;
+}
+
+.patient-inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.patient-inform .visit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 40%;
+  margin: 1.5rem 0;
+}
+.patient-inform .visit .visit-first,
+.patient-inform .visit .visit-followUp {
+  font-size: 24px;
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.14em;
+  color: rgba(74, 74, 74, 0.3);
+  padding: 0.75rem 0.55rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(74, 74, 74, 0.3);
+  margin: 0 1rem;
+  width: 100%;
+}
+.patient-inform .visit .visit-first.active,
+.patient-inform .visit .visit-followUp.active {
+  background-color: #53B6B7;
+  color: white;
+  border: #53B6B7 1px solid;
+}
+.patient-inform .inform-input {
+  width: 50%;
+  margin-top: 1rem;
+}
+.patient-inform .inform-input .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+.patient-inform .inform-input .input label {
+  font-size: 18px;
+  color: #4A4A4A;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  white-space: nowrap;
+  min-width: 150px;
+  margin-right: 1rem;
+  text-align: start;
+}
+.patient-inform .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 20px;
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.patient-inform .form-check .form-check-label {
+  padding-left: 1.5rem;
+}
+
+.stepControl-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+.stepControl-button .button-prev,
+.stepControl-button .button-next {
+  font-size: 24px;
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.14em;
+  color: rgba(74, 74, 74, 0.3);
+  padding: 0.75rem 0.55rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(74, 74, 74, 0.3);
+  margin: 0 1rem;
+  width: 100%;
+}
+.stepControl-button .button-prev.active,
+.stepControl-button .button-next.active {
+  background-color: #53B6B7;
+  color: white;
+  border: #53B6B7 1px solid;
+}
+
+.finishTitle {
+  font-size: 28px;
+  color: #ab0f56;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-align: center;
+  letter-spacing: 0.14em;
+  margin: 1.5rem 0;
+}
+
+.breakline {
+  position: relative;
+  margin-top: 1rem;
+}
+.breakline .title {
+  font-size: 20px;
+  color: #4A4A4A;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  padding: 0.25rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.breakline .line {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(74, 74, 74, 0.3);
+}
+
+.personal-inform {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+.personal-inform .informItem {
+  margin-bottom: 1rem;
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.personal-inform .informItem .field {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  width: 40%;
+  letter-spacing: 0.14em;
+}
+.personal-inform .informItem .value {
+  width: 60%;
+  font-size: 1.25rem;
+  color: #53b6b7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.14em;
+}
+
+section {
+  margin: 0;
+}
+section.banner {
+  background-color: thistle;
+  height: 100px;
 }

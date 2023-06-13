@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>step1 預約日期</title>
+    <title>step2 資料填寫</title>
     <link rel="stylesheet" href="../../../css/bootstrap.css" />
     <link rel="stylesheet" href="../../../css/resevation/resevation.css" />
     <link rel="stylesheet" href="../../../css/detailAndDate/clinic.css" />
@@ -43,23 +43,46 @@
             <div class="major-content-block">
               <div class="major-content-title">約診時段</div>
               <div class="major-content-list">
-                <div class="clinic-month">
-                  <div class="monthHandler">
-                    <div class="prev" onclick="monthChange('prev')">左邊</div>
-                    <div class="month">2023年五月</div>
-                    <div class="next" onclick="monthChange('next')">右邊</div>
+                <div class="patient-inform">
+                  <div class="visit">
+                    <div class="visit-first">初診</div>
+                    <div class="visit-followUp">複診</div>
                   </div>
-                  <div class="date">
-                    <div class="week">
-                      <div class="weekItem isWeekend">日</div>
-                      <div class="weekItem">一</div>
-                      <div class="weekItem">二</div>
-                      <div class="weekItem">三</div>
-                      <div class="weekItem">四</div>
-                      <div class="weekItem">五</div>
-                      <div class="weekItem isWeekend">六</div>
+                  <div class="inform-input">
+                    <div class="input">
+                      <label for="">姓名</label>
+                      <input type="text" class="form-control" />
                     </div>
-                    <div class="day"></div>
+                    <div class="input">
+                      <label for="">身份證字號</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="input">
+                      <label for="">聯絡電話</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="input">
+                      <label for="">出生年月日</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckIndeterminate"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="flexCheckIndeterminate"
+                    >
+                      Indeterminate checkbox
+                    </label>
+                  </div>
+                  <div class="stepControl-button">
+                    <div class="button-prev">上一步</div>
+                    <div class="button-next active">確認預約</div>
                   </div>
                 </div>
               </div>

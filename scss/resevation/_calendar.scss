@@ -45,6 +45,9 @@
           // border: 1px solid rgba(205, 205, 205, 0.5);
           border-radius: 4px;
           margin: 0.5rem 0.5rem;
+          &.isWeek{
+            color: #9c0e4e;
+          }
           @media (max-width: 576px) {
             width: calc(100% / 7 - 0.5rem);
             font-size: 1rem;

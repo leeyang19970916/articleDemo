@@ -1049,11 +1049,13 @@ nav .button-container button {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  cursor: pointer;
   margin-right: 1rem;
   margin-bottom: 1rem;
   width: calc(14.2857142857% - 1rem);
   height: 60px;
   background: #ffffff;
+  color: rgba(74, 74, 74, 0.3);
   border: 1px solid rgba(205, 205, 205, 0.5);
   border-radius: 10px;
 }
@@ -1169,6 +1171,9 @@ nav .button-container button {
   background: #ffffff;
   border-radius: 4px;
   margin: 0.5rem 0.5rem;
+}
+.major-content-list .clinic-month .date .day .dayItem.isWeek {
+  color: #9c0e4e;
 }
 @media (max-width: 576px) {
   .major-content-list .clinic-month .date .day .dayItem {

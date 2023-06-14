@@ -798,62 +798,6 @@ section.stepControl .step.active {
   height: 1em;
 }
 
-:root {
-  --pointy: 15px;
-  --padding: 1rem;
-  --fontsize: 1rem;
-}
-
-.tp-dfwv {
-  top: 56%;
-}
-
-.btn {
-  background: #aa33ff;
-  cursor: pointer;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.btn.active a {
-  background: darksalmon;
-}
-.btn a {
-  display: block;
-  font-size: var(--fontsize);
-  font-weight: bold;
-  text-decoration: none;
-  padding: var(--padding);
-  color: white;
-  text-align: center;
-}
-.btn a:hover {
-  background: orange;
-}
-
-.arrow {
-  -webkit-clip-path: polygon(0 0%, calc(100% - var(--pointy)) 0, 100% 50%, calc(100% - var(--pointy)) 100%, 0 100%, var(--pointy) 50%);
-          clip-path: polygon(0 0%, calc(100% - var(--pointy)) 0, 100% 50%, calc(100% - var(--pointy)) 100%, 0 100%, var(--pointy) 50%);
-}
-
-.arrow-reverse {
-  background: red;
-  -webkit-clip-path: polygon(var(--pointy) 0%, 100% 0, calc(100% - var(--pointy)) 50%, 100% 100%, var(--pointy) 100%, 0% 50%);
-          clip-path: polygon(var(--pointy) 0%, 100% 0, calc(100% - var(--pointy)) 50%, 100% 100%, var(--pointy) 100%, 0% 50%);
-}
-
-.flex {
-  margin: 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.container {
-  padding: 1em;
-}
-
 .resevation-inform {
   text-align: start;
   padding: 1rem 0 3rem 0;

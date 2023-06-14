@@ -133,71 +133,71 @@ section {
 //   height: 1em;
 // }
 
-:root {
-  --pointy: 15px;
-  --padding: 1rem;
-  --fontsize: 1rem;
-}
+// :root {
+//   --pointy: 15px;
+//   --padding: 1rem;
+//   --fontsize: 1rem;
+// }
 
-// position tweakpane
-.tp-dfwv {
-  top: 56%;
-}
-.btn {
-  // padding: 2rem;
-  background: #aa33ff;
-  cursor: pointer;
-  flex-grow: 1;
-  &.active a {
-    background: darksalmon;
-  }
-  a {
-    display: block;
-    font-size: var(--fontsize);
-    font-weight: bold;
-    text-decoration: none;
-    padding: var(--padding);
-    color: white;
-    text-align: center;
+// // position tweakpane
+// .tp-dfwv {
+//   top: 56%;
+// }
+// .btn {
+//   // padding: 2rem;
+//   background: #aa33ff;
+//   cursor: pointer;
+//   flex-grow: 1;
+//   &.active a {
+//     background: darksalmon;
+//   }
+//   a {
+//     display: block;
+//     font-size: var(--fontsize);
+//     font-weight: bold;
+//     text-decoration: none;
+//     padding: var(--padding);
+//     color: white;
+//     text-align: center;
 
-    &:hover {
-      background: orange;
-    }
-  }
-}
-.arrow {
-  clip-path: polygon(
-    0 0%,
-    calc(100% - var(--pointy)) 0,
-    100% 50%,
-    calc(100% - var(--pointy)) 100%,
-    0 100%,
-    var(--pointy) 50%
-  );
-}
-.arrow-reverse {
-  background: red;
-  clip-path: polygon(
-    var(--pointy) 0%,
-    // TL
-    100% 0,
-    // TR
-    calc(100% - var(--pointy)) 50%,
-    // MR
-    100% 100%,
-    // BR
-    var(--pointy) 100%,
-    // BL
-    0% 50%,
-    // ML
-  );
-}
+//     &:hover {
+//       background: orange;
+//     }
+//   }
+// }
+// .arrow {
+//   clip-path: polygon(
+//     0 0%,
+//     calc(100% - var(--pointy)) 0,
+//     100% 50%,
+//     calc(100% - var(--pointy)) 100%,
+//     0 100%,
+//     var(--pointy) 50%
+//   );
+// }
+// .arrow-reverse {
+//   background: red;
+//   clip-path: polygon(
+//     var(--pointy) 0%,
+//     // TL
+//     100% 0,
+//     // TR
+//     calc(100% - var(--pointy)) 50%,
+//     // MR
+//     100% 100%,
+//     // BR
+//     var(--pointy) 100%,
+//     // BL
+//     0% 50%,
+//     // ML
+//   );
+// }
 
-.flex {
-  margin: 1em 0;
-  display: flex;
-  width: 100%;
-}
-.container {
-  padding: 1em;
-}
+// .flex {
+//   margin: 1em 0;
+//   display: flex;
+//   width: 100%;
+// }
+// .container {
+//   padding: 1em;
+// }

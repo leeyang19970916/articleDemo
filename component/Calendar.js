@@ -21,8 +21,8 @@ class Calendar {
     this.currentDay = 0;
     this.lastDay = 0;
     this.firstDayWeek = 0;
+    this.weekends = [];
     this.calculateDays();
-    this.holidays=[]
   }
   calculateDays() {
     this.year = this.currentDate.getFullYear();
@@ -39,23 +39,20 @@ class Calendar {
     //   this.year,
     //   this.currentDate.getMonth(),
     // ).getDay())
-    this.getHoliday()
+    this.getHoliday();
   }
-  getHoliday(){
-    console.log(this.firstDayWeek,"this.firstDayWeek")
-    // const startDate = new Date(this.year, this.month, 1);
-    // const endDate = new Date(this.year, this.month+1, 0);
-  
-    // for (let date = 1; date <= this.lastDay; date++) {
-    //   const dayOfWeek = date.getDay();
-    //   console.log(date,"datee")
-    //   // 判断是否为星期六或星期日，即假日
-    //   if (dayOfWeek === 6 || dayOfWeek === 0) {
-    //     console.log(date,"datee")
-    //     // this.holidays.push(new Date(date)); // 将日期对象存入假日数组
-    //   }
-    // }
-    // this.holidays.push(date)
+  getHoliday() {
+    const weekends = [];
+    for (let day = 1; day <= this.lastDay; day++) {
+      const currentDate = new Date(this.year, this.month - 1, day);
+      const currentDay = currentDate.getDay(); // 获取当前日期是星期几
+      // 存储星期六和星期日的日期
+      if (currentDay === 6 || currentDay === 0) {
+        // weekends.push(currentDate);
+        this.weekends.push(currentDate.getDate());
+      }
+    }
+    // console.log(weekends,"weekendsweekends",this.weekends,"this.weekends")
   }
   onMonthName() {
     this.monthName = this.monthNamesArr[this.month - 1];
@@ -86,22 +83,23 @@ function monthUI() {
   monthDOM.innerHTML = `${year}年${monthName}`;
 }
 function dayUI() {
-  let { firstDayWeek, currentDay, lastDay } = calendar;
-  console.log(calendar,"calendar")
+  let { firstDayWeek, currentDay, lastDay, weekends } = calendar;
   let week = 0;
   let str = "";
   if (firstDayWeek > 0) {
     week = firstDayWeek;
     for (let i = 0; i < week; i++) {
-   
-        str += ` <div class="dayItem none"></div>`;
-      }
+      str += ` <div class="dayItem none"></div>`;
+    }
   }
   for (let i = 1; i <= lastDay; i++) {
+    let isWeekend = weekends.findIndex((item) => item===i);
     if (i === currentDay) {
       str += `<div class="dayItem"> <span class="active">${i}</span></div>`;
     } else {
-      str += `<div class="dayItem"> <span>${i}</span> </div>`;
+      str += `<div class="dayItem  ${
+        isWeekend !==-1 ? "isWeek" : '' 
+      }"> <span>${i}</span> </div>`;
     }
   }
 

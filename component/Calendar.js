@@ -42,7 +42,7 @@ class Calendar {
     this.getHoliday();
   }
   getHoliday() {
-    const weekends = [];
+    this.weekends=[]
     for (let day = 1; day <= this.lastDay; day++) {
       const currentDate = new Date(this.year, this.month - 1, day);
       const currentDay = currentDate.getDay(); // 获取当前日期是星期几
@@ -98,7 +98,7 @@ function dayUI() {
       str += `<div class="dayItem"> <span class="active">${i}</span></div>`;
     } else {
       str += `<div class="dayItem  ${
-        isWeekend !==-1 ? "isWeek" : '' 
+        isWeekend !==-1 ? "isWeek" : 'qqq' 
       }"> <span>${i}</span> </div>`;
     }
   }

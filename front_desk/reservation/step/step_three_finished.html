@@ -15,9 +15,9 @@
       <div class="content-container">
           <div class="major-content">
             <section class="stepControl">
-              <div class="step step-one">預約日期</div>
-              <div class="step step-two">資料填寫</div>
-              <div class="step step-three">預約完成</div>
+              <div class="step step-one"> <span class="step-num">1</span> 預約日期</div>
+              <div class="step step-two"><span class="step-num">2</span> 資料填寫</div>
+              <div class="step step-three active"><span class="step-num">3</span> 預約完成</div>
             </section>
 
             <div class="finishTitle">預約完成</div>
@@ -65,14 +65,17 @@
 <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../../component/Header.js"></script>
-<script src="../../../component/Calendar.js"></script>
+<!-- <script src="../../../component/Calendar.js"></script> -->
 <script src="../../../component/Footer.js"></script>
+<script type="module"  src="/js/UI_render.js"></script>
 <script>
   Header();
+  StepUIRender()
   //   Navbar();
   //   Carousel("");
   //   HashTagContainer("hashTagContainer");
   // Calendar()
+  // stepUIRender()
   Footer();
 </script>
 <script></script>

@@ -66,6 +66,17 @@
 }
 .breakline {
   @include breakline();
+  &.titleLine{
+    @include fontSize(28px,gray,900);
+    letter-spacing: 0.14em;
+    .title{
+      left: 0;
+      transform: translate(0%, -50%);
+      font-weight: 900;
+    }
+
+
+  }
 }
 .personal-inform {
   width: 50%;

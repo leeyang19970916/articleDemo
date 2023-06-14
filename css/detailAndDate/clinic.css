@@ -708,94 +708,71 @@ section.stepControl {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: white;
 }
 section.stepControl .step {
-  background: 0;
-  border: 0;
-  position: relative;
-  width: 8em;
-  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-size: 20px;
   color: #53b6b7;
   font-weight: 400;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
-  background-color: white;
-  cursor: auto;
   width: calc(33.3333333333% - 1rem);
+  border-bottom: 2px solid #53b6b7;
+  border-radius: 4px 4px 0px 0px;
+  padding: 0.75rem 0;
 }
-section.stepControl .step a {
+section.stepControl .step .step-num {
+  font-size: 1rem;
   color: white;
-  z-index: 1000000;
-  text-decoration: none;
-  cursor: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #53b6b7;
+  margin: 0 0.5rem;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}
+section.stepControl .step .step-name {
+  letter-spacing: 2px;
 }
 section.stepControl .step.active {
+  background: #53B6B7;
   color: white;
-  background-color: #53b6b7;
+  border-bottom: 2px solid #215E5F;
 }
-
-.btn-right {
-  background: 0;
-  border: 0;
-  position: relative;
-  width: 8em;
-  height: 2em;
-  font-size: 20px;
-  color: #53b6b7;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+section.stepControl .step.active .step-num {
   background-color: white;
-  cursor: auto;
-  width: calc(33.3333333333% - 1rem);
-}
-.btn-right a {
-  color: white;
-  z-index: 1000000;
-  text-decoration: none;
-  cursor: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.btn-right.one::after {
-  background: #53b6b7;
-  border-radius: 2px;
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  height: 1em;
-  -webkit-transform: skew(-45deg);
-          transform: skew(-45deg);
-  bottom: 0;
-}
-.btn-right.three::before {
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-  top: 0;
-  background: #53b6b7;
-  border-radius: 2px;
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  height: 1em;
+  color: #53B6B7;
 }
 
 .resevation-inform {
@@ -1000,6 +977,20 @@ section.stepControl .step.active {
   height: 1px;
   width: 100%;
   background-color: rgba(74, 74, 74, 0.3);
+}
+.breakline.titleLine {
+  font-size: 28px;
+  color: gray;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.14em;
+}
+.breakline.titleLine .title {
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  font-weight: 900;
 }
 
 .personal-inform {

@@ -12,3 +12,5 @@ function Footer(params) {
   </div>`
   dom.innerHTML=str
 }
+
+export default Footer

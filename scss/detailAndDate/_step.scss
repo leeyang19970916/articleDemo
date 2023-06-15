@@ -3,6 +3,7 @@ section {
   margin-bottom: 2.5rem;
   &.stepControl {
     @include dflex(space-between, center, nowrap);
+    margin-bottom: 1.5rem;
     .step {
       @include dflex(center, center, nowrap);
       @include fontSize(20px, #53b6b7, 400);

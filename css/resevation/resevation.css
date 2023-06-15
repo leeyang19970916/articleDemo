@@ -360,532 +360,6 @@ main.search-container .searchCard .button button {
   width: 100%;
 }
 
-@media (max-width: 996px) {
-  .container {
-    max-width: none;
-  }
-}
-
-.content-container {
-  padding: 1.5rem 2.5rem 0 2.5rem;
-  background-color: #f5f5f5;
-}
-@media (max-width: 996px) {
-  .content-container {
-    padding: 1rem;
-    padding-bottom: 0;
-  }
-}
-.content-container dl {
-  height: 100px;
-}
-@media (max-width: 996px) {
-  .content-container dl {
-    height: 50px;
-  }
-}
-
-main,
-section {
-  margin: 2.5rem 0;
-  text-align: center;
-}
-@media (max-width: 996px) {
-  main,
-section {
-    margin: 1rem 0;
-  }
-}
-
-.major-title {
-  font-weight: 900;
-  color: #333333;
-  font-size: 2rem;
-}
-@media (max-width: 576px) {
-  .major-title {
-    font-size: 1.5rem;
-  }
-}
-
-.major-content {
-  background-color: white;
-  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
-          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
-  border-radius: 8px 8px 0 0;
-  padding: 2rem 3.5rem;
-  margin: 1rem 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-@media (max-width: 996px) {
-  .major-content {
-    padding: 1.5rem 1rem;
-  }
-}
-@media (max-width: 576px) {
-  .major-content {
-    padding: 1rem;
-  }
-}
-.major-content .major-content-block {
-  margin-bottom: 1rem;
-}
-.major-content .major-content-block .major-content-title {
-  font-size: 20px;
-  color: #333333;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.02em;
-  padding-bottom: 0.75rem;
-  width: 100%;
-  border-bottom: #cdcdcd 1px solid;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .major-content-block .major-content-title .keyword {
-  margin-left: 1.5rem;
-  width: 50%;
-  border-radius: 50px;
-}
-.major-content .major-content-block .major-content-title .notLimited {
-  background-color: white;
-  color: cadetblue;
-  padding: 0.25rem 0.75rem;
-  margin-left: 1.5rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  border: 1px cadetblue solid;
-}
-.major-content .major-content-block .major-content-title .notLimited:hover {
-  background-color: cadetblue;
-  color: white;
-}
-.major-content .major-content-block .major-content-list .buttonItem {
-  margin-right: 0.5rem;
-  padding: 6px 16px;
-  font-size: 1rem;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .major-content-block .major-content-list .buttonItem.active {
-  background: #24a8a7;
-  border-radius: 16px;
-  color: white !important;
-}
-.major-content .major-content-block .major-content-list .list-one-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.active {
-  background: #24a8a7;
-  border-radius: 16px;
-  color: white !important;
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.zone {
-  font-size: 1rem;
-  color: black;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  letter-spacing: 0.01em;
-  margin: 1rem 0;
-  margin-right: 0.5rem;
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.city {
-  margin: 0 0.25rem;
-  padding: 6px 16px;
-  font-size: 1rem;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.district {
-  margin: 1rem 0;
-  margin-right: 0.5rem;
-  padding: 6px 16px;
-  font-size: 1rem;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.department {
-  margin: 1rem 0;
-  margin-right: 0.5rem;
-  padding: 6px 16px;
-  font-size: 1rem;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-}
-.major-content .major-content-block .major-content-list .list-one-line .list-item.condition {
-  margin: 1rem 0;
-  margin-right: 0.5rem;
-  padding: 6px 16px;
-  font-size: 1rem;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-}
-.major-content .major-content-block .major-content-list.clinic-inform {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 20px;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  padding: 1rem 0;
-}
-.major-content .major-content-block .major-content-list.clinic-inform .item {
-  width: auto;
-  height: auto;
-  padding-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .major-content-block .major-content-list.clinic-inform .item.green {
-  text-align: start;
-  line-height: 2.5rem;
-  color: #53b6b7;
-}
-.major-content .major-content-block .major-content-list.clinic-inform .item.tagList {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.major-content .major-content-block .major-content-list.clinic-inform .item.tagList .buttonItem {
-  margin-top: 0.5rem;
-}
-.major-content button {
-  font-weight: 900;
-  font-size: 1.25rem;
-  color: white;
-}
-.major-content .switch-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .switch-header.d-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-@media (max-width: 576px) {
-  .major-content .switch-header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-.major-content .switch-header .total {
-  font-size: 20px;
-  letter-spacing: 0.01em;
-  font-weight: 400;
-}
-@media (max-width: 576px) {
-  .major-content .switch-header .total {
-    width: 100%;
-    font-size: 1rem;
-    color: #666666;
-    margin: 0.5rem 0 0 0;
-    text-align: end;
-  }
-}
-.major-content .clinic-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem 0;
-}
-@media (max-width: 996px) {
-  .major-content .clinic-list {
-    padding: 0;
-  }
-}
-.major-content .clinic-list .clinic-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-bottom: #cdcdcd 1px solid;
-  padding: 0.5rem 0;
-  width: 100%;
-}
-@media (max-width: 996px) {
-  .major-content .clinic-list .clinic-item {
-    margin: 0.5rem 0;
-  }
-}
-.major-content .clinic-list .clinic-item .inform {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-.major-content .clinic-list .clinic-item .department-List {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.major-content .clinic-list .clinic-item .department-List .department {
-  height: auto;
-  width: auto;
-  background: #efefef;
-  border: 1px solid #e2e2e2;
-  border-radius: 4px;
-  font-size: 1rem;
-  padding: 0.25rem;
-  margin-right: 0.5rem;
-}
-.major-content .clinic-list .clinic-item .item {
-  width: auto !important;
-  height: auto !important;
-  color: #666666;
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-}
-@media (max-width: 996px) {
-  .major-content .clinic-list .clinic-item .item {
-    font-size: 1rem;
-    margin: 0.25rem 0;
-  }
-}
-.major-content .clinic-list .clinic-item .item.name {
-  font-weight: 900;
-}
-.major-content .clinic-list .clinic-item .item.btn-detail {
-  background: #24a8a7;
-  border-radius: 8px;
-  color: white;
-  padding: 8px 24px;
-  width: 12.5%;
-}
-@media (max-width: 996px) {
-  .major-content .clinic-list .clinic-item .item.btn-detail {
-    padding: 5px 1rem;
-  }
-}
-@media (max-width: 776px) {
-  .major-content .clinic-list .clinic-item .item.btn-detail {
-    width: 25%;
-  }
-}
-@media (max-width: 576px) {
-  .major-content .clinic-list .clinic-item .item.btn-detail {
-    width: 100%;
-  }
-}
-
-.pagination-container-custom {
-  margin: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.pagination-container-custom .page {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-nav {
-  background: -webkit-gradient(linear, left bottom, left top, from(#37797c), color-stop(64.19%, #289091));
-  background: linear-gradient(0deg, #37797c 0%, #289091 64.19%);
-  border-radius: 8px;
-  width: 100%;
-  padding: 0 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media (max-width: 996px) {
-  nav {
-    padding: 0 1rem;
-  }
-}
-nav .title-container {
-  color: white;
-  font-weight: 900;
-  letter-spacing: 0.02rem;
-  padding: 0.75rem 0;
-  font-size: 1.5rem;
-  font-family: "Noto Sans TC ";
-}
-@media (max-width: 996px) {
-  nav .title-container {
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 576px) {
-  nav .title-container {
-    font-size: 1rem;
-  }
-}
-nav .title-container .title {
-  padding: 1rem 0;
-}
-nav .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-}
-@media (max-width: 576px) {
-  nav .button-container {
-    font-size: 1rem;
-  }
-}
-nav .button-container button {
-  margin: 0.5rem;
-}
-
 .major-content-list .clinic-week {
   width: 100%;
   font-weight: 900;
@@ -1213,6 +687,500 @@ nav .button-container button {
       -ms-flex-direction: row;
           flex-direction: row;
   border-radius: 50px;
+}
+
+@media (max-width: 996px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.content-container {
+  padding: 1.5rem 2.5rem 0 2.5rem;
+  background-color: #f5f5f5;
+}
+@media (max-width: 996px) {
+  .content-container {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+}
+.content-container dl {
+  height: 100px;
+}
+@media (max-width: 996px) {
+  .content-container dl {
+    height: 50px;
+  }
+}
+
+main,
+section {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+@media (max-width: 996px) {
+  main,
+section {
+    margin: 1rem 0;
+  }
+}
+
+.major-title {
+  font-weight: 900;
+  color: #333333;
+  font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .major-title {
+    font-size: 1.5rem;
+  }
+}
+
+.major-content {
+  background-color: white;
+  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px 8px 0 0;
+  padding: 2rem 3.5rem;
+  margin: 1rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 996px) {
+  .major-content {
+    padding: 1.5rem 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .major-content {
+    padding: 1rem;
+  }
+}
+.major-content .major-content-block {
+  margin-bottom: 1rem;
+}
+.major-content .major-content-block .major-content-title {
+  font-size: 20px;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.02em;
+  padding-bottom: 0.75rem;
+  width: 100%;
+  border-bottom: #cdcdcd 1px solid;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .major-content-block .major-content-title .keyword {
+  margin-left: 1.5rem;
+  width: 50%;
+  border-radius: 50px;
+}
+.major-content .major-content-block .major-content-title .notLimited {
+  background-color: white;
+  color: #24a8a7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  padding: 0.25rem 0.75rem;
+  margin-left: 1rem;
+  border-bottom: #B7B7B7 1px solid;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px #24a8a7 solid;
+}
+.major-content .major-content-block .major-content-title .notLimited:hover {
+  background-color: #24a8a7;
+  color: white;
+}
+.major-content .major-content-block .major-content-list .buttonItem {
+  margin-right: 0.5rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .major-content-block .major-content-list .buttonItem.active {
+  background: #24a8a7;
+  border-radius: 16px;
+  color: white !important;
+}
+.major-content .major-content-block .major-content-list .list-one-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item {
+  cursor: pointer;
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.active {
+  background: #24a8a7;
+  border-radius: 16px;
+  color: white !important;
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.zone {
+  cursor: auto;
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.01em;
+  margin: 1rem 0;
+  margin-right: 0.5rem;
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.city {
+  margin: 0 0.25rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.district {
+  margin: 1rem 0;
+  margin-right: 0.5rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.department {
+  margin: 1rem 0;
+  margin-right: 0.5rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.major-content .major-content-block .major-content-list .list-one-line .list-item.condition {
+  margin: 1rem 0;
+  margin-right: 0.5rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.major-content .major-content-block .major-content-list.clinic-inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  padding: 1rem 0;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item {
+  width: auto;
+  height: auto;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item.green {
+  text-align: start;
+  line-height: 2.5rem;
+  color: #53b6b7;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item.tagList {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.major-content .major-content-block .major-content-list.clinic-inform .item.tagList .buttonItem {
+  margin-top: 0.5rem;
+}
+.major-content button {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: white;
+}
+.major-content .switch-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .switch-header.d-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media (max-width: 576px) {
+  .major-content .switch-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.major-content .switch-header .total {
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+@media (max-width: 576px) {
+  .major-content .switch-header .total {
+    width: 100%;
+    font-size: 1rem;
+    color: #666666;
+    margin: 0.5rem 0 0 0;
+    text-align: end;
+  }
+}
+.major-content .clinic-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
+}
+@media (max-width: 996px) {
+  .major-content .clinic-list {
+    padding: 0;
+  }
+}
+.major-content .clinic-list .clinic-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: #cdcdcd 1px solid;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+@media (max-width: 996px) {
+  .major-content .clinic-list .clinic-item {
+    margin: 0.5rem 0;
+  }
+}
+.major-content .clinic-list .clinic-item .inform {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+.major-content .clinic-list .clinic-item .department-List {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.major-content .clinic-list .clinic-item .department-List .department {
+  height: auto;
+  width: auto;
+  background: #efefef;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+}
+.major-content .clinic-list .clinic-item .item {
+  width: auto !important;
+  height: auto !important;
+  color: #666666;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+@media (max-width: 996px) {
+  .major-content .clinic-list .clinic-item .item {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+  }
+}
+.major-content .clinic-list .clinic-item .item.name {
+  font-weight: 900;
+}
+.major-content .clinic-list .clinic-item .item.btn-detail {
+  background: #24a8a7;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 24px;
+  width: 12.5%;
+}
+@media (max-width: 996px) {
+  .major-content .clinic-list .clinic-item .item.btn-detail {
+    padding: 5px 1rem;
+  }
+}
+@media (max-width: 776px) {
+  .major-content .clinic-list .clinic-item .item.btn-detail {
+    width: 25%;
+  }
+}
+@media (max-width: 576px) {
+  .major-content .clinic-list .clinic-item .item.btn-detail {
+    width: 100%;
+  }
+}
+
+.pagination-container-custom {
+  margin: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.pagination-container-custom .page {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #reservationModal .modal-header {

@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      預約掛號-搜尋-結果 
-    </title>
+    <title>預約掛號-搜尋-結果</title>
     <link rel="stylesheet" href="../../css/bootstrap.css" />
     <link rel="stylesheet" href="../../css/resevation/resevation.css" />
   </head>
@@ -14,47 +12,23 @@
     <div class="container border p-0">
       <header></header>
       <div class="content-container">
-        <nav>
-          <div class="title-container">
-            <div class="title">看診線上預約</div>
-            <div class="title">即時叫號 主動推播提醒</div>
-          </div>
-          <div class="button-container">
-            <button class="btn btn-primary">google</button>
-            <button class="btn btn-primary">apple</button>
-          </div>
-        </nav>
+        <nav class="ad-image">API引入一張圖片</nav>
         <main>
           <div class="major-title">預約掛號</div>
           <div class="major-content">
             <div class="major-content-block">
-              <div class="major-content-title">搜尋關鍵字
-                <input type="text " placeholder="關鍵字搜尋..." class="form-control keyword ">
+              <div class="major-content-title">
+                搜尋關鍵字
+                <input
+                  type="text "
+                  placeholder="關鍵字搜尋..."
+                  class="form-control keyword"
+                />
               </div>
             </div>
             <div class="major-content-block">
-              <div class="major-content-title">選擇城市
-                <button class="btn notLimited"> 不限</button>
-              </div>
-              <div class="major-content-list">
-                <div class="list-one-line">
-                  <div class="list-item zone">北部</div>
-                  <div class="list-item city">基隆市</div>
-                  <div class="list-item city active">台北市</div>
-                  <div class="list-item city">新北市</div>
-                  <div class="list-item city">桃園市</div>
-                  <div class="list-item city">新竹市</div>
-                  <div class="list-item city">新竹縣</div>
-                </div>
-                <div class="list-one-line">
-                  <div class="list-item zone">北部</div>
-                  <div class="list-item city">基隆市</div>
-                  <div class="list-item city active">台北市</div>
-                  <div class="list-item city">新北市</div>
-                  <div class="list-item city">桃園市</div>
-                  <div class="list-item city">新竹市</div>
-                  <div class="list-item city">新竹縣</div>
-                </div>
+              <div class="major-content-title">選擇城市</div>
+              <div class="major-content-list city-container">
                 <div class="list-one-line">
                   <div class="list-item zone">北部</div>
                   <div class="list-item city">基隆市</div>
@@ -77,8 +51,11 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">選擇區域(可複選) <button class="btn notLimited"> 不限</button></div>
-              <div class="major-content-list">
+              <div class="major-content-title">
+                選擇區域(可複選)
+                <div class="notLimited">不限</div>
+              </div>
+              <div class="major-content-list district-container">
                 <div class="list-one-line">
                   <div class="list-item district active">中山區</div>
                   <div class="list-item district">大同區</div>
@@ -92,7 +69,10 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">選擇科別(可複選) <button class="btn notLimited"> 不限</button></div>
+              <div class="major-content-title">
+                選擇科別(可複選)
+                <div class="notLimited">不限</div>
+              </div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item department active">不分科</div>
@@ -108,7 +88,10 @@
             </div>
 
             <div class="major-content-block">
-              <div class="major-content-title">更多條件(可複選) <button class="btn notLimited"> 不限</button></div>
+              <div class="major-content-title">
+                更多條件(可複選)
+                <div class="notLimited">不限</div>
+              </div>
               <div class="major-content-list">
                 <div class="list-one-line">
                   <div class="list-item condition active">週六看診</div>
@@ -145,7 +128,7 @@
                 </div>
               </dd>
               <dd class="clinic-item">
-                <dl class="inform"> 
+                <dl class="inform">
                   <div class="item name">丁文內科診所</div>
                   <div class="item tel">02-12345678</div>
                   <div class="item address">新北市蘆洲區長安街23號</div>
@@ -191,22 +174,153 @@
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- <script src="../../js/innerHeight.js"></script> -->
 <!-- <script src="../../js/cityZoneSelect.js"></script> -->
-<script src="../../component/Header.js"></script>
+<!-- <script src="../../component/Header.js"></script> -->
 <!-- <script src="../../component/Navbar.js"></script>
 <script src="../../component/Carousel.js"></script>
 <script src="../../component/HashTagContainer.js"></script>
 <script src="../../component/Title-line.js"></script> -->
-<script src="../../component/Footer.js"></script>
+<!-- <script src="../../component/Footer.js"></script> -->
+<script type="module" src="/js/UI_render.js"></script>
+<script src="../../AreaManager.js"></script>
 <script>
-  Header();
-  //   Navbar();
-  //   Carousel("");
-  //   HashTagContainer("hashTagContainer");
-  Footer();
+  // Header();
+  // //   Navbar();
+  // //   Carousel("");
+  // //   HashTagContainer("hashTagContainer");
+  // Footer();
 </script>
 
 <script>
+  let searchObj = {
+    keyword: "",
+    city: "臺北市",
+    district: [],
+    department: [],
+    condition: [],
+  };
 
+  let manager = new AreaManager();
+  manager
+    .onAreaChange((initial, items) => {
+      // console.log(initial, "initial", items, "area");
+      // areaUIRender(initial, items);
+    })
+    .onCityChange((initial, items) => {
+      // console.log(initial, "initial", items, "city");
+      // manager.selectCity("臺北市");
+      // manager.selectCity("臺北市");
+      // manager.selectCity("臺北市");
+      // cityUIRender(initial, items);
+    })
+    .onDistrictChange((initial, items) => {
+      console.log(initial, "initial", items, "district");
 
-  
+      initDistrictUIRender(initial, items);
+      // districtUIRender(initial, items);
+    })
+    .start();
+
+  // 撈API
+
+  manager.selectCity(searchObj.city);
+  // console.log(manager,"manager")
+  const initCityUIRender = () => {
+    let dom = document.querySelector(".major-content-list.city-container");
+    let str = "";
+    const entries = Object.entries(manager.data);
+    for (let i = 0; i < entries.length; i++) {
+      const zone = entries[i];
+      const city = Object.keys(zone[1]);
+      str += ` <div class="list-one-line">
+                <div class="list-item zone">${zone[0]}</div>
+                 ${city
+                   .map(
+                     (item, index) =>
+                       `<div data-id="${item}" onclick="cityChange('${
+                         zone[0]
+                       }','${item}')" class="list-item
+                        city ${searchObj.city === item ? "active" : ""}
+                       ">${item}</div>`
+                   )
+                   .join("")}
+                </div>`;
+    }
+
+    dom.innerHTML = str;
+  };
+  initCityUIRender();
+
+  const cityChange = (zone, city) => {
+    let target = event.target; //自己
+    manager.selectArea(zone);
+    manager.selectCity(city);
+    activeCssChange("single", target);
+  };
+
+  function initDistrictUIRender(initial, items) {
+    // console.log(items, "itemss");
+    items = items.slice(1);
+    let dom = document.querySelector(".district-container .list-one-line");
+    let str = "";
+    items.forEach((item) => {
+      str += ` <div data-id="${item.code}" class="list-item district " onclick="districtSelect()">${item.text}</div>`;
+    });
+    dom.innerHTML = str;
+  }
+
+  function activeCssChange(type, target) {
+    if (type === "single") {
+      if (target.classList.contains("active")) {
+        return;
+      }
+      let oldDom = document.querySelector(
+        ".city-container .list-one-line .active"
+      );
+      oldDom.classList.remove("active");
+      target.classList.add("active");
+      return
+    }
+    if (type==="many") {
+            // 多選
+            target.classList.toggle("active");
+    }
+  }
+  function districtSelect() {
+    let target = event.target; //自己
+    activeCssChange("many",target)
+  }
+  // function cityChange(zone,city) {
+  //   manager.selectArea(zone);
+  //   manager.selectCity(city);
+  //   let domArr=document.querySelectorAll(".city-container .city")
+  //   // let domActive=document.querySelector(".city-container .city.active")
+  //   activeChange(domArr,domActive)
+  // }
+  //   function districtUIRender(initial,items) {
+  //     let dom = document.querySelector(".district-container .list-one-line");
+  //     let str = "";
+  //     items.forEach((item) => {
+  //       // str += `<div data-id="${item.text}" onclick="addrChange('${item.text}','city')"
+  //       // class="minZone-item normal ${item.text === `${initial}` ? "active" : ""}">
+  //       // ${item.text}</div>`;
+  // str+=` <div data-id="${item.code}" class="list-item district ">${item.text}</div>`
+
+  //     });
+  //     dom.innerHTML = str;
+  //     // let nowCity = document.querySelector(".cityzone .nowCity");
+  //     // nowCity.innerHTML = initial;
+  //   }
+  //   cityUIRender();
+  //   districtUIRender()
+
+  //   // 撈最重要的API 得到一組Array
+  //   // 渲染上去
+
+  //   // 撈另外兩個API
+
+  //   // console.log(manager,"manager")
+  //   function activeChange(domArr,domActive) {
+  //     console.log(domArr,"domarrr",domActive)
+  //     domArr.forEach(item => item.classList.remove("active"));
+  //   }
 </script>

@@ -31,3 +31,5 @@ function redirectTo(page) {
   }
   
 }
+
+export default Header

@@ -828,6 +828,10 @@ section {
   background-color: #24a8a7;
   color: white;
 }
+.major-content .major-content-block .major-content-title .notLimited.active {
+  background-color: #24a8a7;
+  color: white;
+}
 .major-content .major-content-block .major-content-list .buttonItem {
   margin-right: 0.5rem;
   padding: 6px 16px;

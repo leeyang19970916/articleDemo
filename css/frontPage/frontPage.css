@@ -1281,6 +1281,20 @@ ul {
 .page__btn.active:hover {
   color: var(--primary);
 }
+.page .prevIcon,
+.page .nextIcon {
+  background: #ffffff;
+  border: 0.5px solid #4a4a4a;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+.page .prevIcon.dis,
+.page .nextIcon.dis {
+  background: #EDEBEB;
+  color: white;
+  border: none;
+}
 
 .list .list_title {
   display: -webkit-box;

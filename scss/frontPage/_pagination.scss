@@ -94,8 +94,8 @@ ul {
   justify-content: center;
   align-items: center;
 
-//   height: 5rem;
-//   margin: 3rem;
+  //   height: 5rem;
+  //   margin: 3rem;
   border-radius: 0.6rem;
   background: #ffffff;
   box-shadow: 0 0.8rem 2rem rgba(#5a6181, 0.05);
@@ -153,5 +153,19 @@ ul {
         color: var(--primary);
       }
     }
+  }
+  .prevIcon,
+  .nextIcon {
+    background: #ffffff;
+    border: 0.5px solid #4a4a4a;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    &.dis{
+      background: #EDEBEB;
+      color: white;
+      border: none;
+    }
+    // transform: matrix(1, 0, 0, -1, 0, 0);
   }
 }

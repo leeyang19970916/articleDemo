@@ -40,11 +40,19 @@ header{
             min-width: 250px
         }
         button{
-            border-radius: 50px;
-            margin: 0 0.75rem;
-            padding-left:  1rem;
-            padding-right: 1rem;
-            white-space: nowrap;
+            &.btnLink{
+                border-radius: 20px;
+                margin: 0 0.75rem;
+                border: 1px solid #53B6B7;
+                padding: 0px 12px;
+                white-space: nowrap;
+                @include fontSize(1rem, #53B6B7,500);
+            }
+            // border-radius: 50px;
+            
+            // padding-left:  1rem;
+            // padding-right: 1rem;
+            // white-space: nowrap;
         }
     }
 }

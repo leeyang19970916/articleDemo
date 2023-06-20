@@ -1,15 +1,19 @@
+.schedule-container {
+  transform: translate(0px, 130px);
+  width: 50%;
+}
+
 .schedule {
   background-color: white;
   border: 1px solid #e2e2e2;
   border-radius: 20px;
+  width: 100%;
   padding: 20px;
-  transform: translate(0px, 80px);
-  width: 50%;
   .clinic-week {
     width: 100%;
     text-align: center;
     @include fontSize(24px, #4a4a4a, 400);
-    @include dflex(null,null,nowrap);
+    @include dflex(null, null, nowrap);
 
     .clinic-week-col {
       &:first-child {
@@ -25,24 +29,24 @@
         border-right: none;
       }
       .item {
-        @include fontSize(1.25rem,null,900);
-        &.state{
-          @include dflex(center, center, nowrap,column);
+        @include fontSize(1.25rem, null, 900);
+        &.state {
+          @include dflex(center, center, nowrap, column);
           // font-size: 1.25rem;
 
-          .stateName{
+          .stateName {
             padding-top: 10px;
           }
-          .range{
+          .range {
             padding-top: 5px;
-            font-size: 1rem
+            font-size: 1rem;
           }
         }
-        &.isWeekend{
-          color: #9C0E4E
+        &.isWeekend {
+          color: #9c0e4e;
         }
-        &.isRest{
-          color: #9C0E4E
+        &.isRest {
+          color: #9c0e4e;
         }
         // width: auto;
         @include dflex(center, center, nowrap);
@@ -62,8 +66,8 @@
           height: 20px;
           background: #53b6b7;
           border-radius: 50%;
-          &.isWeekend{
-            background-color: #9C0E4E;
+          &.isWeekend {
+            background-color: #9c0e4e;
             // color: #9C0E4E;
             // border: 1px solid #9C0E4E;
           }
@@ -156,6 +160,27 @@
           }
         }
       }
+    }
+  }
+}
+
+.resevation-container {
+  @include dflex(center, center);
+  margin-top: 1.5rem;
+  .btn-link {
+    @include fontSize(20px, white, 500);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    padding: 10px 20px;
+    border: 1.5px solid #2b9293;
+    box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
+    border-radius: 50px;
+    margin: 0 1rem;
+    &.nowCalled {
+      background: #2b9293;
+    }
+    &.reservation {
+      background: #53b6b7;
     }
   }
 }

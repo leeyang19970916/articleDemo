@@ -144,12 +144,17 @@ header .header-right .form-control {
   border-radius: 50px;
   min-width: 250px;
 }
-header .header-right button {
-  border-radius: 50px;
+header .header-right button.btnLink {
+  border-radius: 20px;
   margin: 0 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  border: 1px solid #53B6B7;
+  padding: 0px 12px;
   white-space: nowrap;
+  font-size: 1rem;
+  color: #53B6B7;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
 }
 
 :root {
@@ -710,7 +715,7 @@ main.search-container .searchCard .button button {
 }
 
 .content-container {
-  padding: 1.5rem 2.5rem 0 2.5rem;
+  padding: 1.5rem 2rem 0 2rem;
   background-color: #f5f5f5;
 }
 @media (max-width: 996px) {

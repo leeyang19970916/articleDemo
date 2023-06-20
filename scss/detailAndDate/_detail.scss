@@ -9,7 +9,7 @@
         border: #24a8a7 1px solid;
         color: #53b6b7;
         padding: 0.55rem 0.75rem;
-        margin-left: 1rem;
+        margin-right: 1rem;
       }
     }
   }
@@ -23,7 +23,7 @@
   @include backgroundImage("../../image/卡比.jpg");
   // width: 300px;
   width: 100%;
-  height: 774px;
+  height: 500px;
 
   .inform {
     @include fontSize(18px, #ffffff, 700);
@@ -36,59 +36,58 @@
     .clinicName {
       @include fontSize(48px, #ffffff, 700);
       letter-spacing: 0.02em;
-      border-bottom: 1px solid white;
+      // border-bottom: 1px solid white;
       padding-bottom: 1rem;
     }
-    .phone,
-    .address {
-      @include fontSize(20px, null, 400);
-      // font-size: 20px;
-      letter-spacing: 0.08em;
-      // font-weight: 400;
-      padding: 0.5rem 0;
-    }
-    .alert {
-      // font-size: 12px;
-      // font-weight: 400;
-      letter-spacing: 0.08em;
-      @include fontSize(12px, null, 400);
-      padding: 0;
-      padding-top: 1.5rem;
-      padding-bottom: 0.5rem;
-      margin: 0;
-    }
+  }
+}
+.inform-detail {
+  @include fontSize(20px, #666666, 500);
+  letter-spacing: 0.08em;
+  .phone,
+  .address,
+  .facebook {
+    // margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 }
 section {
   &.detail {
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 0rem 0 0rem;
     .title {
       @include fontSize(28px, #53b6b7, 900);
+      @include dflex(space-between, end);
       border-bottom: 1px solid #cdcdcd;
       padding: 1rem 2.5rem;
 
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     }
+    .expand{
+      @include fontSize(20px, #666666, 400);
+      overflow: hidden;
+      transition: all 0.5s;
+      &.close{
+        // height: 0px;
+        max-height: 0;
+        // padding: 1rem
+      }
+      &.show{
+        max-height: 500px; 
+        padding:1rem 0;
+      }
+    }
+    // .collapse {
+    //   &.collapseItem{
+
+    //   }
+
+    // }
     .content {
       @include fontSize(20px, #666666, 400);
       letter-spacing: 0.08em;
       // border-bottom: 1px solid #CDCDCD;
       padding: 1rem 0;
-      &.alert {
-        padding: 1rem 2.5rem;
-        &.close{
-          // max-height: 0;
-          // overflow: hidden;
-          // opacity: 0;
-          // visibility: hidden;
-          // transition: opacity 5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-        &.show{
-          // opacity: 1;
-          // visibility: visible;
-          // max-height: none;
-        }
-      }
+
       .list {
         min-height: 300px;
         li {
@@ -105,4 +104,9 @@ section {
   }
 }
 
-
+.card-body{
+  @include fontSize(20px, #666666, 400);
+  background-color: transparent;
+  border: 0;
+  padding:1rem 0;
+}

@@ -145,12 +145,17 @@ header .header-right .form-control {
   border-radius: 50px;
   min-width: 250px;
 }
-header .header-right button {
-  border-radius: 50px;
+header .header-right button.btnLink {
+  border-radius: 20px;
   margin: 0 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  border: 1px solid #53B6B7;
+  padding: 0px 12px;
   white-space: nowrap;
+  font-size: 1rem;
+  color: #53B6B7;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
 }
 
 footer {
@@ -256,14 +261,18 @@ footer .copyright {
   border-radius: 10px;
 }
 
+.schedule-container {
+  -webkit-transform: translate(0px, 130px);
+          transform: translate(0px, 130px);
+  width: 50%;
+}
+
 .schedule {
   background-color: white;
   border: 1px solid #e2e2e2;
   border-radius: 20px;
+  width: 100%;
   padding: 20px;
-  -webkit-transform: translate(0px, 80px);
-          transform: translate(0px, 80px);
-  width: 50%;
 }
 .schedule .clinic-week {
   width: 100%;
@@ -344,10 +353,10 @@ footer .copyright {
   font-size: 1rem;
 }
 .schedule .clinic-week .clinic-week-col .item.isWeekend {
-  color: #9C0E4E;
+  color: #9c0e4e;
 }
 .schedule .clinic-week .clinic-week-col .item.isRest {
-  color: #9C0E4E;
+  color: #9c0e4e;
 }
 .schedule .clinic-week .clinic-week-col .item:first-child {
   border-top: none;
@@ -363,7 +372,7 @@ footer .copyright {
   border-radius: 50%;
 }
 .schedule .clinic-week .clinic-week-col .item .active.isWeekend {
-  background-color: #9C0E4E;
+  background-color: #9c0e4e;
 }
 @media (max-width: 576px) {
   .schedule .clinic-week .clinic-week-col .item .active {
@@ -528,8 +537,48 @@ footer .copyright {
   color: #24a8a7;
 }
 
+.resevation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1.5rem;
+}
+.resevation-container .btn-link {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  padding: 10px 20px;
+  border: 1.5px solid #2b9293;
+  -webkit-box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
+          box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
+  border-radius: 50px;
+  margin: 0 1rem;
+}
+.resevation-container .btn-link.nowCalled {
+  background: #2b9293;
+}
+.resevation-container .btn-link.reservation {
+  background: #53b6b7;
+}
+
 .content-container {
-  padding: 1.5rem 2.5rem 0 2.5rem;
+  padding: 1.5rem 2rem 0 2rem;
   background-color: #f5f5f5;
 }
 @media (max-width: 996px) {
@@ -561,7 +610,7 @@ footer .copyright {
   border: #24a8a7 1px solid;
   color: #53b6b7;
   padding: 0.55rem 0.75rem;
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .clinic-image {
@@ -582,13 +631,13 @@ footer .copyright {
           flex-direction: row;
   padding: 0 1rem;
   background-color: #53b6b7;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(83, 182, 183)), color-stop(70%, hsla(181deg, 41%, 52%, 0))), url("../../image/卡比.jpg");
-  background-image: linear-gradient(to top, rgb(83, 182, 183) 0%, hsla(181deg, 41%, 52%, 0) 70%), url("../../image/卡比.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, rgb(83, 182, 183)), color-stop(70%, hsla(181deg, 41%, 52%, 0))), url("../../image/卡比.jpg");
+  background-image: linear-gradient(to top, rgb(83, 182, 183) 20%, hsla(181deg, 41%, 52%, 0) 70%), url("../../image/卡比.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100%;
-  height: 774px;
+  height: 500px;
 }
 .clinic-image .inform {
   font-size: 18px;
@@ -607,32 +656,25 @@ footer .copyright {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
   letter-spacing: 0.02em;
-  border-bottom: 1px solid white;
   padding-bottom: 1rem;
 }
-.clinic-image .inform .phone,
-.clinic-image .inform .address {
+
+.inform-detail {
   font-size: 20px;
-  font-weight: 400;
+  color: #666666;
+  font-weight: 500;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
   letter-spacing: 0.08em;
-  padding: 0.5rem 0;
 }
-.clinic-image .inform .alert {
-  letter-spacing: 0.08em;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  padding: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  margin: 0;
+.inform-detail .phone,
+.inform-detail .address,
+.inform-detail .facebook {
+  margin-bottom: 1rem;
 }
 
 section.detail {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0rem 0 0rem;
 }
 section.detail .title {
   font-size: 28px;
@@ -640,10 +682,42 @@ section.detail .title {
   font-weight: 900;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-bottom: 1px solid #cdcdcd;
   padding: 1rem 2.5rem;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+}
+section.detail .expand {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+section.detail .expand.close {
+  max-height: 0;
+}
+section.detail .expand.show {
+  max-height: 500px;
+  padding: 1rem 0;
 }
 section.detail .content {
   font-size: 20px;
@@ -653,9 +727,6 @@ section.detail .content {
   font-family: "Noto Sans TC";
   letter-spacing: 0.08em;
   padding: 1rem 0;
-}
-section.detail .content.alert {
-  padding: 1rem 2.5rem;
 }
 section.detail .content .list {
   min-height: 300px;
@@ -686,6 +757,17 @@ section.detail .content .list li {
 }
 section.detail .content .list li .itemContent {
   padding-left: 1rem;
+}
+
+.card-body {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  background-color: transparent;
+  border: 0;
+  padding: 1rem 0;
 }
 
 section {

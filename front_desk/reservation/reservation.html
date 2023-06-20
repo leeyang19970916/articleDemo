@@ -70,8 +70,7 @@
                 <div class="notLimited department">不限</div>
               </div>
               <div class="major-content-list department-container">
-                <div class="list-one-line">
-                </div>
+                <div class="list-one-line"></div>
               </div>
             </div>
 
@@ -109,26 +108,17 @@
                 </dl>
               </dd>
               <dd class="clinic-item">
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                </div>
                 <dl class="inform">
                   <div class="item name">丁文內科診所</div>
                   <div class="item tel">02-12345678</div>
                   <div class="item address">新北市蘆洲區長安街23號</div>
                   <div class="item btn btn-detail">詳細內容</div>
                 </dl>
-                <div class="department-List">
-                  <div class="item department">家醫科</div>
-                </div>
-              </dd>
-              <dd class="clinic-item">
-                <dl class="inform">
-                  <div class="item name">丁文內科診所</div>
-                  <div class="item tel">02-12345678</div>
-                  <div class="item address">新北市蘆洲區長安街23號</div>
-                  <div class="item btn btn-detail">詳細內容</div>
-                </dl>
-                <div class="department-List">
-                  <div class="item department">家醫科</div>
-                </div>
               </dd>
             </div>
             <section class="pagination-container pagination-container-custom">
@@ -157,7 +147,9 @@
 <script src="/js/class/INPUT.js"></script>
 <script src="/js/class/PAGINATION.js"></script>
 <script src="/js/class/RESERVATION_SEARCH.js"></script>
+<!-- <script src="/js/class/HEADER.js"></script> -->
 <script>
+  // let Header=new HEADER()
   let searchObj = {
     keyword: "",
     city: "臺北市",
@@ -223,11 +215,10 @@
 
   function initDistrictUIRender(initial, items) {
     items = items.slice(1);
-console.log(items,"itemsss")
+    console.log(items, "itemsss");
     let districtDom = document.querySelector("#district-container");
 
     let district = new RESERVATION_SEARCH(districtDom, items);
-
   }
   // function initDepartmentUIRender(params) {
   //   let data = [

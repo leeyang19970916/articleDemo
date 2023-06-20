@@ -7,6 +7,7 @@ class RESERVATION_SEARCH {
       (this.activeArr = []);
     this.initDOMSetting();
     this.initUIRender();
+    this.nolimited_DOM_control()
   }
   initDOMSetting() {
     this.nolimited_DOM = this.dom.querySelector(".notLimited");
@@ -18,16 +19,18 @@ class RESERVATION_SEARCH {
   initUIRender() {
     let str = "";
     this.data.forEach((item) => {
-      const listItem = document.createElement("div");
-      listItem.setAttribute("data-id", item.code);
-      listItem.classList.add("list-item", "condition");
-      listItem.textContent = item.text;
-      listItem.addEventListener("click", this.optionSelect.bind(this));
-      this.list_DOM.appendChild(listItem);
+      str += `<div data-id="${item.code}" class="list-item condition">${item.text}</div>`;
+    });
+    this.list_DOM.innerHTML = str;
+
+    // 綁定點擊事件
+    const listItemElements = this.list_DOM.querySelectorAll(".list-item");
+    listItemElements.forEach((item) => {
+      item.addEventListener("click", this.optionSelect.bind(this));
     });
   }
   nolimited_DOM_control() {
-    console.log(this.nolimited_DOM, " this.nolimited_DOM");
+    // console.log(this.nolimited_DOM, " this.nolimited_DOM");
     if (this.activeArr.length > 0) {
       this.nolimited_DOM.classList.remove("active");
     } else {
@@ -48,14 +51,16 @@ class RESERVATION_SEARCH {
     this.optionData(targetObj);
   }
   optionData(data) {
-    let isExist = this.activeArr.findIndex((item) => item.dataID === data.dataID);
+    let isExist = this.activeArr.findIndex(
+      (item) => item.dataID === data.dataID
+    );
     if (isExist !== -1) {
       this.activeArr.splice(isExist, 1);
     } else {
       this.activeArr.push(data);
     }
     this.nolimited_DOM_control();
-    console.log(this.activeArr,"asdfasdfds")
+    console.log(this.activeArr, "(this.activeArr ");
   }
   resetArr(event) {
     this.activeArr = [];

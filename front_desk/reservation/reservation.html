@@ -71,14 +71,6 @@
               </div>
               <div class="major-content-list department-container">
                 <div class="list-one-line">
-                  <div class="list-item department active">不分科</div>
-                  <div class="list-item department">家醫科</div>
-                  <div class="list-item department active">內科</div>
-                  <div class="list-item department">復健科</div>
-                  <div class="list-item department">骨科</div>
-                  <div class="list-item department">眼科</div>
-                  <div class="list-item department">耳鼻喉科</div>
-                  <div class="list-item department">皮膚科</div>
                 </div>
               </div>
             </div>
@@ -89,8 +81,7 @@
                 <div class="notLimited condition">不限</div>
               </div>
               <div class="major-content-list condition-container">
-                <div class="list-one-line">
-                </div>
+                <div class="list-one-line"></div>
               </div>
             </div>
 
@@ -141,8 +132,7 @@
               </dd>
             </div>
             <section class="pagination-container pagination-container-custom">
-              <ul class="page">
-              </ul>
+              <ul class="page"></ul>
             </section>
           </div>
         </section>
@@ -197,7 +187,7 @@
 
   // 撈API
 
-  manager.selectCity(searchObj.city);
+  // manager.selectCity(searchObj.city);
   const initCityUIRender = () => {
     let dom = document.querySelector(".major-content-list.city-container");
     let str = "";
@@ -233,26 +223,25 @@
 
   function initDistrictUIRender(initial, items) {
     items = items.slice(1);
-    let dom = document.querySelector(".district-container .list-one-line");
-    let str = "";
-    items.forEach((item) => {
-      str += ` <div data-id="${item.code}" class="list-item district " onclick="optionSelect('district')">${item.text}</div>`;
-    });
-    dom.innerHTML = str;
+console.log(items,"itemsss")
+    let districtDom = document.querySelector("#district-container");
+
+    let district = new RESERVATION_SEARCH(districtDom, items);
+
   }
-  function initDepartmentUIRender(params) {
-    let data = [
-      { code: "1", text: "Ｘ光" },
-      { code: "2", text: "測試" },
-    ];
-    let dom = document.querySelector(".department-container .list-one-line");
-    let str = "";
-    data.forEach((item) => {
-      str += ` <div data-id="${item.code}" class="list-item department " onclick="optionSelect('department')">${item.text}</div>`;
-    });
-    dom.innerHTML = str;
-  }
-  initDepartmentUIRender();
+  // function initDepartmentUIRender(params) {
+  //   let data = [
+  //     { code: "1", text: "Ｘ光" },
+  //     { code: "2", text: "測試" },
+  //   ];
+  //   let dom = document.querySelector(".department-container .list-one-line");
+  //   let str = "";
+  //   data.forEach((item) => {
+  //     str += ` <div data-id="${item.code}" class="list-item department " onclick="optionSelect('department')">${item.text}</div>`;
+  //   });
+  //   dom.innerHTML = str;
+  // }
+  // initDepartmentUIRender();
 
   // function initConditionUIRender(params) {
   //   let data = [
@@ -272,9 +261,14 @@
     { code: "1", text: "Ｘ光" },
     { code: "2", text: "測試" },
   ];
-  let dom = document.querySelector("#condition-container");
+  let conditionDom = document.querySelector("#condition-container");
 
-  let condition = new RESERVATION_SEARCH(dom,data);
+  let condition = new RESERVATION_SEARCH(conditionDom, data);
+
+  let departmentDom = document.querySelector("#department-container");
+
+  let department = new RESERVATION_SEARCH(departmentDom, data);
+
   // let department= new RESERVATION_SEARCH(dom,data);
   // 預設進來
 
@@ -306,22 +300,22 @@
   // 如果他是搜尋進來 會直接走post 然後畫面停在搜尋結果
   // 跟他是預約掛號點進來 全部都是空值 就不要移動
 
-  // function activeCssChange(type, target) {
-  //   if (type === "single") {
-  //     if (target.classList.contains("active")) {
-  //       return;
-  //     }
-  //     let oldDom = document.querySelector(
-  //       ".city-container .list-one-line .active"
-  //     );
-  //     oldDom.classList.remove("active");
-  //     target.classList.add("active");
-  //     return;
-  //   }
-  //   if (type === "many") {
-  //     target.classList.toggle("active");
-  //   }
-  // }
+  function activeCssChange(type, target) {
+    if (type === "single") {
+      if (target.classList.contains("active")) {
+        return;
+      }
+      let oldDom = document.querySelector(
+        ".city-container .list-one-line .active"
+      );
+      oldDom.classList.remove("active");
+      target.classList.add("active");
+      return;
+    }
+    if (type === "many") {
+      target.classList.toggle("active");
+    }
+  }
   // function optionSelect(type) {
   //   let target = event.target; //自己
   //   let dataID = target.getAttribute("data-id");

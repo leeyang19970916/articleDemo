@@ -138,7 +138,7 @@
           ><span class="item">週六看診</span>
         </div>
 
-        <section class="detail expendIte">
+        <section class="detail">
           <div class="title">
             <div
               type="button"
@@ -146,7 +146,7 @@
               data-bs-target="#collapseExample"
               aria-expanded="false"
               aria-controls="collapseExample"
-              onclick="expandsChange(this)"
+              
             >
               注意事項
             </div>
@@ -156,7 +156,6 @@
               data-bs-target="#collapseExample"
               aria-expanded="false"
               aria-controls="collapseExample"
-              onclick="expandsChange(this,true)"
             >
               ></span
             >
@@ -169,8 +168,8 @@
             </div>
           </div>
         </section>
-        <section class="detail">
-          <div class="title">門診公告</div>
+        <section class="detail announce">
+          <div class="title ">門診公告</div>
           <div class="content">
             <ul class="list">
               <li>
@@ -179,6 +178,7 @@
                   <span class="itemContent">Korem ipsum dolor sit amet</span>
                 </div>
                 <div
+                class="more"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseExample1"
@@ -194,28 +194,6 @@
                     relevant trigger.
                   </div>
                 </div>
-              </li>
-
-              <li>
-                <div>
-                  2023-06-01
-                  <span class="itemContent">Korem ipsum dolor sit amet</span>
-                </div>
-                <div>more></div>
-              </li>
-              <li>
-                <div>
-                  2023-06-01
-                  <span class="itemContent">Korem ipsum dolor sit amet</span>
-                </div>
-                <div>more></div>
-              </li>
-              <li>
-                <div>
-                  2023-06-01
-                  <span class="itemContent">Korem ipsum dolor sit amet</span>
-                </div>
-                <div>more></div>
               </li>
             </ul>
           </div>
@@ -249,18 +227,14 @@
 <script src="../../component/Title-line.js"></script> -->
 <!-- <script src="../../component/Calendar.js"></script> -->
 <script type="module" src="/js/UI_render.js"></script>
+<script src="/js/class/SCHEDULE.js"></script>
+<script>
+  let SleepData=["02","61","43","52","33","32"]
+  let schedule=new SCHEDULE(document.querySelector(".schedule .clinic-week"),SleepData)
+  // console.log(dfdfas,"dddd")
+</script>
 <!-- <script src="../../component/Footer.js"></script> -->
 
-<script>
-  function expandsChange(params, expand = null) {
-    // console.log(expand, "expand");
-    // let dom = document.querySelector("section.detail .collapse");
-    // dom.classList.toggle("show");
-    // if (expand) {
-    //   params.innerHTML="fdgdsf"
-    // }
-  }
-</script>
 <!-- <script>
   function textUIRender() {
     let str = `在上述代码中，每个导航项都有一个 onclick 属性，其中调用了一个名为 redirectTo 的 JavaScript 函数，并传递了要跳转到的页面的路径作为参数。

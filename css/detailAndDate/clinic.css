@@ -702,23 +702,6 @@ section.detail .title {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
 }
-section.detail .expand {
-  font-size: 20px;
-  color: #666666;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  overflow: hidden;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-section.detail .expand.close {
-  max-height: 0;
-}
-section.detail .expand.show {
-  max-height: 500px;
-  padding: 1rem 0;
-}
 section.detail .content {
   font-size: 20px;
   color: #666666;
@@ -758,7 +741,6 @@ section.detail .content .list li {
 section.detail .content .list li .itemContent {
   padding-left: 1rem;
 }
-
 .card-body {
   font-size: 20px;
   color: #666666;
@@ -791,6 +773,15 @@ section.stepControl {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 1.5rem;
+  position: relative;
+}
+section.stepControl .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #53B6B7;
+  height: 2.5px;
+  z-index: 1;
 }
 section.stepControl .step {
   display: -webkit-box;
@@ -813,14 +804,17 @@ section.stepControl .step {
   font-weight: 400;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
-  width: calc(33.3333333333% - 1rem);
+  width: 25%;
+  border: 1px solid #53b6b7;
   border-bottom: 2px solid #53b6b7;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   padding: 0.75rem 0;
+  background-color: white;
+  z-index: 100;
 }
 section.stepControl .step .step-num {
   font-size: 1rem;
-  color: white;
+  color: #53b6b7;
   font-weight: 400;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC";
@@ -839,7 +833,7 @@ section.stepControl .step .step-num {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: #53b6b7;
+  border: 1px solid #53b6b7;
   margin: 0 0.5rem;
   border-radius: 50px;
   width: 25px;
@@ -851,7 +845,7 @@ section.stepControl .step .step-name {
 section.stepControl .step.active {
   background: #53B6B7;
   color: white;
-  border-bottom: 2px solid #215E5F;
+  border-bottom: 3px solid #2B9293;
 }
 section.stepControl .step.active .step-num {
   background-color: white;

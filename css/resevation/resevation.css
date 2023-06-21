@@ -584,13 +584,17 @@ main.search-container .searchCard .button button {
       -ms-flex-direction: row;
           flex-direction: row;
   letter-spacing: 0.02em;
-  font-weight: 900;
   font-size: 20px;
+  color: #24a8a7;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
 }
 .major-content-list .clinic-month .monthHandler .prev,
 .major-content-list .clinic-month .monthHandler .next {
   cursor: pointer;
   background-color: #24a8a7;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
@@ -665,6 +669,12 @@ main.search-container .searchCard .button button {
   border-radius: 4px;
   margin: 0.5rem 0.5rem;
 }
+.major-content-list .clinic-month .date .day .dayItem.none {
+  cursor: initial;
+}
+.major-content-list .clinic-month .date .day .dayItem.disabled {
+  cursor: initial;
+}
 .major-content-list .clinic-month .date .day .dayItem.isWeek {
   color: #9c0e4e;
 }
@@ -676,12 +686,10 @@ main.search-container .searchCard .button button {
   }
 }
 .major-content-list .clinic-month .date .day .dayItem span.none {
-  cursor: auto;
   border: none;
 }
 .major-content-list .clinic-month .date .day .dayItem span.disabled {
-  background: rgba(222, 222, 222, 0.5);
-  border: 1px solid rgba(205, 205, 205, 0.5);
+  cursor: initial;
   color: #a7a7a7;
 }
 .major-content-list .clinic-month .date .day .dayItem span.active {

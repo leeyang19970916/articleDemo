@@ -62,26 +62,7 @@ section {
 
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     }
-    .expand{
-      @include fontSize(20px, #666666, 400);
-      overflow: hidden;
-      transition: all 0.5s;
-      &.close{
-        // height: 0px;
-        max-height: 0;
-        // padding: 1rem
-      }
-      &.show{
-        max-height: 500px; 
-        padding:1rem 0;
-      }
-    }
-    // .collapse {
-    //   &.collapseItem{
 
-    //   }
-
-    // }
     .content {
       @include fontSize(20px, #666666, 400);
       letter-spacing: 0.08em;
@@ -98,6 +79,11 @@ section {
           .itemContent {
             padding-left: 1rem;
           }
+        }
+      }
+      &.announce{
+        .more{
+          
         }
       }
     }

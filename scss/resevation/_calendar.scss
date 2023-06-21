@@ -4,12 +4,12 @@
     .monthHandler {
       @include dflex(space-between, center);
       letter-spacing: 0.02em;
-      font-weight: 900;
-      font-size: 20px;
+      @include fontSize(20px,#24a8a7,600);
       .prev,
       .next {
         cursor: pointer;
         background-color: #24a8a7;
+        color: white;
         padding: 0.5rem 1rem;
         border-radius: 5px;
       }
@@ -45,6 +45,12 @@
           // border: 1px solid rgba(205, 205, 205, 0.5);
           border-radius: 4px;
           margin: 0.5rem 0.5rem;
+          &.none{
+            cursor: initial;
+          }
+          &.disabled{
+            cursor: initial;
+          }
           &.isWeek{
             color: #9c0e4e;
           }
@@ -58,13 +64,14 @@
           span {
             &.none {
               // 空拍
-              cursor: auto;
+              // cursor: initial;
               border: none;
             }
             &.disabled {
               // 沒有可預約
-              background: rgba(222, 222, 222, 0.5);
-              border: 1px solid rgba(205, 205, 205, 0.5);
+              cursor: initial;
+              // background: rgba(222, 222, 222, 0.5);
+              // border: 1px solid rgba(205, 205, 205, 0.5);
               color: #a7a7a7;
             }
             &.active {

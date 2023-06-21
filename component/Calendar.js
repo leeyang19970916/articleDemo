@@ -2,12 +2,12 @@ class Calendar {
   constructor() {
     (this.currentDate = new Date()),
       (this.monthNamesArr = [
-        "一月",
-        "二月",
-        "三月",
-        "四月",
-        "五月",
-        "六月",
+        "1月",
+        "2月",
+        "3月",
+        "4月",
+        "5月",
+        "6月",
         "七月",
         "八月",
         "九月",
@@ -35,10 +35,6 @@ class Calendar {
       this.currentDate.getMonth(),
       1
     ).getDay();
-    // this.getHoliday(new Date(
-    //   this.year,
-    //   this.currentDate.getMonth(),
-    // ).getDay())
     this.getHoliday();
   }
   getHoliday() {
@@ -98,8 +94,8 @@ function dayUI() {
       str += `<div class="dayItem"> <span class="active">${i}</span></div>`;
     } else {
       str += `<div class="dayItem  ${
-        isWeekend !==-1 ? "isWeek" : 'qqq' 
-      }"> <span>${i}</span> </div>`;
+        isWeekend !==-1 ? "isWeek" : '' 
+      }"> <span class="">${i}</span> </div>`;
     }
   }
 
